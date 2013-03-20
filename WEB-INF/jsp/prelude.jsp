@@ -8,3 +8,4 @@
 <%@ taglib prefix="util" uri="http://www.escenic.com/taglib/escenic-util" %>
 <%@ taglib prefix="tm" tagdir="/WEB-INF/tags" %>
 <%@ taglib prefix="elfn" uri="ELFunctionTagLibrary" %>
+<%@ taglib prefix="shared" uri="/WEB-INF/jsp/shared-taglib.tld" %>

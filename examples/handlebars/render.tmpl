@@ -1,0 +1,39 @@
+<div class="article lg-teaser type-news top-story clearfix ">
+
+  <h1>
+    <a href="{{url}}" class="">
+      {{title}}
+    </a>
+  </h1>
+
+  <figure>
+    <a href="{{url}}">
+      <img src="{{imageUrl}}"
+        class="belowHeadline "
+        alt="{{imageAltText}}"
+        title=""
+        width="318"
+        height="211"
+      />
+    </a>
+  </figure>
+
+  <ul class="tools" >
+    <li>
+      <a href="{{topicUrl}}" class="more">{{topicName}}</a>
+    </li>
+  </ul>
+
+  <p>{{intro}}</p>
+
+  {{#if hasRelatedStories}}
+    <ul class="headline-teaser see-also">
+      {{#each relatedStories}}
+      <li class="{{#if isLast}}last{{/if}}">
+        <a href="{{url}}">{{title}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+</div>
