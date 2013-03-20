@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+  <!-- This name appears in escenic-admin to identify the application-->
+  <display-name>Publication</display-name>
+
+  <!-- Configure which component is used for loading Presenation classes -->
+  <context-param>
+    <param-name>presentation-loader</param-name>
+    <param-value>nursery:/neo/xredsys/presentation/PresentationLoader</param-value>
+  </context-param>
+
+  <!-- Configure which component is used for accessing the Escenic API -->
+  <context-param>
+    <param-name>api</param-name>
+    <param-value>nursery://global/io/api/API</param-value>
+  </context-param>
+
+  <!-- 
+    define the BootstrapFilter (blocks incoming requests until the application
+    is initialized by sending a 503) Bootstrapping is done by the listener below
+  -->
+  <filter>
+    <filter-name>BootstrapFilter</filter-name>
+    <filter-class>com.escenic.presentation.servlet.BootstrapFilter</filter-class>
+  </filter>
+
+  <!--
+    define the StandardFilterChain (this is the main part of the Escenic 
+    request processing. It analyzes the URL and creates appropriate publication, section,
+    article beans)
+  -->
+  <filter>
+    <filter-name>EscenicStandardFilterChain</filter-name>
+    <filter-class>com.escenic.presentation.servlet.CompositeFilter</filter-class>
+    <init-param>
+      <param-name>chain</param-name>
+      <param-value>nursery:/com/escenic/servlet/StandardFilter</param-value>
+    </init-param>
+  </filter>
+
+  <!--
+    define the imageVersion filter (this modifies the binary image to produce the
+    selected representation)
+  -->
+  <filter>
+    <filter-name>imageVersionFilter</filter-name>
+    <filter-class>com.escenic.presentation.servlet.ImageVersionFilter</filter-class>
+  </filter>
+
+  <!-- the BootstrapFilter should block all URLs if the application is not initialized -->
+  <filter-mapping>
+    <filter-name>BootstrapFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- 
+    the EscenicStandardFilterChain is fundamental to the way Escenic works and should be 
+    applied to all URLs (unless some part of the application doesn't use Escenic at all)
+  -->
+  <filter-mapping>
+    <filter-name>EscenicStandardFilterChain</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- 
+    the imageVersionFilter is applied whenever an image is requested from the 
+    binaryFieldRetriever servlet
+  -->
+  <filter-mapping>
+    <filter-name>imageVersionFilter</filter-name>
+    <servlet-name>binaryFieldRetriever</servlet-name>
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+
+  <!--
+    Listens for startup and Bootstraps the application (loads and configures classes)
+  -->
+  <listener>
+    <description>Escenic Presentation layer bootstrap listener</description>
+    <listener-class>com.escenic.presentation.servlet.PresentationBootstrapper</listener-class>
+  </listener>
+
+  <!--
+    The binaryFieldRetriever is called (by name) from within the StandardFilterChain
+    (by the BinaryDispatcherProcessor). 
+    Thus it doesn't have a mapping associated with it. It retrieves an image file by
+    partial URL.
+  -->
+  <servlet>
+    <servlet-name>binaryFieldRetriever</servlet-name>
+    <servlet-class>com.escenic.presentation.servlet.BinaryFieldRetrieverServlet</servlet-class>
+    <init-param>
+      <param-name>storage</param-name>
+      <param-value>nursery://global/com/escenic/storage/Storage</param-value>
+    </init-param>
+  </servlet>
+  
+</web-app>

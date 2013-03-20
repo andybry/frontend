@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<content-types xmlns="http://xmlns.escenic.com/2008/content-type" xmlns:ui="http://xmlns.escenic.com/2008/interface-hints" xmlns:doc="http://xmlns.vizrt.com/2010/documentation" version="4">
+  <field-group name="title">
+    <field mime-type="text/plain" type="basic" name="title">
+      <ui:label>Title</ui:label>
+      <ui:description>The title of the article</ui:description>
+      <parameter name="com.escenic.lucy.indexField" value="title"/>
+    </field>
+  </field-group>
+  <field-group name="body">
+    <field mime-type="application/xhtml+xml" type="basic" name="body">
+      <ui:label>Body text</ui:label>
+      <ui:description>The body text of the article.</ui:description>
+      <ui:style> body { min-height: 200px; } </ui:style>
+      <parameter name="com.escenic.lucy.indexField" value="longText"/>
+    </field>
+  </field-group>
+
+  <content-type name="default">
+    <ui:label>Default Article</ui:label>
+    <ui:description>Default article type</ui:description>
+    <ui:title-field>title</ui:title-field>
+    <panel name="default">
+      <ui:label>Default</ui:label>
+      <ui:description>The default set of article fields</ui:description>
+      <ref-field-group name="title"/>
+      <ref-field-group name="body"/>
+    </panel>
+    <summary>
+      <ui:label>Content Summary</ui:label>
+      <field name="title" type="basic" mime-type="text/plain"/>
+    </summary>
+  </content-type>
+
+  <content-type name="image">
+    <ui:label>Image</ui:label>
+    <ui:title-field>name</ui:title-field>
+    <panel name="main">
+      <ui:label>Image content</ui:label>
+      <field mime-type="text/plain" type="basic" name="name">
+        <ui:label>Name</ui:label>
+        <ui:description>The name of the image</ui:description>
+        <constraints>
+          <required>true</required>
+        </constraints>
+      </field>
+      <field mime-type="text/plain" type="basic" name="description">
+        <ui:label>Description</ui:label>
+      </field>
+      <field mime-type="text/plain" type="basic" name="alttext">
+        <ui:label>Alternative text</ui:label>
+        <ui:description>Text for the partially sighted and blind</ui:description>
+      </field>
+      <field name="binary" type="link">
+        <relation>com.escenic.edit-media</relation>
+        <constraints>
+          <mime-type>image/jpeg</mime-type>
+          <mime-type>image/png</mime-type>
+        </constraints>
+      </field>
+    </panel>
+
+    <panel name="crop">
+      <ui:label>Crop</ui:label>
+      <field name="alternates" type="basic" mime-type="application/json">
+        <representations xmlns="http://xmlns.escenic.com/2009/representations" type="image-versions">
+
+          <!-- A minimal version definition, with cropping and resizing -->
+          <representation name="WideBig">
+            <output width="572" height="204"/> <!-- The target size of the version -->
+            <crop/> <!-- Crop masks are derived from the target size -->
+            <resize/> <!-- Resized automatically; to the width/height seen above -->
+          </representation>
+
+          <representation name="SmallSquare">
+            <output width="150" height="150"/>
+            <crop/>
+            <resize/>
+          </representation>
+
+        </representations>
+      </field>
+    </panel>
+
+    <summary>
+      <ui:label>Content Summary</ui:label>
+      <field name="caption" type="basic" mime-type="text/plain"/>
+      <field name="alttext" type="basic" mime-type="text/plain"/>
+    </summary>
+  </content-type>
+
+
+  <ui:group name="Articles">
+    <ui:label>All Articles</ui:label>
+    <ui:ref-content-type name="default"/>
+  </ui:group>
+  <ui:group name="Images">
+    <ui:label>Images</ui:label>
+    <ui:ref-content-type name="image"/>
+  </ui:group>
+
+  <content-type name="widget_code">
+    <ui:icon>generic</ui:icon>
+    <ui:label>Code Widget</ui:label>
+    <ui:description>The widget to render provided code or a JSP page</ui:description>
+    <doc:description xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        Code widget displays a custom component of your code written either in HTML or JSP. The Widget Framework does
+        not interact with your custom code in any way: it simply places it on the rendered page, optionally
+        wrapping it in an HTML
+        <code>div</code>
+        element.
+      </p>
+      <p>This widget has two views-</p>
+      <ul>
+        <li>HTML - This view usually used to place HTML code. Your HTML will be rendred by the widget.</li>
+        <li>JSP - This view takes path of the JSP file and usually used if you have JSP code. The path must be valid and
+         code in the jsp page must be compilable and runnable.</li>
+      </ul>
+    </doc:description>
+    <ui:title-field>title</ui:title-field>
+    <panel name="general">
+      <ui:label>General</ui:label>
+      <ui:description>The basic fields of code widget</ui:description>
+      <ref-field-group name="basic-widget-fields"/>
+      <ref-field-group name="code-widget-basic-fields"/>
+    </panel>
+    <panel name="html">
+      <ui:label>HTML</ui:label>
+      <ui:description>The HTML view specific fields</ui:description>
+      <doc:description xmlns="http://www.w3.org/1999/xhtml">
+        <p>This panel properties are used to define how Code Widget will work when html code are supplied.</p>
+      </doc:description>
+      <ref-field-group name="code-widget-html-fields"/>
+    </panel>
+    <summary>
+      <ui:label>Content Summary</ui:label>
+      <field mime-type="text/plain" name="title" type="basic">
+        <ui:label>Title</ui:label>
+      </field>
+    </summary>
+  </content-type>
+
+  <field-group name="basic-widget-fields">
+    <field mime-type="text/plain" name="title" type="basic">
+      <ui:label>Title</ui:label>
+      <ui:description>The title of the widget</ui:description>
+      <constraints>
+        <required>true</required>
+      </constraints>
+    </field>
+  </field-group>
+
+  <field-group name="code-widget-basic-fields">
+    <field name="view" type="enumeration">
+      <ui:label>View</ui:label>
+      <ui:description>The view chosen for the code widget</ui:description>
+      <enumeration value="html">
+        <ui:label>HTML</ui:label>
+        <doc:description xmlns="http://www.w3.org/1999/xhtml">
+          <p>Select this view if your custom component is written in HTML.</p>
+        </doc:description>
+      </enumeration>
+      <ui:value-if-unset>html</ui:value-if-unset>
+    </field>
+  </field-group>
+
+  <field-group name="code-widget-html-fields">
+    <field mime-type="text/plain" name="code" type="basic">
+      <ui:label>Code</ui:label>
+      <ui:description>The code to be rendered</ui:description>
+      <doc:description xmlns="http://www.w3.org/1999/xhtml">
+        <p>This field is to contain HTML code. This HTML will be rendered in the widget.</p>
+      </doc:description>
+      <ui:layout cols="40" rows="5"/>
+    </field>
+  </field-group>
+
+</content-types>

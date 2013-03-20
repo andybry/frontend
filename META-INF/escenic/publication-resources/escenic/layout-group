@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<groups
+  xmlns="http://xmlns.escenic.com/2008/layout-group"
+  xmlns:ct="http://xmlns.escenic.com/2008/content-type"
+  xmlns:ui="http://xmlns.escenic.com/2008/interface-hints"
+  >
+
+  <group name="content" root="true">
+    <ui:label>Content</ui:label>
+    <area name="contentArea"/>
+  </group>
+
+  <group root="true" name="configGroup">
+    <ui:label>Config Layout</ui:label>
+    <area name="top">
+      <ui:label>Top</ui:label>
+    </area>
+    <area name="main">
+      <ui:label>Main</ui:label>
+      <ref-group name="childGroup"/>
+    </area>
+    <area name="bottom">
+      <ui:label>Bottom</ui:label>
+    </area>
+  </group>
+
+  <group name="childGroup">
+    <ui:label>Child Group</ui:label>
+    <area name="top">
+      <ui:label>Top</ui:label>
+    </area>
+    <area name="main">
+      <ui:label>Child Main</ui:label>
+      <ref-group name="childGroup"/>
+    </area>
+  </group>
+
+</groups>
