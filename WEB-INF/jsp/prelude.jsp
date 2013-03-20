@@ -1,0 +1,10 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="section" uri="http://www.escenic.com/taglib/escenic-section" %>
+<%@ taglib prefix="view" uri="http://www.escenic.com/taglib/escenic-view" %>
+<%@ taglib prefix="collection" uri="http://www.escenic.com/taglib/escenic-collection" %>
+<%@ taglib prefix="article" uri="http://www.escenic.com/taglib/escenic-article" %>
+<%@ taglib prefix="wf-core" uri="http://www.escenic.com/widget-framework/core" %>
+<%@ taglib prefix="util" uri="http://www.escenic.com/taglib/escenic-util" %>
+<%@ taglib prefix="tm" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="elfn" uri="ELFunctionTagLibrary" %>

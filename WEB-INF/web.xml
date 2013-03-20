@@ -99,4 +99,11 @@
     </init-param>
   </servlet>
   
+  <!--This will include taglibs at the beginning of each JSP file -->
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <include-prelude>/WEB-INF/jsp/prelude.jsp</include-prelude>
+    </jsp-property-group>
+  </jsp-config>
 </web-app>

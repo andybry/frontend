@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+
+  <description>A taglib to define some EL accessible functions.</description>
+  <tlib-version>1.0</tlib-version>
+  <short-name>ELFunctionTagLib</short-name>
+  <uri>ELFunctionTagLibrary</uri>
+
+  <function>
+    <description>Serialises an object to a JSON string</description>
+    <name>toJson</name>
+    <function-class>uk.co.trinitymirror.utils.json.JsonSerialiser</function-class>
+    <function-signature>java.lang.String toJson(java.lang.Object)</function-signature>
+  </function>
+
+  <function>
+    <description>Serialises an object to a JSON string</description>
+    <name>fromJson</name>
+    <function-class>uk.co.trinitymirror.utils.json.JsonDeserialiser</function-class>
+    <function-signature>java.lang.String fromJson(java.lang.String)</function-signature>
+  </function>
+
+</taglib>
