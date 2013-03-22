@@ -1,3 +1,4 @@
+<c:set var="widgetBase" scope="page" value="/template/widgets" />
 <jsp:include page="head.jsp" />
 
 <body id="mirror"> 
@@ -9,6 +10,9 @@
 
   <!-- content -->
   <div data-role="content" class="content">  
+
+  <%-- large teaser --%>
+  <jsp:include page="${widgetBase}/stories/tablet7largeTeaser.jsp" />
 
   </div><!-- /content -->
   
