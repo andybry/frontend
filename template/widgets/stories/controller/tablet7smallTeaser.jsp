@@ -28,6 +28,6 @@
     "intro": "The 64-year-old says he got the shock of his life when he saw the large reptile swimming along the waterway at Reading",
      "hasRelatedStories": false
   }
-</c:set>
+</c:set> 
 
 <shared:handlebars template="${template}" json="${json}" />
