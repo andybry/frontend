@@ -16,7 +16,7 @@
         "inpageStyleClass": "",
         "alttext": "Lovers: Oscar and Reeva",
         "title": "Lovers: Oscar and Reeva",
-        "url": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva%20Steenkamp%20and%20Oscar%20Pistorius-1715733.jpg"
+        "imageUrl": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva%20Steenkamp%20and%20Oscar%20Pistorius-1715733.jpg"
       },
       "topicMap": {
         "name": "Reeva Steenkamp",

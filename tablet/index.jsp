@@ -14,8 +14,14 @@
   <%-- large teaser --%>
   <jsp:include page="${widgetBase}/stories/tablet7largeTeaser.jsp" />
 
-    <%-- small teaser --%>
+  <%-- medium teaser --%>
+  <jsp:include page="${widgetBase}/stories/tablet7mediumTeaser.jsp" />
+
+  <%-- small teaser --%>
   <jsp:include page="${widgetBase}/stories/tablet7smallTeaser.jsp" />
+  
+    <%-- picture navigator --%>
+  <jsp:include page="${widgetBase}/stories/tablet7pictureNavigator.jsp" />
 
   </div><!-- /content -->
   

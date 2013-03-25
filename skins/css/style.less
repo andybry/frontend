@@ -212,6 +212,18 @@ Version:  1.0
 @red-1: #e9210e;
 .red-1 {color: @red-1;}
 
+/* Section Backgrounds */ 
+
+.match-bg {
+  background-image: url(images/matchbg.png);
+}
+.am-bg {
+  background-image: url(images/3ambackground.png); 
+}
+.standard-bg {
+  background-image: url(images/bkg1.png); 
+}
+
 /* Borders */	
 
 .border-custom (@solid: 1px, @bordertype: solid, @color: #000 ) {
@@ -685,7 +697,7 @@ ul {
         margin: 10px 0px;
       }
       .tools {
-        padding: 0 30px;
+        padding: 0 20px;
         background: rgb(206,206,206); /* Old browsers */
         background: -moz-linear-gradient(top,  rgba(206,206,206,1) 0%, rgba(245,245,245,1) 9%, rgba(244,244,244,1) 92%, rgba(230,230,230,1) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(206,206,206,1)), color-stop(9%,rgba(245,245,245,1)), color-stop(92%,rgba(244,244,244,1)), color-stop(100%,rgba(230,230,230,1))); /* Chrome,Safari4+ */
@@ -748,6 +760,8 @@ ul {
           background-color:rgba(0,0,0,1);
           margin: 0px;
           float: left;
+          .box-border-sizing;
+          width: 100%;
           #Fonts > .MirrorExtaCond-SemiBold (@lineHeight: 1em); 
           @media only screen and (max-width : @mobileMaxWidth) {
             #pxtoem > .font-size( 16, 16 );
@@ -1153,6 +1167,7 @@ ul {
          color: #ffffff;
          background: #000000;
          width: 100%;
+         text-shadow: none;
          #Fonts > .MirrorExtaCond-SemiBold (@lineHeight: 1em);
          #pxtoem > .font-size( 16, 8 );
          .box-border-sizing;
@@ -1516,28 +1531,49 @@ ul {
   	}  	
   }// Short teaser
   
-/* Features Teaser, Picture navigator */
-  .features-teaser {
+/* Picture navigator */
+  .carousel {
     background-color: #ffffff;
     padding-bottom: 30px;
     margin-bottom: 10px;
     border-bottom: 1px solid @BorderLightGrey;
-    .features-wrapper {
+    .carousel-wrapper {
       position: relative;
-      background: #000000;
-      #features-slider {
+      .carousel-border-top {
+        border-bottom: 1px solid #353232;
+        background: url(images/bkg1.png) 0 0 repeat;
+        height: 20px;
+      }
+      #slider {
         /* OC, added these to fix flickering on ios devices, http://stackoverflow.com/questions/12284820/html5-swipe-js-css3-transitions-offscreen-rendering-and-caching-of-page-element */
         -webkit-perspective: 0;
         -webkit-backface-visibility: hidden;
         -webkit-transform:translate3d(0,0,0);
-      }       
+        position: relative;
+      }    
+      .slide-item {
+        position: relative;
+        background: #000;        
+      }  
       figure {
         margin: 0;
       }
       img {
         width: 100%;
         display: block;
+      }  
+      .caption-bg-wrapper {
+        float: left;
+        width: inherit;
+        overflow: hidden;
       }
+      .caption-bg-ext {
+        background: rgba(0,0,0, 0.5);
+        position: absolute;
+        padding-bottom: 400px;
+        width: inherit;
+        //margin-top: 20px;
+      }    
       h2 {
         #Fonts > .MirrorExtaCond (@lineHeight: 1);
         #pxtoem > .font-size( 16, 9 );
@@ -1547,6 +1583,8 @@ ul {
         padding: 10px 0px;
         line-height: 1;
         margin: 0;
+        float: left;
+        width: 100%;
       }
       .slide-nav {
         position: absolute;
@@ -1556,33 +1594,36 @@ ul {
         width: 50px;
         background: #000000;
         opacity: 0.8;
+        span {
+          margin-top: 25px;
+          font-size: 48px;
+          height: 48px;
+          width: 48px;
+          line-height: 48px;
+          text-shadow: none;
+          color: #fff;
+          display: inline-block;
+        }
         @media only screen and (max-width : @mobileMaxWidth) {
           margin-top: -75px;
           height: 60px;
           width: 30px;
+          span {
+            margin-top: 15px;
+            font-size: 30px;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+          }
         }
       }
       #slide-prev {
         left: 0px;
-        background-image: url(images/icons-36-white.png);
-        background-position: -280px 32px;
-        background-repeat: no-repeat;
-        @media only screen and (max-width : @mobileMaxWidth) {
-          background-image: url(images/icons-36-white.png);
-          background-position: -290px 14px;
-        }
       }
       #slide-next {
         right: 0px;
-        background-image: url(images/icons-36-white.png);
-        background-position: -207px 32px;
-        background-repeat: no-repeat;
-        @media only screen and (max-width : @mobileMaxWidth) {
-          background-image: url(images/icons-36-white.png);
-          background-position: -218px 14px;
-        }
       }
-      #features-slider-nav {
+      #slider-nav {
         height: 2.4em;
         border-top: 1px solid #353232;
         background: url(images/bkg1.png) 0 0 repeat;
@@ -1597,7 +1638,7 @@ ul {
             display: inline-block;
             margin: 0.8em 5px;
           }
-          li.features-slider-nav-on {
+          li.slider-nav-on {
             .rounded-corners-all(1em);
             height: 0.5em;
             width: 0.5em;
@@ -1607,7 +1648,139 @@ ul {
           }
         }
       }
+    }    
+    &.video {
+      .section-logo {
+        .box-border-sizing;
+        padding: 7.5%;
+        position: absolute;
+        width: 40%;
+        @media only screen and (max-width : @mobileMaxWidthLandscape) {
+          padding: 10px 38%;
+          width: 100%;
+        }
+      }
+      .slider-videodate-wrapper {
+        padding: 0 5%;
+        position: absolute;
+        width: 40%;
+        top: 55%;
+        .box-border-sizing;
+        p {
+          background-color:rgba(0,0,0,1);
+          color: #ffffff;    
+          margin: 0px;
+          padding: 2px 5px;
+          width: 100%;              
+          float: right;   
+          text-align: center;
+          .box-border-sizing;       
+          #Fonts > .MirrorExtaCond-SemiBold (@lineHeight: 1em); 
+          #pxtoem > .font-size( 16, 12 );
+        }
+        h3 {
+          background: #ffffff;            
+          width: 100%;
+          margin: 0px;
+          padding: 2px 5px;
+          float: right; 
+          .box-border-sizing;
+          text-align: center;
+          #Fonts > .MirrorExtaCond-SemiBold (@lineHeight: 1em); 
+          #pxtoem > .font-size( 16, 6 );
+        }
+        @media only screen and (max-width : @mobileMaxWidthLandscape) {
+          display: none;
+        }
+      }
+      .slide-item {
+        background: none;
+        padding-top: 0px;
+        h2 {
+          background: rgba(0,0,0, 0.5);
+          padding: 10px 10%;
+          //margin-top: 20px;
+          .box-border-sizing;
+        }
+          /* Slider Video */ 
+        .slider-video-wrapper {
+          padding: 10px 2.5% 10px 40%;
+          .box-border-sizing;   
+          @media only screen and (max-width : @mobileMaxWidthLandscape) {
+            padding: 10px 15%;
+          }
+        }
+        .slider-video {
+          width: 100%;     
+          float: left;
+          .sl-video-wrapper {
+            position: relative;
+            padding-top: 1px;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-bottom: 0px;
+            margin-top: 0;
+            width: 100%;
+            height: 100%;
+            iframe, div,embed, object, .BrightcoveExperience {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+            }
+          }
+        }
+        @media only screen and (max-width : @mobileMaxWidthLandscape) {
+          padding-top: 5%;
+        }
+      }
+      &.spy {
+        .carousel-wrapper {
+          background-image: url(images/matchbg.png);
+        }
+        .section-logo {
+          @media only screen and (max-width : @mobileMaxWidthLandscape) {
+            padding: 10px 28%;
+            width: 100%;
+          }
+        }
+        .slider-videodate-wrapper {
+          h3 {
+            color: #2e5f13;
+          }
+        }
+      }
+      &.am {
+        .carousel-wrapper {
+          background-image: url(images/3ambackground.png); 
+        }
+        .slider-videodate-wrapper {
+          h3 {
+            color: #733296;
+          }
+        }
+      }
+      &.standard {
+        .carousel-wrapper {
+          background-image: url(images/bkg1.png); 
+        }
+        .section-logo {
+          display: none;
+        }
+        .slider-videodate-wrapper {
+          display: none;
+        }
+        .slider-video-wrapper {
+          padding: 10px 15%;
+        }
+      }
+      .slide-nav {
+        margin: 0px;
+      }
+ 
     }
+
   }//Features teaser
   
 /* Opinion Teaser */
@@ -1925,7 +2098,6 @@ ul {
               display: inline-block;
               height: 25px;
               width: 25px;
-              psition: relative;
               top: 5px;
               margin-right: 0.3em;
               position: relative;
@@ -2018,6 +2190,275 @@ ul {
       }
     }
   }//Football team-select menu Widget
+  
+  /* Article Blog page */
+ 
+ .blog {
+   .article-header {
+     .lead-text {
+       padding: 0px 15px;
+       margin: 10px 0;
+       color: @grey-1;
+       font-weight: normal;
+       a {
+         color: @red-1;
+       }
+     }
+     figure {
+       margin-bottom: 0;
+     }
+     .image-credit {
+       display: block;
+       text-align: right;
+       #Fonts > .PTSans-SansSerif (@lineHeight: 1em);
+       #pxtoem > .font-size( 16, 20 );
+       color: @grey-1;
+       margin-right: 5px;
+     } 
+   }
+   .blog-body {
+     padding: 10px 0;
+     .updates {
+       margin: 0 15px;
+       .ui-controlgroup-label {
+         float: left;
+         .content > .lead-text;
+         margin: 0 10px 0 0;
+         line-height: 35px;
+         @media only screen and (max-width : @mobileMaxWidth) {
+           line-height: 20px;           
+         }        
+       }
+       .ui-btn-active {
+         background: #e90e0e;
+         color: #fff;
+         text-shadow: none;
+         border: 1px solid #e90e0e;
+       }
+       .ui-btn-text {
+         #Fonts > .MirrorExtaCond (@lineHeight: 0);
+         #pxtoem > .font-size( 16, 12 );
+         text-shadow: none;         
+       }
+       .ui-radio .ui-mini .ui-btn-inner {
+         @media only screen and (max-width : @mobileMaxWidth) {
+           padding: 0.25em 11px 0.2em;             
+         }       
+       }
+     }
+     .live-entry {
+       padding-top: 15px;
+       .live-title {
+         .content > .tools;
+         .article > .article-header > .tools;
+         padding: 0;
+         .live-prefix {
+           color: #fff;
+           position: relative;
+           background: #000000;
+           padding: 8px;
+           text-shadow: none;
+           #Fonts > .MirrorExtaCond();
+           #pxtoem > .font-size(16, 14);
+           @media only screen and (max-width : @mobileMaxWidth) {
+             padding: 10px 5px;            
+           }
+         }
+         .live-prefix:after {
+            left: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+          }
+          .live-prefix:after {
+            border-color: rgba(0, 0, 0, 0);
+            border-left-color: #000;
+            border-width: 20px;
+            top: 50%;
+            margin-top: -20px;
+          }
+          .live-info {
+            color: #000;
+            padding: 7px 0 0 30px;
+            #Fonts > .MirrorExtaCond();
+            #pxtoem > .font-size(16, 12);
+            text-shadow: none;
+          }
+          .live-icon {
+            float: right;
+            padding: 7px 10px 0 0;
+            .ln-icon {
+              width: 25px;
+              height: 25px;
+              border: none;
+              background: transparent url('images/live-blog-sprite.png') 0 0 no-repeat;
+              box-shadow: none;
+              margin: 0;           
+            }
+            .ln-tweet {
+              background-position: 0 0;
+            }
+            .ln-twitter-blog {
+              background-position: -25px 0;
+            }
+            .ln-facebook-blog {
+              background-position: -50px 0;
+            }
+            .ln-mirror {
+              background-position: -75px 0;
+            }
+            .ln-mirror-grey {
+              background-position: -100px 0;
+            }
+            .ln-image {
+              background-position: 0 -25px;
+            }
+            .ln-goal {
+              background-position: 0 -50px;
+            }
+            .ln-sms {
+              background-position: 0 -75px;
+            }
+            .ln-email {
+              background-position: 0 -100px;
+            }
+            .ln-quote {
+              background-position: 0 -125px;
+            }
+            .ln-video {
+              background-position: 0 -150px;
+            }
+            .ln-audio {
+              background-position: 0 -175px;
+            }
+            .ln-live {
+              background-position: -25px -25px;
+            }
+            .ln-timeelapsed {
+              background-position: -25px -50px;
+            }
+            .ln-placebet {
+              background-position: -25px -75px;
+            }
+            .ln-breakingnews {
+              background-position: -25px -100px;
+            }
+            .ln-redcard {
+              background-position: -25px -125px;
+            }
+            .ln-yellowcard {
+              background-position: -25px -150px;
+            }
+            .ln-penalty {
+              background-position: -25px -175px;
+            }
+            .ln-extratime, 
+            .ln-qualifying {
+              background-position: -50px -25px;
+            }
+            .ln-substitute {
+              background-position: -50px -50px;
+            }
+            .ln-offside {
+              background-position: -50px -75px;
+            }
+            .ln-corner {
+              background-position: -50px -100px;
+            }
+            .ln-fulltime {
+              background-position: -50px -125px;
+            }
+            .ln-halftime {
+              background-position: -50px -150px;
+            }
+            .ln-stupidcomment {
+              background-position: -50px -175px;
+            }
+            .ln-outwicket, 
+            .ln-four,
+            .ln-six {
+              background-position: -75px -25px;
+            }
+            .ln-endofinning {
+              background-position: -75px -50px;
+            }
+            .ln-knockedtoground {
+              background-position: -75px -75px;
+            }
+            .ln-wononpoints {
+              background-position: -75px -100px;
+            }
+            .ln-technicalknockout {
+              background-position: -75px -125px;
+            }
+            .ln-knockout {
+              background-position: -75px -150px;
+            }
+            .ln-knockout {
+              background-position: -75px -175px;
+            }
+            .ln-qualified {
+              background-position: -100px -25px;
+            }
+            .ln-poleposition {
+              background-position: -100px -50px;
+            }
+            .ln-f1knockout {
+              background-position: -100px -75px;
+            }
+            .ln-safetycar {
+              background-position: -100px -100px;
+            }
+            .ln-chequeredflagr {
+              background-position: -100px -125px;
+            }
+            .ln-gridlineup {
+              background-position: -100px -150px;
+            }
+            .ln-crash {
+              background-position: -100px -175px;
+            }
+            .ln-pits {
+              background-position: -125px -25px;
+            }
+            .ln-disqualified {
+              background-position: -125px -50px;
+            }     
+          }
+       }
+       .live-content {
+         padding: 15px 0 10px 0;        
+         p {
+           .content > .lead-text;
+           color: #000;
+           margin: 0 15px;
+           a, a:hover {
+            color: @red-1;
+           }
+         }
+         figure {
+           margin: 0;       
+           img {
+             padding: 0;
+             width: 100%;
+           }
+         }
+         iframe {
+           width: 100%;
+         }
+         ul, ol {
+           margin: 0 15px;
+           li {
+             margin-bottom: 10px;
+           }
+         }
+       }
+     }
+   }
+ }
   
 //Search Results Page
 	

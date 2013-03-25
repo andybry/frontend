@@ -4,10 +4,11 @@
 
     {{#if showImage}}
       <figure class="inline-image clearfix ">
-        {{#with imageMap}}
-          <a href="{{url}}"><img src="{{url}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}"></a>
-        {{/with}}
-
+          <a href="{{url}}">
+          	{{#with imageMap}}
+          		<img src="{{imageUrl}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}">
+          	{{/with}}
+          </a>
         <figcaption>{{title}}</figcaption>
 
       </figure>

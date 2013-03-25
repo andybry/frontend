@@ -1,45 +1,39 @@
-<%--
- * $Id:$
- * $URL:$
- *
- * This is the controller for the tablet7mediumTeaser view of stories widget
---%>
-<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="article" uri="http://www.escenic.com/taglib/escenic-article" %>
-<%@ taglib prefix="wf-core" uri="http://www.escenic.com/widget-framework/core" %>
-
-<jsp:useBean id="stories" type="java.util.HashMap" scope="request"/>
-
-<c:set target="${stories}" property="source" value="${fn:trim(widgetContent.fields.sourceMediumTeaser.value)}"/>
-
-<c:set target="${stories}" property="begin" value="${fn:trim(widgetContent.fields.beginMediumTeaser.value) - 1}"/>
-<c:set target="${stories}" property="numberOfItems"
-       value="${fn:trim(widgetContent.fields.numberOfItemsMediumTeaser.value)}"/>
-
-<jsp:include page="helpers/getArticles.jsp">
-  <jsp:param name="widgetContentId" value="${widgetContent.id}"/>
-</jsp:include> 
-
-<c:set target="${stories}" property="maxCharacters"
-       value="${fn:trim(widgetContent.fields.maxCharactersMediumTeaser.value)}"/>
-<c:set target="${stories}" property="showComments"
-       value="${fn:trim(widgetContent.fields.showCommentsMediumTeaser.value)}"/>
-<c:set target="${stories}" property="showIcons" value="${fn:trim(widgetContent.fields.showIconsMediumTeaser.value)}"/>
-<c:set target="${stories}" property="hidePrimaryTagOrChannel"
-       value="${fn:trim(widgetContent.fields.hidePrimaryTagOrChannel.value)}"/>
-
-<c:set var="imageRepresentation"
-       value="${fn:trim(widgetContent.fields.imageRepresentationMediumTeaser.value)}"/>
-
-<c:if test="${imageRepresentation eq 'custom'}">
-  <c:set var="imageRepresentation" value="${fn:trim(widgetContent.fields.imageVersion.value)}"/>
-  <c:if test="${empty imageRepresentation}">
-    <c:set var="imageRepresentation" value="s148"/>
-  </c:if>
-</c:if>
-
-<c:set target="${stories}" property="imageVersion" value="${imageRepresentation}"/>
-
-<jsp:include page="helpers/calculateViewModel.jsp" />
+<c:set var="template" scope="page" value="/template/handlebars/widgets/stories/tablet7mediumTeaser.tmpl" />
+<c:set var="json" scope="page">
+{
+  "articleMaps": [
+    {
+      "url": "http://www.mirror.co.uk/news/world-news/reeva-steenkamp-mum-model-shot-1715532",
+      "title": "\"Why would he kill my angel?\" Distraught mum of Oscar Pistorius' girlfriend is baffled by killing.",
+      "intro": "Distraught June Steenkamp, 66, spoke out as it was revealed her daughter Reeva's skull had been crushed.",
+      "showImage": true,
+      "dateTimeInMs": 1363973484000,
+      "dateStringFortimeElement": "2013-03-22T17:31+0000",
+      "timeAgoString": "49 mintues",
+      "imageMap": {
+        "id": 1715733,
+        "showPictureCaption": true,
+        "inpageStyleClass": "",
+        "alttext": "Lovers: Oscar and Reeva",
+        "title": "Lovers: Oscar and Reeva",
+        "imageUrl": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva%20Steenkamp%20and%20Oscar%20Pistorius-1715733.jpg"
+      },
+      "topicMap": {
+        "name": "Reeva Steenkamp",
+        "url": "http://www.mirror.co.uk/all-about/reeva%20steenkamp"
+      },
+      "relatedItemMaps": [
+        {
+          "title": "Model may have had skull crushed on night she was shot dead by Oscar Pistorius",
+          "url": "http://www.mirror.co.uk/news/world-news/reeva-steenkamp-model-skull-crushed-1715537"
+        },
+        {
+          "title": "\"It was a mistake anybody can make\": Sprint star's gran says shooting was an accident",
+          "url": "http://www.mirror.co.uk/news/world-news/oscar-pistorius-sprint-stars-gran-1715080"
+        }
+      ]
+    }
+  ]
+}
+</c:set>
+<shared:handlebars template="${template}" json="${json}" />
