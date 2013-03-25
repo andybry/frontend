@@ -14,6 +14,9 @@
   <%-- large teaser --%>
   <jsp:include page="${widgetBase}/stories/tablet7largeTeaser.jsp" />
 
+    <%-- small teaser --%>
+  <jsp:include page="${widgetBase}/stories/tablet7smallTeaser.jsp" />
+
   </div><!-- /content -->
   
   <div data-role="footer">   

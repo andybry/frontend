@@ -1,22 +1,32 @@
 <!-- Small Teaser - MIR-4487 -->
 
-			<div class="short-teaser clearfix">
-	      <div class="inner-teaser">
-	           <figure class="inline-image">
-	               <a href="{{url}}"><img src="{{imageUrl}}" alt="{{imageAltText}}"></a>
-	           </figure>
-	           <div class="teaser-content">
-	               <ul class="tools">
-	                  <li>
-	                    <a href="{{topicUrl}}" class="more">{{topicName}}</a>
-	                  </li>     
-	                  <li class="last">
-	                    <time datetime="{{pubDate}}">{{pubDate}}</time>
-	                  </li>
-	              </ul>
-	              <h3 class="teaser-title"><a href="{{url}}">{{title}}</a></h3>
-	            </div>
-	         </div>      
-	    </div>
+{{#each articleMaps}}
+		<div class="short-teaser clearfix">
+      <div class="inner-teaser">
+           {{#if showImage}}
+		           <figure class="inline-image">
+		               <a href="{{url}}">
+		               		{{#with imageMap}}
+		               			<img src="{{imageUrl}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}" />
+		               		{{/with}}
+		               	</a>
+		           </figure>
+           {{/if}}  
+           <div class="teaser-content">
+               <ul class="tools">
+                  <li>
+                  	{{#with topicMap}}  
+                    	<a href="{{topicUrl}}" class="more">{{topicName}}</a>
+                  	{{/with}}
+                  </li>     
+                  <li class="last">
+                    <time datetime="{{dateStringFortimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}} ago</time>
+                  </li>
+              </ul>
+              <h3 class="teaser-title"><a href="{{url}}">{{title}}</a></h3>
+            </div>
+         </div>      
+    </div>
+{{/each}}
 
 <!-- /Small Teaser -->
