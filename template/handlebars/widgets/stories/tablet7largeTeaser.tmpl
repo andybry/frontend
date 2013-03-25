@@ -1,0 +1,51 @@
+{{#each articleMaps}}
+
+  <div class="primary-topic">
+
+    {{#if showImage}}
+      <figure class="inline-image clearfix ">
+        {{#with imageMap}}
+          <a href="{{url}}"><img src="{{url}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}"></a>
+        {{/with}}
+
+        <figcaption>{{title}}</figcaption>
+
+      </figure>
+    {{/if}}
+
+    <div class="primary-topic-content">
+      <ul class="tools">
+
+        {{#if topicMap}}
+          <li>
+            {{#with topicMap}}
+              <a href="{{url}}" class="more">{{name}}</a>
+            {{/with}}
+          </li>
+        {{/if}}
+
+        <li class="last">
+          <time datetime="{{dateStringFortimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}} ago</time>
+        </li>
+
+      </ul>
+
+      <p class="lead-text"><a href="{{url}}">{{intro}}</a></p>
+      
+      {{#if relatedItemMaps}}
+        <ul class="related-text">
+
+          {{#each relatedItemMaps}}
+            <li>
+              <span class="right-arrow">&rsaquo;</span>
+              <a href="{{url}}">{{title}}</a>
+            </li>
+          {{/each}}
+
+        </ul>
+      {{/if}}
+
+    </div>
+  </div>
+
+{{/each}}
