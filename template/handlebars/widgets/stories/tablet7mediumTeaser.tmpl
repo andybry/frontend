@@ -1,0 +1,32 @@
+{{#each articleMaps}}
+    
+    <div class="medium-teaser clearfix">
+      <div class="inner-teaser">
+         {{#if showImage}}
+	         <figure class="inline-image">
+	             <a href="{{url}}">
+	             		{{#with imageMap}}
+	             			<img src="{{imageUrl}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}" />
+	             		{{/with}}
+	             </a>
+	         </figure>
+         {{/if}}
+         
+         <div class="teaser-content">
+             <ul class="tools">
+                <li>
+                	{{#with topicMap}} 
+                  	<a href="{{url}}" class="more">{{name}}</a>
+                  {{/with}}	
+                </li>     
+                <li class="last">
+                  <time datetime="{{dateStringFortimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}} ago</time>
+                </li>
+            </ul>
+            <h3 class="teaser-title"><a href="{{url}}">{{title}}</a></h3>
+            <p class="lead-text"><a href="{{url}}">{{intro}}</a></p>
+          </div>
+       </div>   
+    </div>
+
+{{/each}}

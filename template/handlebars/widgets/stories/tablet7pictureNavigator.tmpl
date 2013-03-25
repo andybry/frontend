@@ -1,0 +1,56 @@
+ <!-- Features Teaser - MOB-50 -->
+    <div class="carousel clearfix">
+      <h2 class="section-title">{{title}}</h2>
+      <div class="carousel-wrapper">
+        <div id="slider">
+          <div class="slider-wrapper">
+            {{#each pictureMaps}}
+              <div class="slide-item" style="display: block;">
+                <figure>
+                  <a href="{{url}}">
+                      <img src="{{imageUrl}}" alt="{{alttext}}" title="{{title}}"/>
+                    </a>
+                </figure>
+                <h2>{{caption}}</h2>
+              </div>
+            {{/each}}
+          </div>
+          <div id="slide-prev" class="slide-nav">
+            <span class="icon-arrow-left"/>
+          </div>
+          <div id="slide-next" class="slide-nav">
+            <span class="icon-arrow-right"/>
+          </div>
+        </div>
+        <div id="slider-nav">
+          <ul id="slider-nav-position">
+            <li class="slider-nav-on"></li>
+            <li></li>
+            <li></li>    
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>    
+      $LAB.script("../resources/js/lib/swipejs.js").wait(function(){
+        var bullets = $('#slider-nav-position li');
+        var swipe = new Swipe(document.getElementById('slider'), {
+          speed: 400,
+          auto: 3000,
+          callback: function(event, index, elem) {
+            var i = bullets.length;
+            while (i--) {
+              bullets[i].className = ' ';
+            }
+            bullets[index].className = 'slider-nav-on'; 
+          }
+        });
+        $('#slide-prev').click(function(){
+          swipe.prev();
+        });
+        $('#slide-next').click(function(){
+          swipe.next();
+        });
+      });     
+    </script>
