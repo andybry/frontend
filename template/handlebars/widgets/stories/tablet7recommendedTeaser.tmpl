@@ -1,0 +1,80 @@
+  <!-- Teaser Recommended - MOB-73 -->
+ <script>
+ Handlebars.registerHelper("eachevenodd", function(array, even, odd, fn) {
+	  if (array && array.length > 0) {
+	    var buffer = "";
+	    for (var i = 0, j = array.length; i < j; i++) {
+	      var item = array[i];
+
+	      // we'll just put the appropriate stripe class name onto the item for now
+	      item.stripeClass = (i % 2 == 0 ? even : odd);
+
+	      // show the inside of the block
+	      buffer += fn(item);
+	    }
+
+	    // return the finished buffer
+	    return buffer;
+	  }
+	});
+ </script>
+  
+      <div class="recommended-teaser clearfix">
+      <h2 class="section-title">{{title}}</h2>
+         {#each articleMaps}
+              {{#if articleLeft}}
+                 
+              {{/if}}
+              {{#if isButtonPanel}}
+                 <div class="buttons-panel clearfix">
+                   <a href="#popupRecommended" data-role="button" data-rel="popup">Improve these suggestions</a>
+                  </div>
+              {{/if}}
+         {{/each}}   
+         
+         
+         
+         <div class="item-container left">
+         <figure class="inline-image">
+             <a href="#"><img src="http://i4.mirror.co.uk/incoming/article1733639.ece/ALTERNATES/s482b/Michelle+Williams.jpg" alt="Lovers: Oscar and Reeva" class="" title="Lovers: Oscar and Reeva"></a>
+         </figure>
+         <div class="teaser-content">
+             <ul class="tools">
+                <li>
+                  <a href="index.html" class="more">PRIMARY TOPIC</a>
+                </li>     
+                <li class="last">
+                  <time datetime="2013-01-18T15:26+0000" data-storiestime="1358522760000">30 minutes ago</time>
+                </li>
+            </ul>
+            <h3 class="teaser-title"><a href="#">Michelle Williams is back in work and smiling after 'split from Jason Segal'</a></h3>
+          </div>
+          </div> 
+          
+          
+          <div class="item-container right">
+           <figure class="inline-image">
+               <a href="#"><img src="http://i2.mirror.co.uk/incoming/article1715056.ece/ALTERNATES/s482b/Pippa Middleton-1715056.jpg" alt="Pippa Middleton" class="" title="Pippa Middleton"></a>
+           </figure>
+           <div class="teaser-content">
+               <ul class="tools">
+                  <li>
+                    <a href="index.html" class="more">PRIMARY TOPIC</a>
+                  </li>     
+                  <li class="last">
+                    <time datetime="2013-01-18T15:26+0000" data-storiestime="1358522760000">30 minutes ago</time>
+                  </li>
+              </ul>
+              <h3 class="teaser-title"><a href="#">"She is absolutely charming": Mum of Pippa Middleton's new boyfriend is thrilled at romance</a></h3>
+            </div>
+           </div>
+           
+           <div class="row-clear"></div>
+             
+            
+
+
+
+             
+            
+      </div><!-- /Teaser Recommended -->

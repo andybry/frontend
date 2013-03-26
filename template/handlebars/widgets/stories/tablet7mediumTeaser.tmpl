@@ -1,6 +1,11 @@
-{{#each articleMaps}}
-    
-    <div class="medium-teaser clearfix">
+<!-- medium teaser with 2 views: MOB-52, MOB-83 -->
+
+{{#each articleMaps}}  
+    {{#if showIntro}}
+      <div class="medium-teaser clearfix">
+    {{else}}
+      <div class="medium-teaser v2 clearfix">  
+    {{/if}}  
       <div class="inner-teaser">
          {{#if showImage}}
 	         <figure class="inline-image">
@@ -24,9 +29,10 @@
                 </li>
             </ul>
             <h3 class="teaser-title"><a href="{{url}}">{{title}}</a></h3>
-            <p class="lead-text"><a href="{{url}}">{{intro}}</a></p>
+            {{#if showIntro}}
+              <p class="lead-text"><a href="{{url}}">{{intro}}</a></p>
+            {{/if}}  
           </div>
        </div>   
     </div>
-
 {{/each}}

@@ -17,11 +17,20 @@
   <%-- medium teaser --%>
   <jsp:include page="${widgetBase}/stories/tablet7mediumTeaser.jsp" />
 
+  <%-- Hot Topics - MOB-20 --%>
+  <jsp:include page="${widgetBase}/stories/tablet7hotTopicsList.jsp" />
+
   <%-- small teaser --%>
   <jsp:include page="${widgetBase}/stories/tablet7smallTeaser.jsp" />
   
-    <%-- picture navigator --%>
+  <%-- picture navigator - MOB-50 --%>
   <jsp:include page="${widgetBase}/stories/tablet7pictureNavigator.jsp" />
+
+  <%-- picture navigator - MOB-69 --%>
+  <jsp:include page="${widgetBase}/stories/tablet7opinionTeaser.jsp" />
+  
+  <%-- picture navigator - MOB-69 --%>
+  <jsp:include page="${widgetBase}/stories/tablet7mostReadList.jsp" />
 
   </div><!-- /content -->
   

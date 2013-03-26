@@ -7,6 +7,7 @@
       "title": "\"Why would he kill my angel?\" Distraught mum of Oscar Pistorius' girlfriend is baffled by killing.",
       "intro": "Distraught June Steenkamp, 66, spoke out as it was revealed her daughter Reeva's skull had been crushed.",
       "showImage": true,
+      "showIntro": true,
       "dateTimeInMs": 1363973484000,
       "dateStringFortimeElement": "2013-03-22T17:31+0000",
       "timeAgoString": "49 mintues",

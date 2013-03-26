@@ -1,0 +1,30 @@
+<!-- Opinion Teaser - MOB 69 -->
+<div class="opinion-teaser clearfix">
+  <h2 class="section-title">{{title}}</h2>
+ 
+ {{#each entryMaps}} 
+  <div class="entry-wrapper">
+    {{#with authorMaps}}
+    <div class="left-col">
+      <figure>
+        <img class="" alt="{{name}}" title="{{name}}" src="{{avatarUrl}}">
+      </figure>
+    </div>
+    {{/with}}
+    {{#with postMaps}}
+    <div class="teaser-content">
+        <h3>{{title}}</h3>
+        <p>
+          <span class="red-1">&#8220;</span>{{text}}<span class="red-1">&#8221;</span>
+        </p>
+         <ul class="tools">
+            <li class="last">
+              <time datetime="{{dateStringFortimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}}</time>
+            </li>
+        </ul>
+      </div>
+     {{/with}} 
+  </div>
+ {{/each}}
+  
+</div>
