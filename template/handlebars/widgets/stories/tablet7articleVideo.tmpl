@@ -13,7 +13,7 @@
             <img src="../skins/css/images/{{videoLogo}}" alt="" title=""/>
           {{/if}}
         </figure>
-        {{#videoMap}}
+        {{#article}} {{#fields}}
         <div class="article-videodate-wrapper clearfix">
         	<p class="videodate-year">{{dateMonthYear}}</p>
 			<h3 class="videodate-day">{{dateDayWeek}}</h3>
@@ -22,20 +22,20 @@
           <!-- Start of Video Player -->
             <div class="video-wrapper">
               {{#if isYoutube}}
-                <iframe src="{{youtubeUrl}}" frameborder="0" allowfullscreen></iframe>
+                <iframe src="http://www.youtube.com/embed/{{youtubeUrl}}" frameborder="0" allowfullscreen></iframe>
               {{/if}}
               {{#if isBrightcove}}
                 <object id="" class="BrightcoveExperience">
                   <param name="bgcolor" value="#FFFFFF" />
                   <param name="width" value="100%" />
                   <param name="height" value="100%" />
-                  <param name="playerID" value="{{brightcovePlayerId}}" />
-                  <param name="publisherID" value="{{brightcovePublisherId}}" />
+                  <param name="playerID" value="{{playerid}}" />
+                  <param name="publisherID" value="{{publisherid}}" />
                   <param name="isVid" value="true" />
                   <param name="isUI" value="true" />
                   <param name="dynamicStreaming" value="true" />
                   <param name="htmlFallback" value="true" />
-                  <param name="@videoPlayer" value="{{brightcoveVideoPlayer}}" />
+                  <param name="@videoPlayer" value="{{videoid}}" />
                   <!-- params for Universal Player API -->
                   <param name="includeAPI" value="true" />
                   <param name="templateLoadHandler" value="onTemplateLoaded" />
@@ -47,7 +47,7 @@
             
         </div><!-- End of article-video -->
         <h3>{{caption}}</h3>
-        {{/videoMap}}
+        {{/fields}} {{/article}}
     </div>
   </div>
 </div>
