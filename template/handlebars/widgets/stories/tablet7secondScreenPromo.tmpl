@@ -1,0 +1,36 @@
+<!-- Second Screen Promo Units - MOB-21 -->
+<div class="promo-unit clearfix">
+  <div class="promo-color-wrap top"></div>
+  {{#promo}}
+  <div class="promo-content {{promoClass}} clearfix">
+    <div class="promo-section clearfix">
+    	<figure {{#if isPromoSmall}} class="vert-center" {{/if}}>
+    		<img src="../skins/css/images/{{logoImageName}}" />        		
+    	</figure>
+    	<h3 {{#if isPromoSmall}} class="vert-center" {{/if}}>{{caption}}</h3>
+    </div>
+    {{#if hasImage}}
+    <div class="promo-image clearfix">
+      <figure>
+         <a href="{{url}}"><img src="{{imageUrl}}" alt="{{imageAltText}}" class="" title="{{imageTitle}}"></a>
+        <figcaption>{{imageCaption}}</figcaption>
+      </figure>
+    </div>  
+    {{/if}}      
+  </div> 
+  {{/promo}}
+  <div class="promo-color-wrap bottom"></div>
+</div>
+
+
+
+<script>
+  $LAB.script("../resources/js/lib/tm.verticalCenter.js").wait(function() {
+  //IMPORTANT less is not going to compile like this in production so the refresh should be removed.
+    less.refresh();
+    $(".vert-center").middle();
+    $(window).on('resize',function() {
+      $(".vert-center").middle();     
+        });
+      });
+</script>
