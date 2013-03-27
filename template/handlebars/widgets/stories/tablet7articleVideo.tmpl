@@ -1,0 +1,85 @@
+<!-- video article --> 
+
+<script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+<div class="article">
+  <div class="article-header">
+  	<h1>{{title}}</h1>
+  </div>
+  <div class="article-body clearfix">
+  	<div class="article-video-wrapper {{videoClass}} clearfix">
+  		<figure>
+          {{#if subType}}
+            <img src="../skins/css/images/{{videoLogo}}" alt="" title=""/>
+          {{/if}}
+        </figure>
+        {{#videoMap}}
+        <div class="article-videodate-wrapper clearfix">
+        	<p class="videodate-year">{{dateMonthYear}}</p>
+			<h3 class="videodate-day">{{dateDayWeek}}</h3>
+        </div>
+        <div class="article-video clearfix">     		        	
+          <!-- Start of Video Player -->
+            <div class="video-wrapper">
+              {{#if isYoutube}}
+                <iframe src="{{youtubeUrl}}" frameborder="0" allowfullscreen></iframe>
+              {{/if}}
+              {{#if isBrightcove}}
+                <object id="" class="BrightcoveExperience">
+                  <param name="bgcolor" value="#FFFFFF" />
+                  <param name="width" value="100%" />
+                  <param name="height" value="100%" />
+                  <param name="playerID" value="{{brightcovePlayerId}}" />
+                  <param name="publisherID" value="{{brightcovePublisherId}}" />
+                  <param name="isVid" value="true" />
+                  <param name="isUI" value="true" />
+                  <param name="dynamicStreaming" value="true" />
+                  <param name="htmlFallback" value="true" />
+                  <param name="@videoPlayer" value="{{brightcoveVideoPlayer}}" />
+                  <!-- params for Universal Player API -->
+                  <param name="includeAPI" value="true" />
+                  <param name="templateLoadHandler" value="onTemplateLoaded" />
+                  <param name="templateReadyHandler" value="onTemplateReady" />
+                </object>
+              {{/if}}         
+            </div>
+          <!-- End of Video Player -->
+            
+        </div><!-- End of article-video -->
+        <h3>{{caption}}</h3>
+        {{/videoMap}}
+    </div>
+  </div>
+</div>
+<!-- /video article -->
+
+<script type="text/javascript">brightcove.createExperiences();</script>
+<script type="text/javascript" src="http://admin.brightcove.com/js/api/SmartPlayerAPI.js"></script>    
+<script type="text/javascript">
+	var bclArray = [];
+	var $BCLbodyContent = $('.article-video-wrapper');
+	var $BCLvideoWrapper = $('.video-wrapper');
+	var $BCLcontainingBlock = $('.article-video');
+	var onTemplateReady = function(evtObj) {  
+	  var BCL = {};
+	  BCL.currentPlayerWidth = 1   
+	  var experienceID = evtObj.target.experience.id;
+	  BCL.experienceId = experienceID;
+	  BCL.player = brightcove.api.getExperience(experienceID);
+	  BCL.experienceModule = BCL.player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
+	  BCL.videoModule =  BCL.player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
+	  BCL.resizePlayer = function(newWidth) {
+	      $BCLcontainingBlock.width($BCLbodyContent.width() * newWidth);
+	      BCL.experienceModule.setSize($BCLcontainingBlock.width(),$BCLcontainingBlock.height());
+	      BCL.currentPlayerWidth = newWidth;
+	  }
+	  bclArray.push(BCL);
+	}
+	$(window).on('resize',function() {
+	  var length = bclArray.length;
+	  for (var i = 0; i < length; i++) {			
+	    var BCL = bclArray[i];
+		BCL.resizePlayer(BCL.currentPlayerWidth);
+	  }      
+	}); 
+</script>
