@@ -13,6 +13,7 @@
 
   <%-- search results - MOB-97 --%>
   <jsp:include page="${widgetBase}/stories/tablet7searchResultsList.jsp" />
+  
 
   </div><!-- /content -->
   
@@ -20,7 +21,7 @@
   </div><!-- /footer -->
   
 </div><!-- /page -->
-
+<jsp:include page="footer.jsp" />
 </body>
 
-<jsp:include page="footer.jsp" />
+

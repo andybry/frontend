@@ -1,0 +1,25 @@
+<!-- Embedded in Article Picture Poll - MOB-107  -->
+<!-- PLEASE NOTE: that it will work properly only when embedded into an article i.e. <div class="article"> ...</div> -->
+
+<div id="{{pollId}}" class="poll-pictures clearfix">
+  <h3>{{pollQuestion}}</h3>
+  {{#each optionMaps}}
+    {{#if topScore}}
+      <a href="#" class="poll-item top-score">
+    {{else}}
+      <a href="#" class="poll-item"> 
+    {{/if}}   
+      <span class="val">{{votedPercentValue}}%</span>
+        {{#with imageMap}}  
+          <img src="{{imageUrl}}" alt="{{alttext}}" title="{{title}}"/>
+        {{/with}}
+      <span class="caption">{{caption}}</span>
+    </a>
+  {{/each}}
+  <script>
+    $("#{{pollId}} .poll-item").click(function(){
+      $("#{{pollId}} .val").css("display", "block");
+      $("#{{pollId}} .top-score").addClass('highscore');
+    });
+  </script>
+</div>
