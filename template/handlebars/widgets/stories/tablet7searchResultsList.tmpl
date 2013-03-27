@@ -1,0 +1,40 @@
+<!-- MOB-97 Front-end - Search -->
+<div id="search-panel">
+  <ul class="navigation-list">
+    <li class="last">
+          <form id="" action="">
+            <i class="icon-search"></i>
+            <input type="text" name="" id="search" value="" placeholder="Search...">
+          </form> 
+    </li>
+  </ul>
+</div>
+
+<div class="search-criteria">
+  <span>Search Results </span><span class="grey-1">for </span><span class="red-1">{{searchCriteria}}</span>
+</div>
+
+<div class="sort-by">
+  <span>Sort By:</span>
+  <a href="#" class="selected">NEWEST</a>
+  <a href="#">MOST RELEVANT</a>
+  <a href="#">OLDEST</a>
+</div>
+{{#each resultMaps}}
+  <div class="search-result-item">
+    <h2 class="title"><a href="{{url}}">{{title}}</a></h2>
+    <ul class="tools">
+        <li>
+          {{#with topicMap}}
+            <a href="url" class="more">{{name}}</a>
+          {{/with}}  
+        </li>     
+        <li class="last">
+          <time datetime="{{dateStringForTimeElement}}" data-storiestime="{{dateTimeInMs}}">{{dateString}}</time>
+        </li>
+    </ul>
+    <p>
+      {{intro}}
+    </p>
+  </div>
+{{/each}}
