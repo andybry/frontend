@@ -3,55 +3,54 @@
 {
   "title": "Recommended for you",
   "articleMaps": [
-                { 
-                  "articleLeft": {
-                      "url": "http://www.mirror.co.uk/news/world-news/reeva-steenkamp-mum-model-shot-1715532",
-                      "title": "\"Why would he kill my angel?\" Distraught mum of Oscar Pistorius' girlfriend is baffled by killing.",
-                      "intro": "Distraught June Steenkamp, 66, spoke out as it was revealed her daughter Reeva's skull had been crushed.",
+          {
+              "typeTeaser": "true",
+              "articleLeft":  {
+                      "url": "#",
+                      "title": "Michelle Williams is back in work and smiling after 'split from Jason Segal'",
                       "showImage": true,
                       "dateTimeInMs": 1363973484000,
-                      "dateStringFortimeElement": "2013-03-22T17:31+0000",
+                      "dateStringForTimeElement": "2013-03-22T17:31+0000",
                       "timeAgoString": "49 mintues",
                       "imageMap": {
                           "id": 1715733,
                           "showPictureCaption": false,
                           "inpageStyleClass": "",
                           "alttext": "Lovers: Oscar and Reeva",
-                          "title": "Lovers: Oscar and Reeva",
-                          "imageUrl": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva%20Steenkamp%20and%20Oscar%20Pistorius-1715733.jpg"
+                          "title": "Michelle Williams is back in work and smiling after 'split from Jason Segal'",
+                          "imageUrl": "http://i4.mirror.co.uk/incoming/article1733639.ece/ALTERNATES/s482b/Michelle+Williams.jpg"
                       },
                       "topicMap": {
-                          "name": "Reeva Steenkamp",
-                          "url": "http://www.mirror.co.uk/all-about/reeva%20steenkamp"
+                          "name": "Michelle Williams",
+                          "url": "http://www.mirror.co.uk/all-about/michelle%20williams"
                       }
-                  }
-                  "articleRight": {
-                      "url": "http://www.mirror.co.uk/news/world-news/reeva-steenkamp-mum-model-shot-1715532",
-                      "title": "\"Why would he kill my angel?\" Distraught mum of Oscar Pistorius' girlfriend is baffled by killing.",
-                      "intro": "Distraught June Steenkamp, 66, spoke out as it was revealed her daughter Reeva's skull had been crushed.",
-                      "showImage": true,
-                      "dateTimeInMs": 1363973484000,
-                      "dateStringFortimeElement": "2013-03-22T17:31+0000",
-                      "timeAgoString": "49 mintues",
-                      "imageMap": {
-                          "id": 1715733,
-                          "showPictureCaption": false,
-                          "inpageStyleClass": "",
-                          "alttext": "Lovers: Oscar and Reeva",
-                          "title": "Lovers: Oscar and Reeva",
-                          "imageUrl": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva%20Steenkamp%20and%20Oscar%20Pistorius-1715733.jpg"
-                      },
-                      "topicMap": {
-                          "name": "Reeva Steenkamp",
-                          "url": "http://www.mirror.co.uk/all-about/reeva%20steenkamp"
-                      }
-                    }  
-                },
-                {
-                  "isButtonPanel": "true"
-                }
-                
-      ]
+              },
+              "articleRight":  {
+                        "url": "#",
+                        "title": "\"She is absolutely charming\": Mum of Pippa Middleton's new boyfriend is thrilled at romance",
+                        "showImage": true,
+                        "dateTimeInMs": 1363973484000,
+                        "dateStringForTimeElement": "2013-03-22T17:31+0000",
+                        "timeAgoString": "49 mintues",
+                        "imageMap": {
+                            "id": 1715733,
+                            "showPictureCaption": false,
+                            "inpageStyleClass": "",
+                            "alttext": "Pippa Middleton",
+                            "title": "Pippa Middleton",
+                            "imageUrl": "http://i2.mirror.co.uk/incoming/article1715056.ece/ALTERNATES/s482b/Pippa Middleton-1715056.jpg"
+                        },
+                        "topicMap": {
+                            "name": "Pippa Middleton",
+                            "url": "http://www.mirror.co.uk/all-about/pippa%20middleton"
+                        }
+             }
+           },       
+           {
+              "typePanel": "true"
+           }
+      
+     ]
 }
 </c:set>
 <shared:handlebars template="${template}" json="${json}" />
