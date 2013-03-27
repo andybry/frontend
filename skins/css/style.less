@@ -1650,7 +1650,11 @@ ul {
       }
     }    
     &.video {
+      .carousel-wrapper {
+        background-image: url(images/bkg1.png); 
+      }
       .section-logo {
+        display: none;
         .box-border-sizing;
         padding: 7.5%;
         position: absolute;
@@ -1661,11 +1665,13 @@ ul {
         }
       }
       .slider-videodate-wrapper {
+        display: none;
         padding: 0 5%;
-        position: absolute;
+        //position: absolute;
         width: 40%;
-        top: 55%;
+        padding-top: 25%;
         .box-border-sizing;
+        float: left;
         p {
           background-color:rgba(0,0,0,1);
           color: #ffffff;    
@@ -1689,96 +1695,177 @@ ul {
           #Fonts > .MirrorExtaCond-SemiBold (@lineHeight: 1em); 
           #pxtoem > .font-size( 16, 6 );
         }
-        @media only screen and (max-width : @mobileMaxWidthLandscape) {
-          display: none;
-        }
       }
       .slide-item {
         background: none;
         padding-top: 0px;
+        figure {
+          .box-border-sizing;
+          position: relative;
+          padding: 10px 15%;
+          .video-overlay {
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 15%;
+            right: 15%;
+            background-color:rgba(0,0,0,0.2);
+            .play-button {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin-left: -102px;
+              margin-top: -42px;              
+            }
+          }
+          @media only screen and (max-width : @mobileMaxWidthLandscape) {
+            width: 100%;
+            .box-border-sizing;
+            padding: 10px 15%;
+            float: clear;
+            .video-overlay {
+              left: 15%;
+              right: 15%;
+              .play-button {
+                width: 153px;
+                margin-left: -76px;
+                margin-top: -31px; 
+              }
+            }
+          }
+        }
         h2 {
           background: rgba(0,0,0, 0.5);
           padding: 10px 10%;
           //margin-top: 20px;
           .box-border-sizing;
         }
-          /* Slider Video */ 
-        .slider-video-wrapper {
-          padding: 10px 2.5% 10px 40%;
-          .box-border-sizing;   
-          @media only screen and (max-width : @mobileMaxWidthLandscape) {
-            padding: 10px 15%;
-          }
-        }
-        .slider-video {
-          width: 100%;     
-          float: left;
-          .sl-video-wrapper {
-            position: relative;
-            padding-top: 1px;
-            padding-bottom: 56.25%;
-            height: 0;
-            margin-bottom: 0px;
-            margin-top: 0;
-            width: 100%;
-            height: 100%;
-            iframe, div,embed, object, .BrightcoveExperience {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              left: 0;
-              top: 0;
-            }
-          }
-        }
-        @media only screen and (max-width : @mobileMaxWidthLandscape) {
-          padding-top: 5%;
-        }
       }
-      &.spy {
+      &.football_spy_video {
         .carousel-wrapper {
           background-image: url(images/matchbg.png);
         }
         .section-logo {
+          display: block;
           @media only screen and (max-width : @mobileMaxWidthLandscape) {
             padding: 10px 28%;
             width: 100%;
           }
         }
+        .slide-item {
+          figure {
+            -moz-box-sizing: border-box;
+            padding: 10px 2.5% 10px 0%;
+            width: 57.5%;
+            position: relative;
+            float: right;
+            .video-overlay {
+              position: absolute;
+              top: 10px;
+              bottom: 10px;
+              right: 4.34%;
+              left: 0%;
+              background-color:rgba(0,0,0,0.2);
+              .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -102px;
+                margin-top: -42px;              
+              }
+            }
+            @media only screen and (max-width : @mobileMaxWidthLandscape) {
+              width: 100%;
+              .box-border-sizing;
+              padding: 10px 15%;
+              float: clear;
+              .video-overlay {
+                left: 15%;
+                right: 15%;
+                .play-button {
+                  width: 153px;
+                  margin-left: -76px;
+                  margin-top: -31px; 
+                }
+              }
+            }
+          }
+          @media only screen and (max-width : @mobileMaxWidthLandscape) {
+            padding-top: 8%;
+          }
+        }
         .slider-videodate-wrapper {
+          display: block;
           h3 {
             color: #2e5f13;
           }
-        }
-      }
-      &.am {
-        .carousel-wrapper {
-          background-image: url(images/3ambackground.png); 
-        }
-        .slider-videodate-wrapper {
-          h3 {
-            color: #733296;
+          @media only screen and (max-width : @mobileMaxWidthLandscape) {
+            display: none;
           }
         }
       }
-      &.standard {
+      &.three_am_daily_video {
         .carousel-wrapper {
-          background-image: url(images/bkg1.png); 
+          background-image: url(images/3ambackground.png); 
         }
-        .section-logo {
-          display: none;
+        .section-logo {          
+          display: block;
+        }
+        .slide-item {
+          figure {
+            -moz-box-sizing: border-box;
+            padding: 10px 2.5% 10px 0%;
+            width: 57.5%;
+            position: relative;
+            float: right;
+            .video-overlay {
+              position: absolute;
+              top: 10px;
+              bottom: 10px;
+              right: 4.34%;
+              left: 0%;
+              background-color:rgba(0,0,0,0.2);
+              .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -102px;
+                margin-top: -42px;              
+              }
+            }
+            @media only screen and (max-width : @mobileMaxWidthLandscape) {
+              width: 100%;
+              .box-border-sizing;
+              padding: 10px 15%;
+              float: clear;
+              .video-overlay {
+                left: 15%;
+                right: 15%;
+                .play-button {
+                  width: 153px;
+                  margin-left: -76px;
+                  margin-top: -31px; 
+                }
+              }
+            }
+          }
+          @media only screen and (max-width : @mobileMaxWidthLandscape) {
+            padding-top: 8%;
+          }
         }
         .slider-videodate-wrapper {
-          display: none;
-        }
-        .slider-video-wrapper {
-          padding: 10px 15%;
+          display: block;
+          h3 {
+            color: #733296;
+          }
+          @media only screen and (max-width : @mobileMaxWidthLandscape) {
+            display: none;
+          }
         }
       }
       .slide-nav {
         margin: 0px;
-      }
- 
+      } 
     }
 
   }//Features teaser
