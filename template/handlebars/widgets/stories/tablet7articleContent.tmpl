@@ -1,0 +1,20 @@
+<!-- Article -->  
+<div class="article">
+  <div class="article-header">
+  	  <h1>{{article.fields.title}}</h1>
+    <ul class="tools">    	
+       <li class="time"><time datetime=""><a href="">{{article.publishedDateStr}}</a></time></li>
+       <li class="author">By <a href="" class="red-1">{{article.authorMaps.0.name}}</a></li>
+    </ul>
+    <figure class="inline-image clearfix ">
+      <a href="#"><img src="{{article.relatedElements.picturerel.0.article.fields.alternates.s615.mRelativeURI}}" alt="{{article.relatedElements.picturerel.0.summaryFields.caption.mValue}}" class="" title="{{article.relatedElements.picturerel.0.summaryFields.caption.mValue}}"></a>
+      <figcaption>
+      	<span>{{article.fields.leadtext}}</span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="article-body">
+    {{{article.fields.body}}}
+  </div>
+</div>
+<!-- /article --> 
