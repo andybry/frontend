@@ -1,0 +1,200 @@
+/*
+ * Progressive enhancement
+ */
+
+/* always force a scrollbar in non-IE */
+html{overflow-y:scroll;}
+pre{
+	word-wrap:break-word; /* IE */
+}
+
+/* colors for form validity */
+input:valid, textarea:valid {}
+input:invalid, textarea:invalid{
+	border-radius:1px;
+	-moz-box-shadow:0px 0px 5px red;
+	-webkit-box-shadow:0px 0px 5px red;
+	box-shadow:0px 0px 5px red;
+}
+.no-boxshadow input:invalid,.no-boxshadow textarea:invalid{
+	background-color:#f0dddd;
+}
+
+/* bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img{-ms-interpolation-mode:bicubic;}
+
+/* Hide only visually, but have it available for screenreaders
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.visuallyhidden{
+	position:absolute !important;
+	clip:rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip:rect(1px, 1px, 1px, 1px);
+}
+
+/* Fix clearfix:blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix{zoom:1;}
+
+/*
+ * print styles
+ * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/
+ */
+@media print{
+  *{text-shadow:none !important;}
+  @page{margin:0.5cm;}
+}
+
+/* Fireplace fix to display horizontal only when browser width is less than 950px */
+html {overflow-x: hidden;}
+@media screen and (max-width:950px){
+  html{
+    overflow-x: auto;
+  }
+}
+
+/* For general iPad layouts */
+@media only screen and (device-width: 768px) { 
+  
+  .takeover.fireplace {
+    width: 1300px;
+    overflow: hidden;
+    left: 0;
+    margin-left: 0;
+  }
+  .takeover.fireplace img {
+    margin-left: -300px;
+  }
+  
+}
+
+/**************************** extend/override Blueprint ****************************/
+tbody tr:nth-child(even) td {
+  background: none;
+}
+
+/**************************** css3 ****************************/
+
+	/* mega dropdown */
+.tab:first-child {
+	border-color: #d8d8d8;
+}
+
+.drop .box:last-child {
+	margin-bottom: 0;
+}
+  /* search box */
+header .search-box input[type="text"]::-webkit-input-placeholder {
+  line-height: 1.5em;
+}
+  /* related widget */
+.related-widget dd:last-child {
+  border: 0;
+  padding-left: 0;
+}
+
+/* Ipad Popup */
+.touch #WrapperPopup {
+  background: rgba(0, 0, 0, 0.6); 
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.touch .ipad-promo {
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+  top: 20%;
+}
+.touch .ipad-promo img {
+  margin: 0 auto;
+}
+
+
+/* Slider */
+
+/* Component containers
+----------------------------------*/
+
+.cssgradients .ui-widget-content { 
+	background-image: -moz-linear-gradient(top, #5A6466, #e4e4e4);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#5A6466), to(#e4e4e4));
+	background-image: -o-linear-gradient(top, #5A6466, #e4e4e4);
+	background-image: linear-gradient(top, #5A6466, #e4e4e4); 
+}
+.borderradius .ui-widget-content { 
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius:  5px;
+}
+.ie9 .ui-widget-content, .ie8 .ui-widget-content {
+	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAICAgICAgICAgICAgICAwQDAgIDBAUEBAQEBAUGBQUFBQUFBgYGBgcGBgYICAkJCAgLCwsLCwsLCwsLCwsLCwv/2wBDAQMDAwUEBQgGBggMCggKDA4NDQ0NDg4LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwv/wAARCAAFAIwDAREAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAUHCP/EACUQAAAEBgIBBQAAAAAAAAAAAAABAgYDBBhTo9EFERIHCCExgf/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAYEQEAAwEAAAAAAAAAAAAAAAAAARESAv/aAAwDAQACEQMRAD8A3Vy/t1Z8bleRiz0ePPzsSYiKmp6MnyiRYhqPyWszUZmaj+fsbtywjqcGJbxlsLTEFODEt4y2FmIKcGJbxlsLMQU4MS3jLYWYgpwYlvGWwsxBTgxLeMthZiCnBiW8ZbCzEFODEt4y2FmIKcGJbxlsLMQU4MS3jLYWYgpwYlvGWwsxBTgxLeMthZiCnBiW8ZbCzEFODEt4y2FmIKcGJbxlsLMQU4MS3jLYWYhZ7N9BZKS4qJC4N3OHgJM5lalSUktcKGazSntfiiIkuzLovwS2o4f/2Q==);
+}
+.ie7 .ui-widget-content {
+	background-color: #5A6466;
+}
+
+/* Interaction states
+----------------------------------*/
+
+.cssgradients .ui-state-default, .cssgradients .ui-widget-content .ui-state-default, .cssgradients .ui-widget-header .ui-state-default { 
+	background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#fefefe), to(#e4e4e4));
+	background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+	background-image: linear-gradient(top, #fefefe, #e4e4e4); 
+}
+.borderradius .ui-state-default, .borderradius .ui-widget-content .ui-state-default, .borderradius .ui-widget-header .ui-state-default{
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+
+.ie9 .ui-state-default, .ie8 .ui-state-default {
+	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAATABMDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQj/xAAlEAABAwMDBAMBAAAAAAAAAAABAAIDBBESBRMxFDJBcSEiUWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A6W3Otc55eRSg2jaw2z/pI8J0cUYvSudDJ4sSQfYN1Vhcae9O7uiJHscgqQ1IAuT8ILUWs0W2N+ZkU3D2E8EIqEejzVLd/PDcu7Ej9KINLUqeF8DpHNu9g+ruCs3RoIp3uMwzx7boiDeREQf/2Q==);
+}
+.ie7 .ui-state-default {
+	background-color: #DADADA;	
+}
+.ie7 .amount li {
+	height: auto;
+	width: 14px;
+}
+.ie8 .amount li{
+	width: 14px;
+}
+.ie9 .ui-slider .ui-slider-handle, .ie8 .ui-slider .ui-slider-handle {
+	border: none;
+	width: 19px;
+	height: 19px;	
+}
+.ie7 .ui-slider .ui-slider-handle {
+	border: 1px solid #5A6466;	
+}
+.ui-widget :active { 
+	outline: none; 
+}
+.ui-slider { 
+	position: relative; 
+	text-align: left; 
+}
+.ui-slider .ui-slider-handle { 
+	position: absolute; 
+	z-index: 2; 
+	width: 15px;
+	height: 15px;
+	border: 1px solid #DADADA; 
+	cursor: default; 
+}
+.ui-slider-horizontal { 
+	margin: 0px 0px 0px 12px; 
+	height: 5px; 
+	width: 140px;
+	top: 15px;
+}
+.ui-slider-horizontal .ui-slider-handle { 
+	top: -7px; 
+	margin-left: -.6em; 
+}
