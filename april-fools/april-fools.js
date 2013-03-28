@@ -1,5 +1,5 @@
  var _aprilfoolcontent = '<div class="april-fool-info">' +
- '<div class="info"><img src="menu-text.jpg" ></div> </div>' +
+ '<div class="info"><img src="http://s3.amazonaws.com/tm-frontend/frontend/april-fools/menu-text.jpg" ></div> </div>' +
  '<div class="april-fool-menu"><div class="list"><ul>' +
  '<li data-id="ancient"><a href="#">Ancient</a></li>' +
  '<li data-id="ms-dos"><a href="#">MS Dos</a></li>' +
