@@ -18,7 +18,7 @@ padding: 8px 0;
 }
 
 .april-fool-menu {
-background-image: url(http://images.mirror.co.uk/collections/microsites/aprilfools.jpg);
+background-image: url("aprilfools.jpg");
 background-repeat: repeat-x;
 background-position: top;
 background-color: #414141 ;
@@ -91,7 +91,7 @@ background-position: 0 -2px;
 /* ********** Ancient ********** */
 
 body.ancient  {
-background: url("http://images.mirror.co.uk/collections/microsites/ancient-paper-bkg.jpg");
+background: url("ancient-paper-bkg.jpg");
 }
 
 .boxshadow .ancient .container {
@@ -206,7 +206,7 @@ background: rgba(239, 236, 231,0.9)
 
 /* ---------------------------  Logo  --------------------------- */
 .ancient .logo a {
-background: url("http://images.mirror.co.uk/collections/microsites/ancient-logo.png");
+background: url("ancient-logo.png");
 }
 
 .ancient .exclusive, 
@@ -748,7 +748,7 @@ background: #111;
 
 /* ---------------------------  Logo  --------------------------- */
 .ms-dos .logo a {
-background: url("http://images.mirror.co.uk/collections/microsites/dos-logo.gif");
+background: url("dos-logo.gif");
 }
 
 /*  --------------------------- Image effects  --------------------------- */
@@ -1210,7 +1210,7 @@ margin-top: 15px;
 
 /* ---------------------------  Logo  --------------------------- */
 .drunk .logo a {
-background: url("http://images.mirror.co.uk/collections/microsites/drunk-logo.png");
+background: url("drunk-logo.png");
 }
 
 /*  --------------------------- Image effects  --------------------------- */
@@ -1438,7 +1438,7 @@ background: #111;
 
 /* ---------------------------  Logo  --------------------------- */
 .x-ray .logo a {
-background: url("http://images.mirror.co.uk/collections/microsites/x-ray-logo.png");
+background: url("x-ray-logo.png");
 filter: none;
 -webkit-filter: grayscale(0);
 
