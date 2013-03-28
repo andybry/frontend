@@ -11,7 +11,7 @@
  
  $("body").prepend(_aprilfoolcontent);
  
- $("head").append('<link rel="stylesheet" type="text/css" href="filters.css"/>');
+ $("head").append('<link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/tm-frontend/frontend/april-fools/april-folls.js"/>');
   
  $(".april-fool-menu li").click(function(){
   $(this).addClass("active");
