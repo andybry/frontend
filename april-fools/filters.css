@@ -1,0 +1,1705 @@
+@import url(http://fonts.googleapis.com/css?family=Bevan);
+@import url(http://fonts.googleapis.com/css?family=Redressed);
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
+
+/* ********** TOP BAR ********** */
+
+.april-fool-info {
+background-color: #212121;
+overflow: hidden;
+height: 105px;
+}
+.april-fool-info .info {
+width: 950px;
+margin: 0 auto;
+padding: 8px 0;
+}
+
+.april-fool-menu {
+background-image: url(http://images.mirror.co.uk/collections/microsites/aprilfools.jpg);
+background-repeat: repeat-x;
+background-position: top;
+background-color: #414141 ;
+}
+
+.april-fool-menu .list {
+width: 950px;
+margin: 0 auto;
+font-family: 'MirrorExtraCondBlack',Arial,sans-serif;
+font-weight: 100;
+font-size: 35px;
+
+}
+.april-fool-menu .list ul {
+list-style: none;
+margin: 0;
+padding: 35px 0;
+}
+
+.april-fool-menu .list li {
+float: left;
+margin-right: 45px;
+height: 33px;
+}
+.april-fool-menu .list li a{
+color: #a9a9a9;
+}
+.april-fool-menu .list li a:hover, .april-fool-menu .list li.active a {
+color: #fff;
+text-decoration: none;
+}
+.april-fool-menu .list li.last{
+margin-right: 0;
+}
+
+.april-fool-menu .active {
+	position: relative;
+	background: #414141;
+}
+.april-fool-menu .active:after {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.april-fool-menu .active:after {
+	border-color: rgba(65, 65, 65, 0);
+	border-top-color: #414141;
+	border-width: 10px;
+	left: 50%;
+	margin-left: -10px;
+}
+.container {
+margin-top: 20px
+}
+
+.april-fool-menu .btn-img {
+background-image: url(http://images.mirror.co.uk/collections/microsites/btn-close.jpg);
+background-repeat: no-repeat;
+padding-left: 35px;
+background-position: 0 -2px;
+}
+
+/* ********** TOP BAR ********** */
+
+/* ********** Ancient ********** */
+
+body.ancient  {
+background: url("http://images.mirror.co.uk/collections/microsites/ancient-paper-bkg.jpg");
+}
+
+.boxshadow .ancient .container {
+box-shadow: none;
+}
+
+.ancient  .container {
+border-color: #d7c8b1;
+background: rgba(239,236,231,0.5);
+margin-top: 15px;
+}
+
+.ancient .ad, .ancient .top-story, 
+.ancient .weather ul, 
+.ancient .pic-viewer-thumbs, 
+.ancient .horoscope, 
+.ancient .epl, 
+.ancient .standfirst .box-heading, 
+.ancient .sm-promo-list, 
+.ancient .article-page .live-odds, 
+.ancient .article-box-heading.grey, 
+.ancient .splash, 
+.ancient .splash-image-led, 
+.ancient .splash-right, 
+.ancient .horoscope-tabs li, 
+.ancient .opta-tabs li  {
+border-color: #d7c8b1;
+background: rgba(239,236,231,0.3);
+}
+
+.ancient .lg-teaser h1, 
+.ancient .viewport-heading a, 
+.ancient .strip ul, 
+.ancient .ticker-swipe, 
+.ancient .takeover .container, 
+.ancient .splash .splash-inner, 
+.ancient .splash-right .splash-inner, 
+.ancient .horoscope-tabs .selected, 
+.ancient .splash-image-led h1 a, 
+.ancient .container, 
+.ancient .article-page .article figure figcaption, 
+.ancient .top-write, 
+.ancient .login ul, 
+.ancient .opta-tabs .active, 
+.ancient #page .tabs-article .tab_content, 
+.ancient #page .tabs-article ul.tabs li.active a, 
+.ancient footer {
+border-color: #d7c8b1;
+background: rgba(239,236,231,0.5);
+}
+
+.ancient .btn, 
+.ancient .poll-result, 
+.ancient .date-picker input[type="submit"], 
+.ancient .sm-promo-list h3,
+.ancient .errormessage .search-box input[type="submit"], 
+.ancient .search-results .search-box input[type="submit"], 
+.ancient .article-box-heading.red, 
+.ancient .opinions-heading, 
+.no-js .ancient .tab>a:hover, 
+.touch .ancient .tab>a:hover, 
+.ancient .tab .active, 
+.ancient .tab.drop-hover>a, 
+.ancient .tab.drop-hover>a:hover {
+background: #000;
+}
+
+
+/* mirror red - fill */
+.cssgradients .ancient .tab > .active, 
+.touch.cssgradients .ancient .tab > .active, 
+.cssgradients .ancient .drop-hover > a, 
+.touch.cssgradients .ancient .tab > a:hover {
+background: #000;
+}
+
+.cssgradients .ancient .nav-main > ul,
+.cssgradients .ancient .search-box {
+border-color: #d7c8b1;
+background: rgba(239,236,231,0.9);
+}
+.ancient .tab > a {
+border-color: #d7c8b1 #d7c8b1 #d7c8b1 #f1eee9;
+}
+.ancient .nav-main {
+border-color: #d7c8b1;
+}
+
+.ancient .box-bottom {
+border-color: #d7c8b1;
+background: rgba(239,236,231,0.5);
+}
+
+.ancient .lg-teaser h1, 
+.ancient .viewport-heading a, 
+.ancient .strip ul, 
+.ancient .ticker-swipe, 
+.ancient .splash .splash-inner, 
+.ancient .splash-right .splash-inner,
+.ancient .horoscope-tabs .selected, 
+.splash-image-led h1 a, 
+.ancient .article-page .article figure figcaption, 
+.ancient .top-write, 
+.ancient .login ul, 
+.ancient .opta-tabs .active, 
+.ancient #page .tabs-article .tab_content, 
+.ancient #page .tabs-article ul.tabs li.active a, 
+.ancient footer {
+background: rgba(239, 236, 231,0.9)
+}
+
+
+/* ---------------------------  Logo  --------------------------- */
+.ancient .logo a {
+background: url("http://images.mirror.co.uk/collections/microsites/ancient-logo.png");
+}
+
+.ancient .exclusive, 
+.ancient .fb-like-box, 
+.ancient iframe, 
+.ancient .label, 
+.ancient .logo-s, 
+.ancient .HPP .strip-rec-link-title, 
+.ancient .ob_org_header div,
+.ancient .headline-teaser li, 
+.ancient .container li, 
+.ancient .container ol, 
+.ancient .container ul, 
+.ancient .more, 
+.ancient footer a, 
+.ancient .ad, .ancient .ir {
+filter: url(filters.svg#old-timey); /* Firefox 3.5+ */
+-webkit-filter: sepia(100%) blur(0.045em) grayscale(50%);
+   -moz-filter: sepia(100%) blur(0.045em) grayscale(50%);
+    -ms-filter: sepia(100%) blur(0.045em) grayscale(50%);
+     -o-filter: sepia(100%) blur(0.045em) grayscale(50%);
+        filter: sepia(100%) blur(0.045em) grayscale(50%);
+}
+.ancient .container img {
+filter: url(filters.svg#old-timey); /* Firefox 3.5+ */
+-webkit-filter: sepia(100%) blur(0.045em) grayscale(50%);
+   -moz-filter: sepia(100%) blur(0.045em) grayscale(50%);
+    -ms-filter: sepia(100%) blur(0.045em) grayscale(50%);
+     -o-filter: sepia(100%) blur(0.045em) grayscale(50%);
+        filter: sepia(100%) blur(0.045em) grayscale(50%);
+        filter: sepia(100%);
+}
+
+.ancient .container img:hover {
+filter: url(filters.svg#old-timey); /* Firefox 3.5+ */
+-webkit-filter: sepia(0%) blur(0em) grayscale(0%);
+   -moz-filter: sepia(0%) blur(0em) grayscale(0%);
+    -ms-filter: sepia(0%) blur(0em) grayscale(0%);
+     -o-filter: sepia(0%) blur(0em) grayscale(0%);
+        filter: sepia(0%) blur(0em) grayscale(0%);
+}
+
+.ancient .container img {
+border: none !important;
+}
+.ancient .article a, 
+.ancient .channel-hdr a, 
+.ancient .channel-hdr a:hover.no-link, 
+.fontface .ancient .channel-hdr a, 
+.ancient .drop nav li a, 
+.fontface .ancient .weather-header h3, 
+.fontface .ancient .box-heading, 
+.fontface .ancient .small-promo-links h3,
+.fontface .ancient .opinions-heading h3, 
+.fontface .ancient .article-page .storylist h3,
+.fontface .ancient .article-page .related-widget h3, 
+.fontface .ancient .sm-promo-list h3,
+.fontface .ancient .horoscopes-intro h2, 
+.fontface .ancient .horoscopes-storylist h3,
+.fontface .ancient .horoscope-page h2, 
+.fontface .ancient .channel-hdr, 
+.fontface .ancient .drop nav li, 
+.fontface .ancient .drop nav li a, 
+.fontface .ancient .drop h3,
+.fontface .ancient .refine-search h4, 
+.fontface .ancient .google-adsense h3, 
+.ancient .vg310tickets h3, 
+.ancient .vg230tickets h3 {
+font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+font-weight: normal;
+color: #111;
+}
+
+.ancient a, 
+.ancient a:hover, 
+.ancient .sm-promo-list .more, 
+.ancient .drop a, 
+.ancient .channel-headline, 
+.ancient .channel-msg, 
+.ancient .recommendations, 
+.ancient .login, 
+.ancient .search-top .search-sort a, 
+.ancient .mirror-apps .channel-hdr a.support {
+color: #111;
+}
+
+.fontface .ancient header time a, 
+.fontface .ancient .tab>a,
+.fontface .ancient .mirror-apps-support .caption-text {
+font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+font-weight: normal;
+}
+.ancient .tab > a {
+padding: 2px 9px 0;
+}
+
+.ancient .channel-hdr a,
+.fontface .ancient .channel-hdr a { 
+	font-family: 'Bevan', arial, serif;
+	font-size: 54px;
+	color: #222;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	text-shadow:
+		1px 1px 0 #fff,
+		1px 1px 0 #fff,
+
+	-webkit-text-stroke: 1px transparent;  
+}
+.ancient .channel-headline a {
+	font-family: 'Bevan', arial, serif;
+	font-size: 50px;
+	color: #000;
+	letter-spacing:3px;
+	text-transform: uppercase;
+	text-shadow:
+		1px 1px 0 #fff,
+		1px 1px 0 #fff,
+		3px 3px 0 #000,
+		3px 3px 0 #000;
+	-webkit-text-stroke: 1px transparent; 
+}
+
+.ancient .box-heading {
+	font-family: 'Bevan', arial, serif;
+	color: #222;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-size: 18px;   
+}
+
+.fontface .ancient .hot-topics h2 {
+	font-family: 'Bevan', arial, serif;
+	font-size: 18px;
+	color: #000;
+	}
+
+.ancient .channel-frontpage .channel-msg {
+background: none;
+padding-left: 0px;
+}
+
+.ancient .channel-msg a{
+font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+font-weight: normal;
+font-size: 18px;
+}
+
+.ancient .hot-topics ul li a {
+font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+font-weight: normal;
+font-size: 14px;
+}
+
+
+.ancient .article.lg-teaser h1 a {
+	font-size: 28px;
+	line-height: 36px;
+}
+
+.ancient .article h2 a {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.ancient footer, 
+.ancient .box-bottom h5, 
+.ancient .box-bottom dt, 
+.ancient .search-sort li, 
+.ancient .square h5, 
+.ancient .standfirst .match .msg, 
+.ancient .standfirst .info, 
+.ancient .article p, 
+.ancient .article figcaption, 
+.ancient .competition-teaser p, 
+.ancient .sm-promo-inner p, 
+.ancient .five-col-news-teaser h5, 
+.ancient .recent-comments p, 
+.ancient .headline-teaser p, 
+.ancient .sm-horoscopes-list dd, 
+.ancient .tm-twitter .tweet .time, 
+.ancient .competition-quotes h4 span, 
+.ancient .competition-winners p, 
+.ancient .article-header h1 span, 
+.ancient .sm-horoscopes-teaser .tools, 
+.ancient .sm-horoscopes-list h5, 
+.ancient .small, 
+.ancient .horoscope-header .tools li, 
+.ancient .horoscope-header figcaption, 
+.ancient .horoscopes-list .sm-promo h4, 
+.ancient .horoscopes-list .sm-promo h5, 
+.ancient .horoscopes-intro p, 
+.ancient .horoscopes-list .sm-promo, 
+.ancient .sm-horoscopes-list p, 
+.ancient .image-credit, 
+.ancient .play-teaser .issue-date, 
+.ancient .play-teaser .issue-number, 
+.ancient .curated-hdr p, 
+.ancient .section-hdr p, 
+.ancient .weather form input[type="text"], 
+.ancient .date-picker input[type="text"], 
+.ancient .contactlist dl dd, 
+.ancient .contactlist address, 
+.ancient .weather form label,
+.ancient .competition-quotes blockquote, 
+.ancient .promo figcaption, 
+.ancient .promo p, 
+.ancient .article-header h3, 
+.ancient .recommended-seemore p, 
+.ancient .opinions blockquote a, 
+.ancient .col4 .opinions-list-vert blockquote a, 
+.ancient .related-widget dt, 
+.ancient .article-page .ancient .article .lead-text p, 
+.ancient .article-header .ancient .span-15-5 h5, 
+.ancient .player-rating td p.description, 
+.ancient .amount li, 
+.ancient .mirror-apps .features {
+color: #111;
+}
+
+.ancient .row {
+border-width: 20px 0 0;
+}
+
+/* Dark */
+.ancient .row, 
+.ancient .article img, 
+.ancient .carousel img, 
+.ancient .channel-hdr, 
+.ancient .four-col-teaser img, 
+.ancient .curated-hdr img, 
+.ancient .search-results h2, 
+.ancient .curated-thumb, 
+.ancient.five-col-teaser img, 
+.ancient .celebs img, 
+.ancient .quicklinks img, 
+.ancient .competition img, 
+.ancient .competition-teaser img, 
+.ancient .competition-teaser, 
+.ancient .competition-quotes, 
+.ancient.sm-promo-list img, 
+.ancient .kb-teaser img, 
+.ancient .columnists img, 
+.ancient .sm-horoscope-list img, 
+.ancient .smht-pic a, 
+.ancient.horoscope-page h2, 
+.ancient .row-thin, 
+.ancient .sm-horoscopes-profile, 
+.ancient .tm-twitter .tweet img, 
+.ancient .smht-pic a, 
+.ancient.col4 img, 
+.ancient .horoscope-header figure a img, 
+.ancient .horoscopes-profile-header a img, 
+.ancient .most-read img, 
+.ancient .horoscopes-storylist, 
+.ancient .tools .more, 
+.ancient .hot-topics a, 
+.ancient .box-bottom h5 a, 
+.ancient .related-widget dd a, 
+.ancient .pluck-login-withFacebook, 
+.ancient .just-sayin-wrapper, 
+.ancient .just-sayin .visor .video-box {
+border-color: #000;
+}
+
+/* Light */
+.ancient .ad, 
+.ancient .search-box input[type="text"], 
+.ancient .search-box input[type="text"]:focus, 
+.ancient .search-box input[type="submit"], 
+.ancient .search-box input[type="submit"]:focus, 
+.ancient .article, 
+.ancient footer .span-17, 
+.ancient .recommendations, 
+.ancient .login, 
+.ancient .login ul, 
+.ancient .box-bottom, 
+.ancient .headline-teaser li, 
+.ancient .half-horizontal, 
+.ancient .pic-viewer-thumbs, 
+.ancient .lc-teaser .see-also, 
+.ancient .pagination, 
+.ancient .search-for, 
+.ancient .date-picker input[type="text"], 
+.ancient .storylist .lg-teaser .see-also, 
+.ancient .refine-search h4, 
+.ancient .refine-search-date, 
+.ancient .refine-search dl, 
+.ancient .strip, 
+.ancient .horoscope ul, 
+.ancient .horoscope a, 
+.ancient .epl ul, 
+.ancient .epl a, 
+.ancient .newsflash, 
+.ancient .newsflash h2, 
+.ancient .standfirst .box-heading, 
+.ancient .rankings td, 
+.ancient .player-rating, 
+.ancient .player-rating td, 
+.ancient .player-rating thead th, 
+.ancient .rankings-result, 
+.ancient .rankings-result thead th, 
+.ancient .standfirst .info, 
+.ancient .competition-quotes li, 
+.ancient .competition-winners li, 
+.ancient .sm-promo-list, 
+.ancient .article-page .live-odds, 
+.ancient .article-box-heading.grey, 
+.ancient .recent-comments .wrapper,
+.ancient .sm-horoscopes-teaser, 
+.ancient .splash, 
+.ancient .splash-image-led, 
+.ancient .splash .splash-inner,
+.ancient .tm-twitter .tweet, 
+.ancient .horoscope-tabs, 
+.ancient .horoscope-tabs li, 
+.ancient .col4 blockquote, 
+.ancient .splash-right .splash-inner, 
+.ancient .dh-teaser, 
+.ancient .dh-teaser-hdln, 
+.ancient .dh-teaser-hdln p, 
+.ancient .superpick-teaser, 
+.ancient .drop, .ancient .weather ul, 
+.ancient .weather li, 
+.ancient .container, 
+.ancient .opinions, 
+.ancient .drop nav li, 
+.ancient .mpu-border, 
+.ancient .floating-mpu .mpu, 
+.ancient .span-8-5 .mpu, 
+.ancient .flag, .opta-tabs, 
+.ancient .opta-tabs li, 
+.ancient .related-contents h3, 
+.ancient .related-contents-img figure,
+.ancient .box-bottom li, 
+.ancient .opinions-list-vert li, 
+.ancient .related-list, 
+.ancient .article-page .live-update, 
+.ancient .drop .ma-teaser, 
+.ancient .drop .sa-teaser, 
+.ancient .footer-links-wrap, 
+.ancient .directory dt, 
+.ancient input[type="text"]:focus, 
+.ancient footer, 
+.ancient .sm-horoscopes-teaser, 
+.ancient .drop, .drop h3 {
+border-color: #cbbeaa;
+}
+
+.ancient .opinions-heading, 
+.ancient .sm-promo-list h3, 
+.ancient .article-box-heading.red {
+border-color: #000;
+}
+
+/*  --------------------------- Remove triangle images  --------------------------- */
+.ancient .sm-promo-list h3 {
+left: 0px;
+}
+
+.ancient .sm-promo-list h3 .heading-end {
+background: none;
+}
+
+.ancient .top-story figure:before, 
+.ancient .lc-teaser-hdln figure:before,
+.ancient .lc-teaser figure:before,
+.ancient .lc-teaser-nobdr figure:before,
+.ancient .dh-teaser-hdln figure:before, 
+.ancient .dh-teaser figure:before,
+.ancient .splash figure:before, 
+.ancient .splash-image-led figure:before,
+.ancient .top-story figure:before, 
+.ancient .lc-teaser-hdln figure:before,
+.ancient figure:before, 
+.ancient .lc-teaser-hdln figure:before,
+.ancient .dh-teaser figure:before, 
+.ancient .splash figure:before,
+.ancient .superpick-teaser figure:before, 
+.ancient .splash-right figure:before,
+.ancient splash-right figure:before,
+.ancient .top-story figure:before, 
+.ancient .lc-teaser-nobdr figure:before,
+.ancient .dh-teaser-hdln figure:before,
+.ancient .lc-teaser figure:before, 
+.ancient .lc-teaser-hdln figure:before,
+.ancient .splash-image-led figure:before {
+  content: none;
+}
+
+/*  --------------------------- MDD  --------------------------- */
+.ancient .drop nav li a,
+.ancient .drop nav li:first-child a {
+background: none;
+padding-left: 10px;
+font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+font-weight: normal;
+padding: 8px 0 8px 10px;
+}
+.ancient .drop {
+background: #f5f3f0;
+}
+.ancient .drop nav li a:hover {
+border-color: #000;
+}
+.ancient .tab.drop-hover > a:before, 
+.ancient .touch .tab.drop-hover > a:before {
+content: none;
+}
+
+.ancient .tab > .active, 
+.no-js .ancient .tab > a:hover, 
+.touch .ancient.tab > a:hover, 
+.ancient .tab.drop-hover > a, 
+.ancient .tab.drop-hover > a:hover {
+	border-color: #000;
+}
+.ancient .hot-topics {
+margin: 10px 0;
+}
+
+/* ********** Ancient ********** */
+
+/* ********** MS-DOS ********** */
+
+body.ms-dos {
+background: #000;
+color: #fafafa;
+}
+
+.ms-dos .boxshadow .container {
+box-shadow: none;
+}
+
+.ms-dos .container {
+border-color: #0d0d0d;
+background: #000;
+margin-top: 15px;
+}
+
+.ms-dos .ad, 
+.ms-dos .top-story, 
+.ms-dos .weather ul, 
+.ms-dos .pic-viewer-thumbs, 
+.ms-dos .horoscope, 
+.ms-dos .epl, 
+.ms-dos .standfirst .box-heading, 
+.ms-dos .sm-promo-list, 
+.ms-dos .article-page .live-odds, 
+.ms-dos .article-box-heading.grey, 
+.ms-dos .splash, 
+.ms-dos .splash-image-led, 
+.ms-dos .splash-right, 
+.ms-dos .horoscope-tabs li, 
+.ms-dos .opta-tabs li  {
+border-color: #0d0d0d;
+background: #000;
+}
+
+.ms-dos .lg-teaser h1, 
+.ms-dos .viewport-heading a, 
+.ms-dos .strip ul, 
+.ms-dos .ticker-swipe, 
+.ms-dos .takeover .container, 
+.ms-dos .splash .splash-inner, 
+.ms-dos .splash-right .splash-inner, 
+.ms-dos .horoscope-tabs .selected,
+.ms-dos .splash-image-led h1 a, 
+.ms-dos .container, 
+.ms-dos .article-page .article figure figcaption, 
+.ms-dos .top-write, .ms-dos .login ul, 
+.ms-dos .opta-tabs .active, 
+.ms-dos #page .tabs-article .tab_content, 
+.ms-dos #page .tabs-article ul.tabs li.active a, 
+.ms-dos footer {
+border-color: #0d0d0d;
+background: #000;
+}
+
+.ms-dos .btn, 
+.ms-dos .poll-result, 
+.ms-dos .date-picker input[type="submit"], 
+.ms-dos .sm-promo-list h3, 
+.ms-dos .errormessage .search-box input[type="submit"], 
+.ms-dos .search-results .search-box input[type="submit"], 
+.ms-dos .article-box-heading.red, 
+.ms-dos .opinions-heading, 
+.ms-dos.no-js .tab>a:hover,
+.touch .ms-dos .tab>a:hover, 
+.ms-dos .tab .active,
+.ms-dos .tab.drop-hover>a, 
+.ms-dos .tab.drop-hover>a:hover, 
+.ms-dos .tab {
+background: #000;
+}
+
+
+/* mirror red - fill */
+.cssgradients .ms-dos .tab > .active,
+.touch.cssgradients .ms-dos .tab > .active, 
+.cssgradients .ms-dos .drop-hover > a, 
+.touch.cssgradients .ms-dos .tab > a:hover {
+background: #000;
+}
+
+.cssgradients .ms-dos .nav-main > ul,
+.cssgradients .ms-dos .search-box {
+border-color: #0d0d0d;
+background: #060606;
+}
+.ms-dos .tab > a {
+border-color: #0d0d0d #0d0d0d #0d0d0d #000;
+}
+.ms-dos .nav-main {
+border-color: #0d0d0d;
+}
+
+.ms-dos .box-bottom {
+border-color: #d7c8b1;
+background: rgba(0,0,0,0.9);
+}
+
+.ms-dos .viewport-heading a, 
+.ms-dos .strip ul, 
+.ms-dos .ticker-swipe, 
+.ms-dos .splash .splash-inner, 
+.ms-dos .splash-right .splash-inner, 
+.ms-dos .horoscope-tabs .selected, 
+.ms-dos .splash-image-led h1 a, 
+.ms-dos .article-page .article figure figcaption, 
+.ms-dos .top-write, 
+.ms-dos .login ul, 
+.ms-dos .opta-tabs .active, 
+.ms-dos #page .tabs-article .tab_content, 
+.ms-dos #page .tabs-article ul.tabs li.active a, 
+.ms-dos footer {
+background: #111;
+}
+
+/* ---------------------------  Logo  --------------------------- */
+.ms-dos .logo a {
+background: url("http://images.mirror.co.uk/collections/microsites/dos-logo.gif");
+}
+
+/*  --------------------------- Image effects  --------------------------- */
+
+.ms-dos .exclusive, 
+.ms-dos .fb-like-box, 
+.ms-dos iframe, 
+.ms-dos .label, 
+.ms-dos .logo-s,
+.ms-dos .HPP .strip-rec-link-title, 
+.ms-dos .ob_org_header div,
+.ms-dos .headline-teaser li, 
+.ms-dos .more, 
+.ms-dos footer a, 
+.ms-dos .ad, 
+.ms-dos .ir {
+filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+-webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+     -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+}
+
+.ms-dos .container img {
+filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+-webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+     -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+}
+
+.ms-dos .container img:hover{
+filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+-webkit-filter: grayscale(0%);
+   -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+     -o-filter: grayscale(0%);
+        filter: grayscale(0%);
+}
+
+.ms-dos img {
+border: none !important;
+}
+
+.ms-dos .article a, 
+.ms-dos .channel-hdr a, 
+.ms-dos .channel-hdr a:hover.no-link,
+.fontface .ms-dos .channel-hdr a, 
+.ms-dos .drop nav li a,
+.fontface .ms-dos .weather-header h3,
+.fontface .ms-dos .box-heading, 
+.fontface .ms-dos .small-promo-links h3,
+.fontface .ms-dos .opinions-heading h3, 
+.fontface .ms-dos .article-page .storylist h3,
+.fontface .ms-dos .article-page .related-widget h3, 
+.fontface .ms-dos .sm-promo-list h3,
+.fontface .ms-dos .horoscopes-intro h2, 
+.fontface .ms-dos .horoscopes-storylist h3,
+.fontface .ms-dos .horoscope-page h2,
+.ms-dos .fontface .channel-hdr, 
+.fontface .ms-dos .drop nav li, 
+.fontface .ms-dos .drop nav li a,
+.ms-dos .fontface .drop h3, 
+.fontface .ms-dos .refine-search h4,
+.fontface .ms-dos .google-adsense h3, 
+.ms-dos .vg310tickets h3, 
+.ms-dos .vg230tickets h3,
+.ms-dos .box-bottom ol li > a {
+font-family: 'PT Mono', sans-serif;
+font-weight: normal;
+color: #fff;
+}
+
+.ms-dos a, 
+.ms-dos a:hover, 
+.ms-dos .sm-promo-list .more, 
+.ms-dos .drop a, 
+.ms-dos .channel-headline, 
+.ms-dos .channel-msg, 
+.ms-dos .recommendations, 
+.ms-dos .login, 
+.ms-dos .search-top .search-sort a, 
+.ms-dos .mirror-apps .channel-hdr a.support,
+.ms-dos .tools .more:hover, .ms-dos .hot-topics h2 {
+color: #fff;
+}
+
+.ms-dos .hot-topics ul li a:hover {
+color: #fff;
+}
+
+.ms-dos .ob_container .strip-rec-link-title {
+color: #fff !important;
+}
+
+.fontface .ms-dos header time a,
+.fontface .ms-dos .tab>a, 
+.fontface .ms-dos .mirror-apps-support .caption-text {
+font-family: 'PT Mono', sans-serif;
+font-weight: normal;
+}
+.ms-dos .tab > a {
+padding: 2px 9px 0;
+}
+
+.ms-dos .channel-hdr a,
+.fontface .ms-dos .channel-hdr a { 
+	font-family: 'PT Mono', sans-serif;
+	font-size: 54px;
+	color: #fff;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	text-shadow:
+		1px 1px 0 #fff,
+		1px 1px 0 #fff,
+
+	-webkit-text-stroke: 1px transparent;  
+}
+
+.ms-dos .channel-headline a {
+	font-family: 'PT Mono', sans-serif;
+	font-size: 50px;
+	color: #fff;
+	letter-spacing:3px;
+	text-transform: uppercase;
+	text-shadow:
+		1px 1px 0 #fff,
+		1px 1px 0 #fff,
+		3px 3px 0 #000,
+		3px 3px 0 #000;
+	-webkit-text-stroke: 1px transparent; 
+}
+.ms-dos .channel-hdr a:hover,
+.fontface .ms-dos .channel-hdr a:hover, 
+.ms-dos .channel-headline a:hover {
+	color: #fff;
+
+}
+
+.ms-dos .box-heading {
+	font-family: 'PT Mono', sans-serif;
+	color: #fff;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-size: 18px;   
+}
+
+.fontface .ms-dos .hot-topics h2 {
+	font-family: 'PT Mono', sans-serif;
+	font-size: 14px;
+	color: #fff;
+	}
+
+.ms-dos .channel-frontpage .channel-msg {
+background: none;
+padding-left: 0px;
+}
+
+.ms-dos .channel-msg a {
+font-family: 'PT Mono', sans-serif;
+font-weight: normal;
+font-size: 18px;
+}
+
+.ms-dos .hot-topics ul li a {
+font-family: 'PT Mono', sans-serif;
+font-weight: normal;
+font-size: 12px;
+}
+.ms-dos .article.lg-teaser h1 a {
+	font-size: 28px;
+	line-height: 36px;
+}
+.ms-dos .article h2 a {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.ms-dos footer, 
+.ms-dos .box-bottom h5, 
+.ms-dos .box-bottom dt, 
+.ms-dos .search-sort li, 
+.ms-dos .square h5, 
+.ms-dos .standfirst .match .msg, 
+.ms-dos .standfirst .info, 
+.ms-dos .article p, 
+.ms-dos .article figcaption, 
+.ms-dos .competition-teaser p, 
+.ms-dos .sm-promo-inner p, 
+.ms-dos .five-col-news-teaser h5, 
+.ms-dos .recent-comments p, 
+.ms-dos .headline-teaser p, 
+.ms-dos .sm-horoscopes-list dd, 
+.ms-dos .tm-twitter .tweet .time, 
+.ms-dos .competition-quotes h4 span, 
+.ms-dos .competition-winners p, 
+.ms-dos .article-header h1 span, 
+.ms-dos .sm-horoscopes-teaser .tools, 
+.ms-dos .sm-horoscopes-list h5, 
+.ms-dos .small, 
+.ms-dos .horoscope-header .tools li, 
+.ms-dos .horoscope-header figcaption, 
+.ms-dos .horoscopes-list .sm-promo h4, 
+.ms-dos .horoscopes-list .sm-promo h5, 
+.ms-dos .horoscopes-intro p, 
+.ms-dos .horoscopes-list .sm-promo, 
+.ms-dos .sm-horoscopes-list p, 
+.ms-dos .image-credit, 
+.ms-dos .play-teaser .issue-date, 
+.ms-dos .play-teaser .issue-number, 
+.ms-dos .curated-hdr p, 
+.ms-dos .section-hdr p, 
+.ms-dos .weather form input[type="text"], 
+.ms-dos .date-picker input[type="text"], 
+.ms-dos .contactlist dl dd, 
+.ms-dos .contactlist address, 
+.ms-dos .weather form label, 
+.ms-dos .competition-quotes blockquote, 
+.ms-dos .promo figcaption, 
+.ms-dos .promo p, 
+.ms-dos .article-header h3, 
+.ms-dos .recommended-seemore p, 
+.ms-dos .opinions blockquote a, 
+.ms-dos .col4 .opinions-list-vert blockquote a, 
+.ms-dos .related-widget dt, 
+.ms-dos .article-page .article .lead-text p, 
+.ms-dos .article-header .span-15-5 h5, 
+.ms-dos .player-rating td p.description, 
+.ms-dos .amount li, 
+.ms-dos .mirror-apps .features {
+color: #999;
+}
+
+/*  --------------------------- Border color  --------------------------- */
+
+.ms-dos .row {
+border-width: 20px 0 0;
+border-color: #fff;
+}
+
+/* Dark */
+.ms-dos .row, 
+.ms-dos .article img, 
+.ms-dos .carousel img, 
+.ms-dos .channel-hdr, 
+.ms-dos .four-col-teaser img, 
+.ms-dos .curated-hdr img, 
+.ms-dos .search-results h2, 
+.ms-dos .curated-thumb, 
+.ms-dos .five-col-teaser img, 
+.ms-dos .celebs img, 
+.ms-dos .quicklinks img, 
+.ms-dos .competition img, 
+.ms-dos .competition-teaser img, 
+.ms-dos .competition-teaser, 
+.ms-dos .competition-quotes, 
+.ms-dos .sm-promo-list img, 
+.ms-dos .kb-teaser img, 
+.ms-dos .columnists img, 
+.ms-dos .sm-horoscope-list img, 
+.ms-dos .smht-pic a, 
+.ms-dos .horoscope-page h2, 
+.ms-dos .row-thin, 
+.ms-dos .sm-horoscopes-profile, 
+.ms-dos .tm-twitter .tweet img, 
+.ms-dos .smht-pic a, 
+.ms-dos .col4 img, 
+.ms-dos .horoscope-header figure a img, 
+.ms-dos .horoscopes-profile-header a img, 
+.ms-dos .most-read img,
+.ms-dos .horoscopes-storylist,
+.ms-dos .tools .more, 
+.ms-dos .hot-topics a, 
+.ms-dos .box-bottom h5 a,
+.ms-dos .related-widget dd a,
+.ms-dos .pluck-login-withFacebook, 
+.ms-dos .just-sayin-wrapper, 
+.ms-dos .just-sayin .visor .video-box {
+border-color: #333;
+}
+
+/* Light */
+.ms-dos .ad, 
+.ms-dos .search-box input[type="text"], 
+.ms-dos .search-box input[type="text"]:focus, 
+.ms-dos .search-box input[type="submit"], 
+.ms-dos .search-box input[type="submit"]:focus, 
+.ms-dos .article, 
+.ms-dos footer .span-17, 
+.ms-dos .recommendations, 
+.ms-dos .login, 
+.ms-dos .login ul, 
+.ms-dos .box-bottom, 
+.ms-dos .headline-teaser li, 
+.ms-dos .half-horizontal, 
+.ms-dos .pic-viewer-thumbs, 
+.ms-dos .lc-teaser .see-also, 
+.ms-dos .pagination, 
+.ms-dos .search-for, 
+.ms-dos .date-picker input[type="text"], 
+.ms-dos .storylist .lg-teaser .see-also, 
+.ms-dos .refine-search h4, 
+.ms-dos .refine-search-date, 
+.ms-dos .refine-search dl, 
+.ms-dos .strip, 
+.ms-dos .horoscope ul, 
+.ms-dos .horoscope a, 
+.ms-dos .epl ul,
+.ms-dos .epl a, 
+.ms-dos .newsflash, 
+.ms-dos .newsflash h2, 
+.ms-dos .standfirst .box-heading, 
+.ms-dos .rankings td, 
+.ms-dos .player-rating, 
+.ms-dos .player-rating td, 
+.ms-dos .player-rating thead th, 
+.ms-dos .rankings-result, 
+.ms-dos .rankings-result thead th, 
+.ms-dos .standfirst .info, 
+.ms-dos .competition-quotes li, 
+.ms-dos .competition-winners li, 
+.ms-dos .sm-promo-list, 
+.ms-dos .article-page .live-odds, 
+.ms-dos .article-box-heading.grey, 
+.ms-dos .recent-comments .wrapper, 
+.ms-dos .sm-horoscopes-teaser, 
+.ms-dos .splash, 
+.ms-dos .splash-image-led, 
+.ms-dos .splash .splash-inner, 
+.ms-dos .tm-twitter .tweet, 
+.ms-dos .horoscope-tabs, 
+.ms-dos .horoscope-tabs li, 
+.ms-dos .col4 blockquote, 
+.ms-dos .splash-right .splash-inner, 
+.ms-dos .dh-teaser, 
+.ms-dos .dh-teaser-hdln, 
+.ms-dos .dh-teaser-hdln p, 
+.ms-dos .superpick-teaser, 
+.ms-dos .drop, 
+.ms-dos .weather ul, 
+.ms-dos .weather li, 
+.ms-dos .container, 
+.ms-dos .opinions, 
+.ms-dos .drop nav li, 
+.ms-dos .mpu-border, 
+.ms-dos .floating-mpu .mpu, 
+.ms-dos .span-8-5 .mpu, 
+.ms-dos .flag, 
+.ms-dos.opta-tabs, 
+.ms-dos .opta-tabs li, 
+.ms-dos .related-contents h3, 
+.ms-dos .related-contents-img figure,
+.ms-dos .box-bottom li, 
+.ms-dos .opinions-list-vert li, 
+.ms-dos .related-list, 
+.ms-dos .article-page .live-update, 
+.ms-dos .drop .ma-teaser, 
+.ms-dos .drop .sa-teaser, 
+.ms-dos .footer-links-wrap, 
+.ms-dos .directory dt, 
+.ms-dos input[type="text"]:focus, 
+.ms-dos footer, 
+.ms-dos .sm-horoscopes-teaser, 
+.ms-dos .drop, 
+.ms-dos .drop h3 {
+border-color: #333;
+}
+
+.ms-dos .opinions-heading, 
+.ms-dos .sm-promo-list h3, 
+.ms-dos .article-box-heading.red {
+border-color: #333;
+}
+
+/*  --------------------------- Remove triangle images  --------------------------- */
+.ms-dos .sm-promo-list h3 {
+left: 0px;
+}
+
+.ms-dos .sm-promo-list h3 .heading-end {
+background: none;
+}
+
+.ms-dos .top-story figure:before, 
+.ms-dos .lc-teaser-hdln figure:before,
+.ms-dos .lc-teaser figure:before, 
+.ms-dos .lc-teaser-nobdr figure:before,
+.ms-dos .dh-teaser-hdln figure:before, 
+.ms-dos .dh-teaser figure:before,
+.ms-dos .splash figure:before, 
+.ms-dos .splash-image-led figure:before,
+.ms-dos .top-story figure:before, 
+.ms-dos .lc-teaser-hdln figure:before,
+.ms-dos figure:before, 
+.ms-dos .lc-teaser-hdln figure:before,
+.ms-dos .dh-teaser figure:before, 
+.ms-dos .splash figure:before,
+.ms-dos .superpick-teaser figure:before, 
+.ms-dos .splash-right figure:before,
+.ms-dos .splash-right figure:before,
+.ms-dos .top-story figure:before, 
+.ms-dos .lc-teaser-nobdr figure:before,
+.ms-dos .dh-teaser-hdln figure:before,
+.ms-dos .lc-teaser figure:before, 
+.ms-dos .lc-teaser-hdln figure:before,
+.ms-dos .splash-image-led figure:before {
+  content: none;
+}
+/*  --------------------------- MDD  --------------------------- */
+.ms-dos .drop nav li a,
+.ms-dos .drop nav li:first-child a {
+background: none;
+padding-left: 10px;
+font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+font-weight: normal;
+padding: 8px 0 8px 10px;
+}
+
+.ms-dos .drop {
+background: #000;
+}
+
+.ms-dos .drop nav li a:hover {
+border-color: #000;
+}
+
+.ms-dos .tab.drop-hover > a:before,
+.touch .ms-dos .tab.drop-hover > a:before {
+content: none;
+}
+
+.ms-dos .tab > .active,  
+.no-js .ms-dos .tab > a:hover, 
+.touch .ms-dos .tab > a:hover, 
+.ms-dos .tab.drop-hover > a, 
+.ms-dos .tab.drop-hover > a:hover {
+	border-color: #000;
+}
+
+.ms-dos .hot-topics {
+margin: 10px 0;
+}
+
+/* ********** MS-DOS ********** */
+
+/* ********** DRUNK ********** */
+
+.drunk .container {
+-webkit-transition: -webkit-transform 3s ease-in;
+-webkit-transform: rotate(1deg); 
+-moz-transform: rotate(1deg);
+-ms-transform: rotate (1deg);
+transform: rotate (1deg);
+margin-top: 15px;
+}
+
+
+/* ---------------------------  Logo  --------------------------- */
+.drunk .logo a {
+background: url("http://images.mirror.co.uk/collections/microsites/drunk-logo.png");
+}
+
+/*  --------------------------- Image effects  --------------------------- */
+
+.drunk .container p, 
+.drunk .container li, 
+.drunk .container ul {
+filter: url(filters.svg#blur); /* Firefox 3.5+ */
+-webkit-filter:  blur(5px);
+        filter:  blur(5px);
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+}
+.drunk .container .ad {
+filter: url(filters.svg#blur); /* Firefox 3.5+ */
+-webkit-filter:  blur(5px);
+filter:  blur(5px);
+filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+}
+
+.drunk .container img {
+filter: url(filters.svg#blur); /* Firefox 3.5+ */
+-webkit-filter:  blur(3px);
+   -moz-filter:  blur(3px);
+    -ms-filter:  blur(3px);
+     -o-filter:  blur(3px);
+        filter:  blur(3px);
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+}
+
+.drunk .container img:hover {
+filter: url(filters.svg#blur); /* Firefox 3.5+ */
+-webkit-filter:  blur(1px);
+   -moz-filter:  blur(0px);
+    -ms-filter:  blur(0px);
+     -o-filter:  blur(0px);
+        filter:  blur(0px);
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+}
+
+.drunk .container h1, 
+.drunk .container h2, 
+.drunk .container h3, 
+.drunk .container h4, 
+.drunk .container h5, 
+.drunk .container h6, 
+.drunk .container p, 
+.drunk .container a, 
+.drunk .container figcaption, 
+.drunk .strip-rec-link-title, 
+.drunk .fb-likebox, 
+.drunk .logo-s, 
+.drunk .ob_org_header div, 
+.drunk .sm-promo, 
+.drunk .channel-msg, 
+.drunk .more, 
+.drunk footer a, 
+.drunk .ad, 
+.drunk .ob_container .rec-src-link, 
+.drunk .headline-teaser li, 
+.drunk .tools, .drunk .container li, 
+.drunk .ir {
+filter: url(filters.svg#blur); /* Firefox 3.5+ */
+-webkit-filter:  blur(3px);
+   -moz-filter:  blur(3px);
+    -ms-filter:  blur(3px);
+     -o-filter:  blur(3px);
+        filter:  blur(3px);
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+}
+
+.drunk .container h1:hover, 
+.drunk .container h2:hover, 
+.drunk .container h3:hover, 
+.drunk .container h4:hover, 
+.drunk .container h5:hover, 
+.drunk .container h6:hover, 
+.drunk .container p:hover, 
+.drunk .container a:hover, 
+.drunk figcaption:hover,
+.drunk .container li:hover,
+.drunk .tools:hover, 
+.drunk footer a:hover, 
+.drunk .more:hover, 
+.drunk .fb-likebox:hover {
+filter: url(filters.svg#blur); /* Firefox 3.5+ */
+-webkit-filter: blur(0.5px);
+   -moz-filter: blur(0.5px);
+    -ms-filter: blur(0.5px);
+     -o-filter: blur(0.5px);
+        filter: blur(0.5px);
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0.5');
+}
+
+.drunk .container .label {
+display: none;
+}
+
+.drunk #page p {
+    /* for IE7 */
+    zoom: 1;
+    color: #000;
+    /* Implement the blur */
+    filter: progid:DXImageTransform.Microsoft.Chroma(Color=#222222)
+            progid:DXImageTransform.Microsoft.Blur(Strength=2);
+    
+}
+/* ********** DRUNK ********** */
+
+/* ********** X-RAY ********** */
+
+body.x-ray {
+background: #000;
+color: #fafafa;
+}
+
+.x-ray .boxshadow .container {
+box-shadow: 0px 0px 500px rgba(220, 236, 244, 0.5);
+}
+
+.x-ray .container {
+border-color: #0d0d0d;
+background: #000;
+margin-top: 15px;
+}
+
+.x-ray .ad, 
+.x-ray .top-story, 
+.x-ray .weather ul,
+.x-ray .pic-viewer-thumbs, 
+.x-ray .horoscope, 
+.x-ray .epl, 
+.x-ray .standfirst .box-heading, 
+.x-ray .sm-promo-list, 
+.x-ray .article-page .live-odds, 
+.x-ray .article-box-heading.grey, 
+.x-ray .splash, 
+.x-ray .splash-image-led, 
+.x-ray .splash-right, 
+.x-ray .horoscope-tabs li, 
+.x-ray .opta-tabs li  {
+border-color: #0d0d0d;
+background: #000;
+}
+
+.x-ray .lg-teaser h1, 
+.x-ray .viewport-heading a,
+.x-ray .strip ul, 
+.x-ray .ticker-swipe, 
+.x-ray .takeover .container, 
+.x-ray .splash .splash-inner, 
+.x-ray .splash-right .splash-inner, 
+.x-ray .horoscope-tabs .selected, 
+.x-ray .splash-image-led h1 a, 
+.x-ray .container, 
+.x-ray .article-page .article figure figcaption, 
+.x-ray .top-write, 
+.x-ray .login ul, 
+.x-ray .opta-tabs .active, 
+.x-ray #page .tabs-article .tab_content, 
+.x-ray #page .tabs-article ul.tabs li.active a, 
+.x-ray footer {
+border-color: #0d0d0d;
+background: #000;
+}
+
+.x-ray .btn, 
+.x-ray .poll-result, 
+.x-ray .date-picker input[type="submit"], 
+.x-ray .sm-promo-list h3, 
+.x-ray .errormessage .search-box input[type="submit"], 
+.x-ray .search-results .search-box input[type="submit"], 
+.x-ray .article-box-heading.red, 
+.x-ray .opinions-heading, 
+.x-ray .no-js .tab>a:hover, 
+.x-ray .touch .tab>a:hover, 
+.x-ray .tab .active, 
+.x-ray .tab.drop-hover>a, 
+.x-ray .tab.drop-hover>a:hover {
+background: #000;
+}
+
+
+/* mirror red - fill */
+.cssgradients .x-ray .tab > .active, 
+.touch.cssgradients .x-ray .tab > .active, 
+.cssgradients .x-ray .drop-hover > a, 
+.touch.cssgradients .x-ray .tab > a:hover {
+background: #000;
+}
+
+.cssgradients .x-ray .nav-main > ul,
+.cssgradients .x-ray .search-box {
+border-color: #0d0d0d;
+background: #060606;
+}
+.x-ray .tab > a {
+border-color: #0d0d0d #0d0d0d #0d0d0d #000;
+}
+.x-ray .nav-main {
+border-color: #0d0d0d;
+}
+
+.x-ray .box-bottom {
+border-color: #d7c8b1;
+background: rgba(0,0,0,0.9);
+}
+
+/* overlay */ 
+.x-ray .viewport-heading a, 
+.x-ray .strip ul, 
+.x-ray .ticker-swipe, 
+.x-ray .splash .splash-inner, 
+.x-ray .splash-right .splash-inner, 
+.x-ray .horoscope-tabs .selected, 
+.x-ray .splash-image-led h1 a, 
+.x-ray .article-page .article figure figcaption, 
+.x-ray .top-write, 
+.x-ray .login ul, 
+.x-ray .opta-tabs .active, 
+.x-ray #page .tabs-article .tab_content, 
+.x-ray #page .tabs-article ul.tabs li.active a, 
+.x-ray footer {
+background: #111;
+}
+
+/* ---------------------------  Logo  --------------------------- */
+.x-ray .logo a {
+background: url("http://images.mirror.co.uk/collections/microsites/x-ray-logo.png");
+filter: none;
+-webkit-filter: grayscale(0);
+
+-webkit-filter: invert(0%);
+   -moz-filter: invert(0%);
+    -ms-filter: invert(0%);
+     -o-filter: invert(0%);
+        filter: invert(0%);
+}
+
+/*  --------------------------- Image effects  --------------------------- */
+.x-ray .container img {
+
+filter: url(filters.svg#xray); /* Firefox 3.5+ */
+filter: grayscale(100%); /* IE6-9 */
+-webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+
+    
+-webkit-filter: invert(100%);
+   -moz-filter: invert(100%);
+    -ms-filter: invert(100%);
+     -o-filter: invert(100%);
+        filter: invert(100%);
+}
+
+.x-ray .exclusive, 
+.x-ray .fb-like-box, 
+.x-ray iframe, 
+.x-ray .label, 
+.x-ray .logo-s, 
+.x-ray .HPP .strip-rec-link-title, 
+.x-ray .ob_org_header div, 
+.x-ray .ad, 
+.x-ray .ir {
+
+filter: url(filters.svg#xray); /* Firefox 3.5+ */
+filter: grayscale(100%); /* IE6-9 */
+-webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+    
+-webkit-filter: invert(100%);
+   -moz-filter: invert(100%);
+    -ms-filter: invert(100%);
+     -o-filter: invert(100%);
+        filter: invert(100%);
+}
+
+.x-ray img:hover {
+filter: url(filters.svg#xray); /* Firefox 3.5+ */
+filter: none;
+-webkit-filter: grayscale(0);
+-webkit-filter: invert(0%);
+   -moz-filter: invert(0%);
+    -ms-filter: invert(0%);
+     -o-filter: invert(0%);
+        filter: invert(0%);
+}
+
+.x-ray img {
+border: none !important;
+}
+/* ********** Fonts ********** */
+.x-ray .article a, 
+.x-ray .channel-hdr a, 
+.x-ray .channel-hdr a:hover.no-link, 
+.x-ray .fontface .channel-hdr a, 
+.x-ray .drop nav li a,
+.x-ray .fontface .weather-header h3, 
+.x-ray .fontface .box-heading, 
+.x-ray .fontface .small-promo-links h3, 
+.x-ray .fontface .opinions-heading h3, 
+.x-ray .fontface .article-page .storylist h3, 
+.x-ray .fontface .article-page .related-widget h3, 
+.x-ray .fontface .sm-promo-list h3, 
+.x-ray .fontface .horoscopes-intro h2, 
+.x-ray .fontface .horoscopes-storylist h3, 
+.x-ray .fontface .horoscope-page h2, 
+.x-ray .fontface .channel-hdr, 
+.x-ray .fontface .drop nav li, 
+.x-ray .fontface .drop nav li a, 
+.x-ray .fontface .drop h3, 
+.x-ray .fontface .refine-search h4, 
+.x-ray .fontface .google-adsense h3, 
+.x-ray .vg310tickets h3, 
+.x-ray .vg230tickets h3,
+.x-ray .box-bottom ol li > a {
+font-weight: normal;
+color: #dcecf4;
+}
+
+.x-ray a, 
+.x-ray a:hover, 
+.x-ray .sm-promo-list .more, 
+.x-ray .drop a, 
+.x-ray .channel-headline, 
+.x-ray .channel-msg, 
+.x-ray .recommendations,
+.x-ray .login, 
+.x-ray .search-top .search-sort a, 
+.x-ray .mirror-apps .channel-hdr a.support,
+.x-ray .hot-topics ul li a,
+.x-ray .hot-topics ul li a:hover,
+.x-ray .tools .more:hover {
+color: #beddec;
+}
+
+.x-ray .ob_container .strip-rec-link-title {
+color: #fff !important;
+}
+
+.x-ray .fontface header time a, 
+.x-ray .fontface .tab>a, 
+.x-ray .fontface .mirror-apps-support .caption-text {
+font-weight: normal;
+}
+.x-ray .tab > a {
+padding: 2px 9px 0;
+}
+.x-ray .article.lg-teaser h1 a {
+	font-size: 28px;
+	line-height: 36px;
+}
+.x-ray .article h2 a {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.x-ray footer, .x-ray .box-bottom h5, .x-ray .box-bottom dt, 
+.x-ray .search-sort li, .x-ray .square h5, .x-ray .standfirst .match .msg, 
+.x-ray .standfirst .info, .x-ray .article p, .x-ray .article figcaption, .x-ray .competition-teaser p, 
+.x-ray .sm-promo-inner p, .x-ray .five-col-news-teaser h5, .x-ray .recent-comments p, .x-ray .headline-teaser p, 
+.x-ray .sm-horoscopes-list dd, .x-ray .tm-twitter .tweet .time, .x-ray .competition-quotes h4 span, 
+.x-ray .competition-winners p, .x-ray .article-header h1 span, .x-ray .sm-horoscopes-teaser .tools, 
+.x-ray .sm-horoscopes-list h5, .x-ray .small, .x-ray .horoscope-header .tools li, 
+.x-ray .horoscope-header figcaption, .x-ray .horoscopes-list .sm-promo h4, .x-ray .horoscopes-list .sm-promo h5, 
+.x-ray .horoscopes-intro p, .x-ray .horoscopes-list .sm-promo, .x-ray .sm-horoscopes-list p, 
+.x-ray .image-credit, .x-ray .play-teaser .issue-date, .x-ray .play-teaser .issue-number, 
+.x-ray .curated-hdr p, .x-ray .section-hdr p, .x-ray .weather form input[type="text"], .x-ray .date-picker input[type="text"], 
+.x-ray .contactlist dl dd, .x-ray .contactlist address, .x-ray .weather form label, 
+.x-ray .competition-quotes blockquote, .x-ray .promo figcaption, .x-ray .promo p, .x-ray .article-header h3, 
+.x-ray .recommended-seemore p, .x-ray .opinions blockquote a, .x-ray .col4 .opinions-list-vert blockquote a, 
+.x-ray .related-widget dt, .x-ray .article-page .article .lead-text p, .x-ray .article-header .span-15-5 h5,
+.x-ray .player-rating td p.description, .x-ray .amount li, .x-ray .mirror-apps .features {
+color: #999;
+}
+
+/*  --------------------------- Border color  --------------------------- */
+
+.x-ray .row {
+border-width: 12px 0 0;
+border-color: #fff;
+}
+
+/* Dark */
+.x-ray .row, .x-ray .article img, .x-ray .carousel img, 
+.x-ray .channel-hdr, .x-ray .four-col-teaser img, .x-ray .curated-hdr img, 
+.x-ray .search-results h2, .x-ray .curated-thumb, .x-ray .five-col-teaser img, 
+.x-ray .celebs img, .x-ray .quicklinks img, .x-ray .competition img, .x-ray .competition-teaser img, 
+.x-ray .competition-teaser, .x-ray .competition-quotes, .x-ray .sm-promo-list img, 
+.x-ray .kb-teaser img, .x-ray .columnists img, .x-ray .sm-horoscope-list img, .x-ray .smht-pic a, 
+.x-ray .horoscope-page h2, .x-ray .row-thin, .x-ray .sm-horoscopes-profile, .x-ray .tm-twitter .tweet img, 
+.x-ray .smht-pic a, .x-ray .col4 img, .x-ray .horoscope-header figure a img, .x-ray .horoscopes-profile-header a img, 
+.x-ray .most-read img, .x-ray .horoscopes-storylist, .x-ray .tools .more, .x-ray .hot-topics a, 
+.x-ray .box-bottom h5 a, .x-ray .related-widget dd a, .x-ray .pluck-login-withFacebook, .x-ray .just-sayin-wrapper, 
+.x-ray .just-sayin .visor .video-box {
+border-color: #333;
+}
+
+
+/* Light */
+.x-ray .ad, .x-ray .search-box input[type="text"], .x-ray .search-box input[type="text"]:focus, 
+.x-ray .search-box input[type="submit"], .x-ray .search-box input[type="submit"]:focus, .x-ray .article, 
+.x-ray footer .span-17, .x-ray .recommendations, .x-ray .login, .x-ray .login ul, .x-ray .box-bottom, 
+.x-ray .headline-teaser li, .x-ray .half-horizontal, .x-ray .pic-viewer-thumbs, .x-ray .lc-teaser .see-also,
+.x-ray .pagination, .x-ray .search-for, .x-ray .date-picker input[type="text"], .x-ray .storylist .lg-teaser .see-also, 
+.x-ray .refine-search h4, .x-ray .refine-search-date, .x-ray .refine-search dl, .x-ray .strip, .x-ray .horoscope ul, 
+.x-ray .horoscope a, .x-ray .epl ul, .x-ray .epl a, .x-ray .newsflash, .x-ray .newsflash h2, 
+.x-ray .standfirst .x-ray .box-heading, .x-ray .rankings td, .x-ray .player-rating, .x-ray .player-rating td, 
+.x-ray .player-rating thead th, .x-ray .rankings-result, .x-ray .rankings-result thead th, .x-ray .standfirst .info, 
+.x-ray .competition-quotes li, .x-ray .competition-winners li, .x-ray .sm-promo-list, .x-ray .article-page .live-odds, 
+.x-ray .article-box-heading.grey, .x-ray .recent-comments .wrapper, .x-ray .sm-horoscopes-teaser, 
+.x-ray .splash, .x-ray .splash-image-led, .x-ray .splash .splash-inner, .x-ray .tm-twitter .tweet, 
+.x-ray .horoscope-tabs, .x-ray .horoscope-tabs li, .x-ray .col4 blockquote, .x-ray .splash-right .splash-inner, 
+.x-ray .dh-teaser, .x-ray .dh-teaser-hdln, .x-ray .dh-teaser-hdln p, .x-ray .superpick-teaser, 
+.x-ray .drop, .x-ray .weather ul, .x-ray .weather li, .x-ray .container, .x-ray .opinions, .x-ray .drop nav li, 
+.x-ray .mpu-border, .x-ray .floating-mpu .mpu, .x-ray .span-8-5 .mpu, .x-ray .flag, .x-ray .opta-tabs, 
+.x-ray .opta-tabs li, .x-ray .related-contents h3, .x-ray .related-contents-img figure,
+.x-ray .box-bottom li, .x-ray .opinions-list-vert li, .x-ray .related-list, .x-ray .article-page .live-update, 
+.x-ray .drop .ma-teaser, .x-ray .drop .sa-teaser, .x-ray .footer-links-wrap, .x-ray .directory dt, 
+.x-ray input[type="text"]:focus, .x-ray footer, .x-ray .sm-horoscopes-teaser, .x-ray .drop, .x-ray .drop h3 {
+border-color: #333;
+}
+
+.x-ray .opinions-heading, .x-ray .sm-promo-list h3, .x-ray .article-box-heading.red {
+border-color: #333;
+}
+
+/*  --------------------------- Remove triangle images  --------------------------- */
+.x-ray .sm-promo-list h3 {
+left: 0px;
+}
+
+.x-ray .sm-promo-list h3 .heading-end {
+background: none;
+}
+
+.x-ray .top-story figure:before, .x-ray .lc-teaser-hdln figure:before,
+.x-ray .lc-teaser figure:before, .x-ray .lc-teaser-nobdr figure:before,
+.x-ray .dh-teaser-hdln figure:before, .x-ray .dh-teaser figure:before,
+.x-ray .splash figure:before, .x-ray .splash-image-led figure:before,
+.x-ray .top-story figure:before, .x-ray .lc-teaser-hdln figure:before,
+.x-ray figure:before, .x-ray .lc-teaser-hdln figure:before,
+.x-ray .dh-teaser figure:before, .x-ray .splash figure:before,
+.x-ray .superpick-teaser figure:before, .x-ray .splash-right figure:before,
+.x-ray splash-right figure:before,
+.x-ray .top-story figure:before, .x-ray .lc-teaser-nobdr figure:before,
+.x-ray .dh-teaser-hdln figure:before,
+.x-ray .lc-teaser figure:before, .x-ray .lc-teaser-hdln figure:before,
+.x-ray .splash-image-led figure:before {
+  content: none;
+}
+
+/*  --------------------------- MDD  --------------------------- */
+.x-ray .drop nav li a,
+.x-ray .drop nav li:first-child a {
+background: none;
+padding-left: 10px;
+font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+font-weight: normal;
+padding: 8px 0 8px 10px;
+}
+
+.x-ray .drop {
+background: #000;
+}
+
+.x-ray .drop nav li a:hover {
+border-color: #000;
+}
+
+.x-ray .tab.drop-hover > a:before, .x-ray .touch .tab.drop-hover > a:before {
+content: none;
+}
+
+.x-ray .tab > .active, .x-ray .no-js .tab > a:hover, .x-ray .touch .tab > a:hover, 
+.x-ray .tab.drop-hover > a, .x-ray .tab.drop-hover > a:hover {
+	border-color: #000;
+}
+/*  --------------------------- Misc Margins  --------------------------- */
+.x-ray .hot-topics {
+margin: 10px 0;
+}
+
+/* ********** X-RAY ********** */
+
+/* ********** BACKWARDS ********** */
+
+.backwards .container {
+-webkit-transition: -webkit-transform 3s ease-in;
+-webkit-transform: rotateY(-180deg); 
+-moz-transform: rotateY(-180deg); 
+-ms-transform: rotateY(-180deg); 
+transform: rotateY(-180deg); 
+margin-top: 15px;
+}
