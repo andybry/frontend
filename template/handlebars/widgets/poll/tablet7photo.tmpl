@@ -4,14 +4,10 @@
 <div id="{{pollId}}" class="poll-pictures clearfix">
   <h3>{{pollQuestion}}</h3>
   {{#each optionMaps}}
-    {{#if topScore}}
-      <a href="#" class="poll-item top-score">
-    {{else}}
-      <a href="#" class="poll-item"> 
-    {{/if}}   
+    <a href="#" class="poll-item {{#if topScore}}top-score{{/if}}">
       <span class="val">{{votedPercentValue}}%</span>
         {{#with imageMap}}  
-          <img src="{{imageUrl}}" alt="{{alttext}}" title="{{title}}"/>
+          <img src="{{url}}" alt="{{alttext}}" title="{{title}}"/>
         {{/with}}
       <span class="caption">{{caption}}</span>
     </a>
