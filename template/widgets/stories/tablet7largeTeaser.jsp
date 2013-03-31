@@ -16,7 +16,7 @@
         "inpageStyleClass": "",
         "alttext": "Lovers: Oscar and Reeva",
         "title": "Lovers: Oscar and Reeva",
-        "imageUrl": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva%20Steenkamp%20and%20Oscar%20Pistorius-1715733.jpg"
+        "url": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva%20Steenkamp%20and%20Oscar%20Pistorius-1715733.jpg"
       },
       "topicMap": {
         "name": "Reeva Steenkamp",
@@ -36,4 +36,6 @@
   ]
 }
 </c:set>
+<!-- start of widget id: 1234, name: stories, view: tablet7largeTeaser -->
 <shared:handlebars template="${template}" json="${json}" />
+<!-- end of widget id: 1234, name: stories, view: tablet7largeTeaser -->

@@ -10,31 +10,23 @@
 
   <!-- content -->
   <div data-role="content" class="content">  
-
-  <%-- large teaser --%>
-  <jsp:include page="${widgetBase}/stories/tablet7largeTeaser.jsp" />
-
-  <%-- medium teaser --%>
-  <jsp:include page="${widgetBase}/stories/tablet7mediumTeaser.jsp" />
-
-  <%-- Hot Topics - MOB-20 --%>
-  <jsp:include page="${widgetBase}/stories/tablet7hotTopicsList.jsp" />
-
-  <%-- small teaser MOB-22 --%>
-  <jsp:include page="${widgetBase}/stories/tablet7smallTeaser.jsp" />
   
-  <%-- picture navigator - MOB-50 --%>
-  <jsp:include page="${widgetBase}/stories/tablet7pictureNavigator.jsp" />
-
-  <%-- opinion teaser - MOB-69 --%>
-  <jsp:include page="${widgetBase}/stories/tablet7opinionTeaser.jsp" />
+    <jsp:include page="${widgetBase}/stories/tablet7largeTeaser.jsp" />
   
-  <%-- recommended teaser - MOB-73 --%>
-  <jsp:include page="${widgetBase}/stories/tablet7recommendedTeaser.jsp" />
+    <jsp:include page="${widgetBase}/stories/tablet7mediumTeaser.jsp" />
   
-  <%-- Most Read List --%>
-  <jsp:include page="${widgetBase}/stories/tablet7mostReadList.jsp" />
-
+    <jsp:include page="${widgetBase}/topic/tablet7.jsp" />
+  
+    <jsp:include page="${widgetBase}/stories/tablet7smallTeaser.jsp" />
+    
+    <jsp:include page="${widgetBase}/stories/tablet7pictureNavigator.jsp" />
+  
+    <jsp:include page="${widgetBase}/opinionCarousel/tablet7.jsp" />
+    
+    <jsp:include page="${widgetBase}/stories/tablet7rankedList.jsp" />
+    
+    <jsp:include page="${widgetBase}/popularList/tablet7mostRead.jsp" />
+  
   </div><!-- /content -->
   
   <div data-role="footer">   

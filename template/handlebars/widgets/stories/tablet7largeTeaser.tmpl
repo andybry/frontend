@@ -1,22 +1,17 @@
 {{#each articleMaps}}
-
   <div class="primary-topic">
-
     {{#if showImage}}
       <figure class="inline-image clearfix ">
-          <a href="{{url}}">
-          	{{#with imageMap}}
-          		<img src="{{imageUrl}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}">
-          	{{/with}}
-          </a>
+        <a href="{{url}}">
+          {{#with imageMap}}
+            <img src="{{url}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}">
+          {{/with}}
+        </a>
         <figcaption>{{title}}</figcaption>
-
       </figure>
     {{/if}}
-
     <div class="primary-topic-content">
       <ul class="tools">
-
         {{#if topicMap}}
           <li>
             {{#with topicMap}}
@@ -24,18 +19,13 @@
             {{/with}}
           </li>
         {{/if}}
-
         <li class="last">
           <time datetime="{{dateStringFortimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}} ago</time>
         </li>
-
       </ul>
-
       <p class="lead-text"><a href="{{url}}">{{intro}}</a></p>
-      
       {{#if relatedItemMaps}}
         <ul class="related-text">
-
           {{#each relatedItemMaps}}
             <li>
               <span class="right-arrow">&rsaquo;</span>
@@ -45,8 +35,6 @@
 
         </ul>
       {{/if}}
-
     </div>
   </div>
-
 {{/each}}

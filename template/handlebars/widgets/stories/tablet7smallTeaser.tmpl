@@ -1,32 +1,30 @@
-<!-- Small Teaser - MIR-4487 -->
-
 {{#each articleMaps}}
-		<div class="short-teaser clearfix">
-      <div class="inner-teaser">
-           {{#if showImage}}
-		           <figure class="inline-image">
-		               <a href="{{url}}">
-		               		{{#with imageMap}}
-		               			<img src="{{imageUrl}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}" />
-		               		{{/with}}
-		               	</a>
-		           </figure>
-           {{/if}}  
-           <div class="teaser-content">
-               <ul class="tools">
-                  <li>
-                  	{{#with topicMap}}  
-                    	<a href="{{url}}" class="more">{{name}}</a>
-                  	{{/with}}
-                  </li>     
-                  <li class="last">
-                    <time datetime="{{dateStringFortimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}} ago</time>
-                  </li>
-              </ul>
-              <h3 class="teaser-title"><a href="{{url}}">{{title}}</a></h3>
-            </div>
-         </div>      
+<div class="short-teaser clearfix">
+  <div class="inner-teaser">
+    {{#if showImage}}
+      <figure class="inline-image">
+        <a href="{{url}}">
+          {{#with imageMap}}
+            <img src="{{url}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}" />
+          {{/with}}
+        </a>
+      </figure>
+    {{/if}}  
+    <div class="teaser-content">
+      <ul class="tools">
+        {{#if topicMap}}
+          <li>
+            {{#with topicMap}}  
+              <a href="{{url}}" class="more">{{name}}</a>
+            {{/with}}
+          </li>     
+        {{/if}}
+        <li class="last">
+          <time datetime="{{dateStringFortimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}} ago</time>
+        </li>
+      </ul>
+      <h3 class="teaser-title"><a href="{{url}}">{{title}}</a></h3>
     </div>
+  </div>      
+</div>
 {{/each}}
-
-<!-- /Small Teaser -->

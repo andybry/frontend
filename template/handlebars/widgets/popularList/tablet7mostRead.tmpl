@@ -1,13 +1,12 @@
-<!-- List Most Read Text - MOB - 12 -->
 <div class="list-most-read-text clearfix">
   <h2 class="section-title">{{title}}</h2>
   <div class="list-most-read-wrapper">
     <ol class="most-read-list">
-      {{#each topicMaps}}
-        <li class="">
-          <a href="{{url}}">{{caption}}</a>
+      {{#each articleMaps}}
+        <li>
+          <a href="{{url}}">{{title}}</a>
         </li>
       {{/each}}
     </ol>  
   </div>
-</div><!--// List Most Read Text -->
+</div>

@@ -17,24 +17,16 @@
         "inpageStyleClass": "",
         "alttext": "Lovers: Oscar and Reeva",
         "title": "Lovers: Oscar and Reeva",
-        "imageUrl": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva%20Steenkamp%20and%20Oscar%20Pistorius-1715733.jpg"
+        "url": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva%20Steenkamp%20and%20Oscar%20Pistorius-1715733.jpg"
       },
       "topicMap": {
         "name": "Reeva Steenkamp",
         "url": "http://www.mirror.co.uk/all-about/reeva%20steenkamp"
-      },
-      "relatedItemMaps": [
-        {
-          "title": "Model may have had skull crushed on night she was shot dead by Oscar Pistorius",
-          "url": "http://www.mirror.co.uk/news/world-news/reeva-steenkamp-model-skull-crushed-1715537"
-        },
-        {
-          "title": "\"It was a mistake anybody can make\": Sprint star's gran says shooting was an accident",
-          "url": "http://www.mirror.co.uk/news/world-news/oscar-pistorius-sprint-stars-gran-1715080"
-        }
-      ]
-    }
+      }
+     }
   ]
 }
 </c:set>
+<!-- start of widget id: 1234, name: stories, view: tablet7mediumTeaser -->
 <shared:handlebars template="${template}" json="${json}" />
+<!-- end of widget id: 1234, name: stories, view: tablet7mediumTeaser -->

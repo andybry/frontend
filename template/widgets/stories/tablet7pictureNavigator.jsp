@@ -2,29 +2,36 @@
 <c:set var="json" scope="page">
 {
   "title": "Features",
-  "pictureMaps": [
-        {
-          "caption": "Hurricane Sandy: The big Clean Up Begins",
-          "url": "#",
-          "imageUrl": "http://i4.mirror.co.uk/incoming/article1733639.ece/ALTERNATES/s482b/Michelle+Williams.jpg",
-          "alttext": "dummy alt text",
-          "title": "dummy title text"
-        },
-        {
-          "caption": "Another caption",
-          "url": "#",
-          "imageUrl": "http://i2.mirror.co.uk/incoming/article1715056.ece/ALTERNATES/s482b/Pippa Middleton-1715056.jpg",
-          "alttext": "dummy alt text",
-          "title": "dummy title text"
-        },
-        {
-          "caption": "Third caption",
-          "url": "#",
-          "imageUrl": "http://i3.mirror.co.uk/incoming/article1715733.ece/ALTERNATES/s615/Reeva Steenkamp and Oscar Pistorius-1715733.jpg",
-          "alttext": "dummy alt text",
-          "title": "dummy title text"
-        }
-      ]
+  "swipeJsUrl": "/frontend/resources/js/lib/swipejs.js",
+  "widgetId": 1234,
+  "articleMaps": [
+    {
+      "url": "http://www.mirror.co.uk/tv/tv-reviews/doctor-who-review-jenna-louise-coleman-1792420",
+      "title": "Doctor Who review: Jenna-Louise Coleman is great",
+      "imageMap": {
+        "url": "http://i1.mirror.co.uk/incoming/article1789811.ece/ALTERNATES/s482b/Slider-Dr-Who.jpg",
+        "alttext": ""
+      }
+    },
+    {
+      "url": "http://www.mirror.co.uk/3am/celebrity-news/voice-2013-live-join-watch-1791989",
+      "title": "The Voice 2013 live: Join us as we watch the auditions",
+      "imageMap": {
+        "url": "http://i2.mirror.co.uk/incoming/article1792152.ece/ALTERNATES/s482b/the-voice-Main-1792152.jpg",
+        "alttext": ""
+      }
+    },
+    {
+      "url": "http://www.mirror.co.uk/news/world-news/kim-jong-un-looking-things---1793115",
+      "title": "Kim Jong-un looking at things - just like his dad",
+      "imageMap": {
+        "url": "http://i1.mirror.co.uk/incoming/article1792948.ece/ALTERNATES/s482b/CS37805152-EDITORS-NOTE--1792948.jpg",
+        "alttext": ""
+      }
+    }
+  ]
 }
 </c:set>
+<!-- start of widget id: 1234, name: stories, view: tablet7pictureNavigator -->
 <shared:handlebars template="${template}" json="${json}" />
+<!-- end of widget id: 1234, name: stories, view: tablet7pictureNavigator -->

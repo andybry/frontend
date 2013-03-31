@@ -1,38 +1,31 @@
-<!-- medium teaser with 2 views: MOB-52, MOB-83 -->
-
 {{#each articleMaps}}  
-    {{#if showIntro}}
-      <div class="medium-teaser clearfix">
-    {{else}}
-      <div class="medium-teaser v2 clearfix">  
-    {{/if}}  
-      <div class="inner-teaser">
-         {{#if showImage}}
-	         <figure class="inline-image">
-	             <a href="{{url}}">
-	             		{{#with imageMap}}
-	             			<img src="{{imageUrl}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}" />
-	             		{{/with}}
-	             </a>
-	         </figure>
-         {{/if}}
-         
-         <div class="teaser-content">
-             <ul class="tools">
-                <li>
-                	{{#with topicMap}} 
-                  	<a href="{{url}}" class="more">{{name}}</a>
-                  {{/with}}	
-                </li>     
-                <li class="last">
-                  <time datetime="{{dateStringFortimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}} ago</time>
-                </li>
-            </ul>
-            <h3 class="teaser-title"><a href="{{url}}">{{title}}</a></h3>
-            {{#if showIntro}}
-              <p class="lead-text"><a href="{{url}}">{{intro}}</a></p>
-            {{/if}}  
-          </div>
-       </div>   
-    </div>
+  <div class="medium-teaser {{#if showIntro}}{{else}}v2{{/if}} clearfix">
+    <div class="inner-teaser">
+      {{#if showImage}}
+        <figure class="inline-image">
+          <a href="{{url}}">
+          {{#with imageMap}}
+            <img src="{{url}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}" />
+          {{/with}}
+          </a>
+        </figure>
+      {{/if}}
+      <div class="teaser-content">
+         <ul class="tools">
+            <li>
+            {{#with topicMap}} 
+              <a href="{{url}}" class="more">{{name}}</a>
+              {{/with}}
+            </li>     
+            <li class="last">
+              <time datetime="{{dateStringFortimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}} ago</time>
+            </li>
+        </ul>
+        <h3 class="teaser-title"><a href="{{url}}">{{title}}</a></h3>
+        {{#if showIntro}}
+          <p class="lead-text"><a href="{{url}}">{{intro}}</a></p>
+        {{/if}}  
+      </div>
+    </div>   
+  </div>
 {{/each}}

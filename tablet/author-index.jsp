@@ -10,9 +10,10 @@
 
   <!-- content -->
   <div data-role="content" class="content">  
+    <%-- TODO: storyContent, tablet7profileContent needs a back end --%>
+    <jsp:include page="${widgetBase}/storyContent/tablet7profileContent.jsp" />
 
-  <%-- author page - MOB-44 and MOB-101 --%>
-  <jsp:include page="${widgetBase}/stories/tablet7authorTopicsList.jsp" />
+    <jsp:include page="${widgetBase}/stories/tablet7paginatedList.jsp" />
 
   </div><!-- /content -->
   

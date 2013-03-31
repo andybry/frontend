@@ -11,9 +11,7 @@
   <!-- content -->
   <div data-role="content" class="content no-border">  
 
-  <%-- search results - MOB-97 --%>
-  <jsp:include page="${widgetBase}/stories/tablet7searchResultsList.jsp" />
-  
+    <jsp:include page="${widgetBase}/search/tablet7searchResult.jsp" />
 
   </div><!-- /content -->
   

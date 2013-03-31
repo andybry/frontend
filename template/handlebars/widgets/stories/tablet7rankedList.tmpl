@@ -1,0 +1,42 @@
+{{!
+  TODO: this template represents how the data should be output, but the call to Rummble Labs needs
+  to be made at the frontend and this template needs to be rendered there too.
+
+  We also need to output the popup as part of this template
+}}
+<div class="recommended-teaser clearfix">
+<h2 class="section-title">{{title}}</h2>
+  {{#each articleMaps}}
+    <div class="item-container-{{position}}">
+      <figure class="inline-image">
+        <a href="{{url}}">
+          {{#with imageMap}}
+            <img src="{{url}}" alt="{{alttext}}" class="{{inpageStyleClass}}" title="{{title}}">
+          {{/with}}
+        </a>
+      </figure>
+      <div class="teaser-content">
+         <ul class="tools">
+            <li>
+              {{#with topicMap}}
+                <a href="{{url}}" class="more">{{name}}</a>
+              {{/with}}  
+            </li>     
+            <li class="last">
+              <time datetime="{{dateStringForTimeElement}}" data-storiestime="{{dateTimeInMs}}">{{timeAgoString}}&nbsp;ago</time>
+            </li>
+        </ul>
+        <h3 class="teaser-title"><a href="{{url}}">{{title}}</a></h3>
+      </div>
+    </div>
+    {{#if appendButton}}
+      <div class="clearfix"></div>
+      <div class="buttons-panel clearfix">
+        <a href="#popupRecommended" data-role="button" data-rel="popup">Improve these suggestions</a>
+      </div>
+    {{/if}}
+    {{#if appendRowEnd}}
+      <div class="row-clear"></div>
+    {{/if}}
+  {{/each}}
+</div>

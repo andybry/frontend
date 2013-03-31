@@ -1,0 +1,14 @@
+{{#with authorMap}}
+  <div class="author-index-header">
+    <figure class="author">
+       <a href="{{authorUrl}}">
+         <img src="{{imageMap.url}}" alt="{{name}}" title="{{name}}">
+       </a>
+       <figcaption>{{name}}</figcaption>
+       <div class="gradient-overlay"></div>
+    </figure>
+    <div class="author-info">
+        {{intro}}
+    </div>
+  </div>
+{{/with}}

@@ -1,10 +1,9 @@
-<!-- MOB-97 Front-end - Search -->
 <div id="search-panel">
   <ul class="navigation-list">
     <li class="last">
           <form id="" action="">
             <i class="icon-search"></i>
-            <input type="text" name="" id="search" value="" placeholder="Search...">
+            <input type="text" name="" id="search" value="{{searchCriteria}}">
           </form> 
     </li>
   </ul>
@@ -16,17 +15,17 @@
 
 <div class="sort-by">
   <span>Sort By:</span>
-  <a href="#" class="selected">NEWEST</a>
-  <a href="#">MOST RELEVANT</a>
-  <a href="#">OLDEST</a>
+  {{#each sortCriteria}}
+    <a href="{{url}}" {{#if isSelected}}class="selected"{{/if}}>{{name}}</a>
+  {{/each}}
 </div>
-{{#each resultMaps}}
+{{#each articleMaps}}
   <div class="search-result-item">
     <h2 class="title"><a href="{{url}}">{{title}}</a></h2>
     <ul class="tools">
         <li>
           {{#with topicMap}}
-            <a href="url" class="more">{{name}}</a>
+            <a href="{{url}}" class="more">{{name}}</a>
           {{/with}}  
         </li>     
         <li class="last">

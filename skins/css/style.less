@@ -1617,13 +1617,13 @@ ul {
           }
         }
       }
-      #slide-prev {
+      .slide-prev {
         left: 0px;
       }
-      #slide-next {
+      .slide-next {
         right: 0px;
       }
-      #slider-nav {
+      .slider-nav {
         height: 2.4em;
         border-top: 1px solid #353232;
         background: url(images/bkg1.png) 0 0 repeat;
@@ -1830,6 +1830,7 @@ ul {
 				line-height: 1.5;
 				font-style: italic;
 				margin: 3px 0 0 0;
+                                color: @textcolor;
 			}
 		}
 	}//Opinion teaser
@@ -2498,7 +2499,7 @@ ul {
   		margin: 0 10px;
   		color: #000;
   	}
-  	a:active, a:hover {
+  	a:active, a:hover, a.selected {
   			color: @red-1;
   		}
   }
