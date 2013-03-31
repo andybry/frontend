@@ -1,0 +1,41 @@
+<div data-role="panel" data-display="push" id="nav-panel">
+  <ul class="navigation-list">
+    {{#each items}}
+      <li class="{{class}}">
+        <a href="{{url}}">{{text}}</a>
+        <span class="right-arrow">&rsaquo;</span>
+      </li>
+    {{/each}}
+    <li class="last">
+      <form action="{{formAction}}" method="{{formMethod}}">
+        <i class="icon-search"></i>
+        <input type="" name="search" id="search" value="" placeholder="Search...">
+        {{#each formHiddenParameters}}
+          <input type="hidden" name="{{key}}" id="{{key}}" value="{{value}}" />
+        {{/each}}
+      </form> 
+    </li>   
+  </ul>    
+</div>
+  
+<script>
+  $(document).ready(function() {
+    $('#search').click(function() {
+      if ($('#search').val() == 'Search...') {
+        $('#search').val('');  
+      };
+    });
+  });
+  $( document ).on( "pageinit", "#mirror-page", function() {
+    $( document ).on( "swiperight", "#mirror-page", function( e ) {
+      // We check if there is no open panel on the page because otherwise
+      // a swipe to close the left panel would also open the right panel (and v.v.).
+      // We do this by checking the data that the framework stores on the page element (panel: open).
+      if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+        if ( e.type === "swiperight"  ) {
+          $( "#nav-panel" ).panel( "open" );
+        }
+      }
+    });
+  });
+</script>  

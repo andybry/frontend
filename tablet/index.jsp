@@ -5,7 +5,7 @@
 <div id="mirror-page" data-role="page">
 
   <%-- navigation --%>
-  <jsp:include page="${widgetBase}/stories/tablet7navigation.jsp" />
+  <jsp:include page="${widgetBase}/menu/tablet7Menu.jsp" />
 
   <div data-role="header" id="header"> 
 
