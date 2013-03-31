@@ -11,6 +11,8 @@
   <!-- content -->
   <div data-role="content" class="content">  
 
+    <jsp:include page="${widgetBase}/storyContent/tablet7.jsp" />
+
     <%-- 
       this div either needs to go in the template or the configuration in 
       Content Studio
