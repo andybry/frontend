@@ -3,6 +3,9 @@
 {
   "title": "",
   "subType": "football_spy_video",
+  "widgetId": 13252512,
+  "imageBaseUrl": "/frontend/skins/css/images",
+  "swipeJsUrl": "/frontend/resources/js/lib/swipejs.js",
   "articleMaps": [
     {
       "dateMonthYear": "January 2013",
@@ -25,4 +28,6 @@
   ]
 }
 </c:set>
+<!-- start of widget id: 1234, name: stories, view: tablet7videoNavigator -->
 <shared:handlebars template="${template}" json="${json}" />
+<!-- end of widget id: 1234, name: stories, view: tablet7videoNavigator -->

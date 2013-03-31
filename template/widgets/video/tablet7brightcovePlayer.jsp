@@ -1,9 +1,10 @@
-<c:set var="template" scope="page" value="/template/handlebars/widgets/stories/tablet7articleVideo.tmpl" />
+<c:set var="template" scope="page" value="/template/handlebars/widgets/video/tablet7.tmpl" />
 <c:set var="json" scope="page">
 {
   "subType": "dummy_sub_type",
   "videoClass": "am",
   "videoLogo": "justsayin-logo.png",
+  "imageBaseUrl": "/frontend/skins/css/images",
   "article":
     {
       "fields": {
@@ -21,6 +22,4 @@
     }
 }
 </c:set>
-<!-- videoClass options am, spy and standard.-->
-<!-- videoLogo options justsayin-logo.png, spy-logo.png-->
 <shared:handlebars template="${template}" json="${json}" />

@@ -23,6 +23,8 @@
       --%>
       <div class="article-body">
         <jsp:include page="${widgetBase}/poll/tablet7photo.jsp" />
+        <jsp:include page="${widgetBase}/video/tablet7brightcovePlayer.jsp" />
+        <jsp:include page="${widgetBase}/video/tablet7youtube.jsp" />
       </div>
     </div>
 

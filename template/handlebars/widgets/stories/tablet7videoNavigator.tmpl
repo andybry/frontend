@@ -1,61 +1,59 @@
-<!-- Video Navigator - MOB-66, MOB 63, MOB 90  -->
 <div class="carousel video {{subType}} clearfix">
   <h2 class="section-title">Latest Videos</h2>
   <div class="carousel-wrapper">
-  	<div class="carousel-border-top"></div>
-  	<figure class="section-logo">
-  	  {{#if subType}}
-        <img src="../skins/css/images/{{subType}}-section-logo.png" alt="" title=""/>
-      {{/if}}	      
+    <div class="carousel-border-top"></div>
+    <figure class="section-logo">
+      {{#if subType}}
+        <img src="{{imageBaseUrl}}/{{subType}}-section-logo.png" alt="" title=""/>
+      {{/if}}        
     </figure>
-  	<div id="slider">
-  		<div class="slider-wrapper">
-  			<!-- -->
-            {{#each articleMaps}}
-              <div class="slide-item clearfix" style="display: block;">
-              	<div class="slider-videodate-wrapper clearfix">
-			      <p class="videodate-year">{{dateMonthYear}}</p>
-			      <h3 class="videodate-day">{{dateDayWeek}}</h3>
-			    </div>
-                <figure class="clearfix">
-                  <img src="{{videoMainImageUrl}}" alt="{{title}}" title="{{title}}"/>                  
-                  <div class="video-overlay">
-                  	<a href="{{url}}">
-                  	  <div class="play-button">
-                  		<img src="../skins/css/images/play-button.png"/>
-                      </div>
-                    </a>
+    <div id="slider-{{widgetId}}">
+      <div class="slider-wrapper">
+        {{#each articleMaps}}
+          <div class="slide-item clearfix" style="display: block;">
+            <div class="slider-videodate-wrapper clearfix">
+              <p class="videodate-year">{{dateMonthYear}}</p>
+              <h3 class="videodate-day">{{dateDayWeek}}</h3>
+            </div>
+            <figure class="clearfix">
+              <img src="{{videoMainImageUrl}}" alt="{{title}}" title="{{title}}"/>                  
+              <div class="video-overlay">
+                <a href="{{url}}">
+                  <div class="play-button">
+                  <img src="{{../imageBaseUrl}}/play-button.png"/>
                   </div>
-                </figure>
-                <h2>{{{intro}}}</h2>
+                </a>
               </div>
-            {{/each}}
-        </div>
-        <div id="slide-prev" class="slide-nav">
-        	<span class="icon-arrow-left"/>
-        </div>
-        <div id="slide-next" class="slide-nav">
-        	<span class="icon-arrow-right"/>
-        </div>
+            </figure>
+            <h2>{{{intro}}}</h2>
+          </div>
+        {{/each}}
+      </div>
+      <div id="slide-prev-{{widgetId}}" class="slide-prev slide-nav">
+        <span class="icon-arrow-left"/>
+      </div>
+      <div id="slide-next-{{widgetId}}" class="slide-next slide-nav">
+        <span class="icon-arrow-right"/>
+      </div>
     </div>
-    <div id="slider-nav">
-    	<ul id="slider-nav-position">
-    	  {{#each articleMaps}}
-    	    {{#if isFirst}}
-    		  <li class="slider-nav-on"></li> 
-    		{{else}}
-    		  <li></li>
-    		{{/if}}
+    <div id="slider-nav-{{widgetId}}" class="slider-nav">
+      <ul id="slider-nav-position-{{widgetId}}">
+        {{#each articleMaps}}
+          {{#if isFirst}}
+          <li class="slider-nav-on"></li> 
+        {{else}}
+          <li></li>
+        {{/if}}
           {{/each}} 
-    	</ul>
+      </ul>
     </div>
   </div>
 </div><!--// Video Carousel -->
     
 <script>    
-  $LAB.script("../resources/js/lib/swipejs.js").wait(function(){
-    var bullets = $('#slider-nav-position li');
-    var swipe = new Swipe(document.getElementById('slider'), {
+  $LAB.script("{{swipeJsUrl}}").wait(function(){
+    var bullets = $('#slider-nav-position-{{widgetId}} li');
+    var swipe = new Swipe(document.getElementById('slider-{{widgetId}}'), {
       speed: 400,
       //auto: 3000,
       callback: function(event, index, elem) {
@@ -66,29 +64,29 @@
         bullets[index].className = 'slider-nav-on'; 
       }
     });
-    $('#slide-prev').click(function(){
+    $('#slide-prev-{{widgetId}}').click(function(){
       swipe.prev();
     });
-    $('#slide-next').click(function(){
+    $('#slide-next-{{widgetId}}').click(function(){
       swipe.next();
     });   
     $(window).on('resize',function() {
-    	setTimeout(function() {
-          	setNavHeight();
+      setTimeout(function() {
+            setNavHeight();
         }, 100);      
     }); 
     var setNavHeight = function() {
-    	var sliderWrapperHeight = $(".slider-wrapper").innerHeight();   
-	    var slideItemHeight = $(".slide-item figure").first().innerHeight(); 
-	    var slideItemPosition = $(".slide-item figure").first().position(); 
-	    console.log(sliderWrapperHeight);
-	    console.log(slideItemPosition);
-	    console.log(slideItemHeight);
-	    var slideNavHeight = $(".slide-nav").height();
-	    console.log(slideNavHeight);
-	    var totOffset = (slideItemPosition.top) + (slideItemHeight/2) - (slideNavHeight/2);
-	    console.log(totOffset);
-	    $(".slide-nav").css('top', totOffset);  
+      var sliderWrapperHeight = $("#slider-{{widgetId}} .slider-wrapper").innerHeight();   
+      var slideItemHeight = $("#slider-{{widgetId}} .slide-item figure").first().innerHeight(); 
+      var slideItemPosition = $("#slider-{{widgetId}}] .slide-item figure").first().position(); 
+      console.log(sliderWrapperHeight);
+      console.log(slideItemPosition);
+      console.log(slideItemHeight);
+      var slideNavHeight = $("#slider-{{widgetId}} .slide-nav").height();
+      console.log(slideNavHeight);
+      var totOffset = (slideItemPosition.top) + (slideItemHeight/2) - (slideNavHeight/2);
+      console.log(totOffset);
+      $("#slider-{{widgetId}}.slide-nav").css('top', totOffset);  
     };
     setNavHeight();
   });     

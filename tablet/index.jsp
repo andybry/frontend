@@ -26,6 +26,8 @@
     <jsp:include page="${widgetBase}/stories/tablet7rankedList.jsp" />
     
     <jsp:include page="${widgetBase}/popularList/tablet7mostRead.jsp" />
+
+    <jsp:include page="${widgetBase}/stories/tablet7videoNavigator.jsp" />
   
   </div><!-- /content -->
   
