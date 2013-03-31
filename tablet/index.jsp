@@ -31,7 +31,33 @@
     <jsp:include page="${widgetBase}/popularList/tablet7mostRead.jsp" />
 
     <jsp:include page="${widgetBase}/stories/tablet7videoNavigator.jsp" />
-  
+
+    <%-- 
+      tabs come from a layout group and are configured in Content Studio
+      each widget inside forms one of the tabs
+    --%>
+    <div class="nav-tabs">
+      <ul class="tabs clearfix set-4 most-read">
+        <%-- the data here comes from options on the group in Content Studio --%>
+        <li class="active" data-Id="All"><a href="#">All</a></li>
+        <li data-Id="News"><a href="#">News</a></li>
+        <li data-Id="Sport"><a href="#">Sport</a></li>
+        <li class="last" data-Id="Celebs"><a href="#" >Celebs</a></li>
+      </ul>     
+      <div class="tab-container">
+        <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
+        <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
+        <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
+        <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
+      </div>
+    </div>
+   
+    <script type="text/javascript">
+      $LAB.script("../resources/js/lib/tm.multiTabs.js").wait(function() {
+        $(".nav-tabs").tab();
+      });
+    </script> 
+
   </div><!-- /content -->
   
   <div data-role="footer">   
