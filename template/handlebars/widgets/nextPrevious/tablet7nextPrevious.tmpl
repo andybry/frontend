@@ -1,0 +1,39 @@
+<div class="prev-next-article clearfix">
+  <div class="prev-next-content clearfix">
+    {{#previousArticleMap}}
+    <figure class="inline-image clearfix prev">
+      <a class="link" href="{{url}}">
+        <h3><span class="icon-arrow-left"></span>PREVIOUS ARTICLE</h3>
+      </a>
+      <a class="image" href="{{url}}">
+        {{#imageMap}}
+          <img src="{{url}}" alt="{{alttext}}" class="" title="{{title}}">
+        {{/imageMap}}
+      </a>
+      <figcaption>
+        {{#topicMap}}
+      	  <span>{{name}}</span>
+        {{/topicMap}}
+      </figcaption>
+    </figure>
+    {{/previousArticleMap}}
+
+    {{#previousArticleMap}}
+    <figure class="inline-image clearfix next">
+      <a class="link" href="{{url}}">
+        <h3><span class="icon-arrow-right"></span>NEXT ARTICLE</h3>
+      </a>
+      <a class="image" href="{{url}}">
+        {{#imageMap}}
+          <img src="{{url}}" alt="{{alttext}}" class="" title="{{title}}">
+        {{/imageMap}}
+      </a>
+      <figcaption>
+        {{#topicMap}}
+      	  <span>{{name}}</span>
+        {{/topicMap}}
+      </figcaption>
+    </figure>
+    {{/previousArticleMap}}
+  </div> 
+</div>

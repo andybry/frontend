@@ -30,6 +30,8 @@
       </div>
     </div>
 
+    <jsp:include page="${widgetBase}/nextPrevious/tablet7nextPrevious.jsp" />
+
   </div><!-- /content -->
   
   <div data-role="footer">   
