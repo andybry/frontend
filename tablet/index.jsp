@@ -66,6 +66,21 @@
       });
     </script> 
 
+    <jsp:include page="${widgetBase}/promo/tablet7secondScreenPromo.jsp">
+      <jsp:param name="size" value="small"/>
+      <jsp:param name="type" value="match"/>
+    </jsp:include>
+
+    <jsp:include page="${widgetBase}/promo/tablet7secondScreenPromo.jsp">
+      <jsp:param name="size" value="medium"/>
+      <jsp:param name="type" value="3am"/>
+    </jsp:include>
+
+    <jsp:include page="${widgetBase}/promo/tablet7secondScreenPromo.jsp">
+      <jsp:param name="size" value="large"/>
+      <jsp:param name="type" value="match"/>
+    </jsp:include>
+
   </div><!-- /content -->
   
   <div data-role="footer">   

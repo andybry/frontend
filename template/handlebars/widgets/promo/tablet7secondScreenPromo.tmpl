@@ -1,0 +1,39 @@
+<!-- Second Screen Promo Units - MOB-21 -->
+<div class="promo-unit clearfix">
+  <div class="promo-color-wrap top"></div>
+    <div class="promo-content {{class}} clearfix">
+      <div class="promo-section clearfix">
+      	<figure class="vert-center">
+      		<img src="{{logoFile}}" />        		
+      	</figure>
+  {{#articleMap}}
+      	<h3 class="vert-center">{{title}}</h3>
+      </div>
+      {{#if showImage}}
+        <div class="promo-image clearfix">
+          <figure>
+             <a href="{{url}}">
+               {{#imageMap}}
+                 <img src="{{url}}" alt="{{alttext}}" title="{{title}}"></a>
+               {{/imageMap}}
+             </a>
+          </figure>
+        </div>  
+      {{/if}}      
+    </div> 
+  {{/articleMap}}
+  <div class="promo-color-wrap bottom"></div>
+</div>
+
+{{#if needsVerticalAlign}}
+  <script>
+    $LAB.script("{{verticalAlignJs}}").wait(function() {
+    //IMPORTANT less is not going to compile like this in production so the refresh should be removed.
+      less.refresh();
+      $(".vert-center").middle();
+      $(window).on('resize',function() {
+        $(".vert-center").middle();     
+          });
+        });
+  </script>
+{{/if}}
