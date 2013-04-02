@@ -1,22 +1,20 @@
-<div class="tab-content" id="{{styleId}}">
-  {{#each articleMaps}}
-  <figure class="inline-image clearfix ">
-    <span class="most-read-rank">{{rank}}</span>
-    <a href="{{url}}">
-      {{#imageMap}}
-        <img src="{{url}}" alt="{{alttext}}" title="{{title}}">
-      {{/imageMap}}
-    </a>
-    <figcaption class="main-caption">
-      {{intro}}
+{{#each articleMaps}}
+<figure class="inline-image clearfix ">
+  <span class="most-read-rank">{{rank}}</span>
+  <a href="{{url}}">
+    {{#imageMap}}
+      <img src="{{url}}" alt="{{alttext}}" title="{{title}}">
+    {{/imageMap}}
+  </a>
+  <figcaption class="main-caption">
+    {{intro}}
+  </figcaption>
+  <div class="fig-container">
+    <figcaption class="tag-caption">
+      {{#topicMap}}
+        {{name}}
+      {{/topicMap}}
     </figcaption>
-    <div class="fig-container">
-      <figcaption class="tag-caption">
-        {{#topicMap}}
-          {{name}}
-        {{/topicMap}}
-      </figcaption>
-    </div>              
-  </figure>
-  {{/each}}
-</div>
+  </div>              
+</figure>
+{{/each}}

@@ -45,10 +45,18 @@
         <li class="last" data-Id="Celebs"><a href="#" >Celebs</a></li>
       </ul>     
       <div class="tab-container">
-        <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
-        <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
-        <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
-        <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
+        <div class="tab-content" id="styleIdtab0">
+          <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
+        </div>
+        <div class="tab-content" id="styleIdtab0">
+          <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
+        </div>
+        <div class="tab-content" id="styleIdtab0">
+          <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
+        </div>
+        <div class="tab-content" id="styleIdtab0">
+          <jsp:include page="${widgetBase}/popularList/tablet7mostReadPics.jsp" />
+        </div>
       </div>
     </div>
    
