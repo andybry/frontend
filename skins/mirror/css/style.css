@@ -1,0 +1,5614 @@
+.showgrid{
+  background:url(../gfx/grid.png);
+}
+
+/* 
+	@RULES:
+		1. Define colours within colours section only
+		2. Spacing
+				a. Use 2 spaces for indentation
+				b. Do not qualify selector with element tag if class name already exist. 
+						E.g.: No ul.classname
+				c. Don't use !important
+        d. Keep each line within 100 chars
+
+ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after{content:''; content:none;}
+mark{background-color:#ff9; color:#000; font-style:italic; font-weight:bold;}
+del{text-decoration:line-through;}
+abbr[title], dfn[title]{border-bottom:1px dotted; cursor:help;}
+input, select{vertical-align:middle;}
+
+/* normalize monospace sizing
+ * en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
+ */
+pre, code, kbd, samp{font-family:monospace, sans-serif;}
+
+/* accessible focus treatment:people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active{outline:none;}
+
+small{font-size:85%;}
+strong, th{font-weight:bold;}
+td, td img{vertical-align:top;}
+sub{vertical-align:sub; font-size:smaller;}
+sup{vertical-align:super; font-size:smaller;}
+pre{
+	padding:15px;
+	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+	white-space:pre; /* CSS2 */
+	white-space:pre-wrap; /* CSS 2.1 */
+	white-space:pre-line; /* CSS 3 (and 2.1 as well, actually) */
+}
+
+/* thnx ivannikolic! www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+textarea{overflow:auto;}
+.ie6 legend, .ie7 legend{margin-left:-7px;} /* thnx ivannikolic! */
+
+/* align checkboxes, radios, text inputs with their label
+   by:Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"]{vertical-align:text-bottom;}
+input[type="checkbox"]{vertical-align:bottom;}
+.ie7 input[type="checkbox"]{vertical-align:baseline;}
+.ie6 input{vertical-align:text-bottom;}
+.ie7 #SimpleSearchForm input[type=text],
+.ie8 #SimpleSearchForm input[type=text] {line-height: 1.6em;}
+.ie7 #SimpleSearchForm input[type=submit] {text-transform: capitalize;margin-left:-1px;}
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button{cursor:pointer;}
+
+/* webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea{margin:0;}
+
+/* make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button{ width:auto; overflow:visible;}
+
+/* remove mysterious gap - http://devedge-temp.mozilla.org/viewsource/2002/img-table/ */
+a img{display:block;}
+
+/* for image replacement */
+.ir{display:block; text-indent:-999em; overflow:hidden; background-repeat:no-repeat; text-align:left; direction:ltr;}
+
+/* hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden{display:none; visibility:hidden;}
+
+/* hide visually and from screenreaders, but maintain layout */
+.invisible{visibility:hidden;}
+
+/* >> the Magnificent CLEARFIX:Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+.clearfix:after, header:after , .nav-main ul:after, .article:after, figure:after, 
+.tools:after, .opinions-heading:after, .pic-viewer-thumbs:after, .opinions:after, 
+.pagination:after, .poll:after, .poll li:after, .weather-header:after, .weather ul:after {
+	content:"\0020"; display:block; height:0; visibility:hidden;
+}
+.clearfix:after, header:after , .nav-main ul:after, .article:after, figure:after, .tools, 
+.tools:after, .opinions-heading:after, .pic-viewer-thumbs:after, .opinions:after, 
+.pagination:after, .poll:after, .poll li:after, .weather-header:after, .weather ul:after {
+	clear:both;
+}
+/* clear in IE */
+.ie7 .clearfix, .ie7 header, .ie7 .nav-main ul, .ie7 .article:after, .ie7 .article, .ie7 .tools, .ie7 figure:after, 
+.ie7 .tools:after, .ie7 .opinions-heading, .ie7 .poll, .ie7 .poll li {
+  display:inline-block;
+}
+/* IE6 double float-margin bug fix */
+.ie6 .clearfix, ie6 figure, .ie6 .nav-main ul, .ie6 .tools{display:inline;}
+
+/**************************** extend/override Blueprint ****************************/
+body {
+	font-family:"Trebuchet MS", sans-serif;
+	font-size:81.25%;
+	line-height:1.385em;
+}
+input {
+	font-family:"Trebuchet MS", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {font-weight:bold;}
+
+	/* TODO NB overriden in blueprint according to &&& update but should they be universal like this? */
+h3 {
+	line-height: 1.08em;
+	margin-bottom:0.5em;
+}
+p {margin:0 0 0.75em;}
+
+a {outline-style:none; text-decoration:none;}
+
+.container {
+  border-width: 0 1px;
+  padding: 0 10px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.span-4-5, .span-7-5, .span-8-5,.span-15-5, .span-17-5 {float:left; margin-right:20px;}
+.span-5-6 {float:left; margin-right:11px;}
+.span-4-5 {width:160px;}
+.span-5-6 {width:226px;}
+.span-7-5 {width:300px;}
+.span-8-5 {width:340px;}
+.span-15-5 {width:620px;}
+.span-17-5 {width:700px;}
+
+.append-0 {padding-right:20px;}
+.prepend-0 {padding-left:20px;}
+.last {margin-right:0;} /* override right margin */
+
+
+/**************************** Colours ****************************/
+	/* background color */
+.pic-viewer-list .selected {
+	background-color: #000;
+}
+		/* white */
+.search-box input[type="submit"], .lg-teaser h1, .viewport-heading a, .strip ul, .ticker-swipe, 
+.takeover .container, .splash .splash-inner, .splash-right .splash-inner, .horoscope-tabs .selected, 
+.splash-image-led h1 a, .container, .article-page .article figure figcaption, .top-write,
+.login ul, .opta-tabs .active, #page .tabs-article .tab_content, #page .tabs-article ul.tabs li.active a {
+	background-color: #fff;
+}
+
+	/* light gray 
+	* NB:.ad uses this as a fallback bgcolor if CSS3 background stripes is not supported
+  */
+.ad, .top-story, .weather ul, .pic-viewer-thumbs, .horoscope, .epl, 
+.standfirst .box-heading, .sm-promo-list, .article-page .live-odds, .article-box-heading.grey, 
+.splash, .splash-image-led, .splash-right, .horoscope-tabs li, .opta-tabs li { 
+  background-color: #ededed;
+}
+	/* another light gray */
+footer, .drop .loading {
+  background-color: #f5f5f5;
+}
+		/* mid gray */
+.weather .box-bottom {
+  background-color: #dadada;
+}
+	/* Mirror Red - Fill */
+.btn, .poll-result, .date-picker input[type="submit"], .sm-promo-list h3, 
+.errormessage .search-box input[type="submit"], .search-results .search-box input[type="submit"], 
+.article-box-heading.red, .opinions-heading, .no-js .tab > a:hover, .touch .tab > a:hover, .tab .active, .tab.drop-hover > a, .tab.drop-hover > a:hover {
+  background-color: #e90e0e;
+}
+		/* yellow */
+.pagination-controls .selected {
+	background-color: #ffd600;
+}
+
+	/* border color */
+		/* gray */
+.ad, .search-box input[type="text"], .search-box input[type="text"]:focus,
+.search-box input[type="submit"], .search-box input[type="submit"]:focus, .article, footer .span-17, 
+.recommendations, .login, .login ul, .box-bottom, .headline-teaser li, .half-horizontal, .pic-viewer-thumbs, 
+.lc-teaser .see-also, .pagination, .search-for, .date-picker input[type="text"], .storylist .lg-teaser .see-also, 
+.refine-search h4, .refine-search-date, .refine-search dl, .strip, .horoscope ul, .horoscope a, 
+.epl ul, .epl a, .newsflash, .newsflash h2, .standfirst .box-heading, .rankings td, .player-rating, .player-rating td, .player-rating thead th,
+.rankings-result, .rankings-result thead th, .standfirst .info, .competition-quotes li, .competition-winners li, .sm-promo-list, .article-page .live-odds,
+.article-box-heading.grey, .recent-comments .wrapper, .sm-horoscopes-teaser, .splash, .splash-image-led,
+.splash .splash-inner, .tm-twitter .tweet, .horoscope-tabs, .horoscope-tabs li, .col4 blockquote,
+.splash-right .splash-inner, .dh-teaser, .dh-teaser-hdln, .dh-teaser-hdln p, 
+.superpick-teaser, .drop, .weather ul, .weather li, .container, .opinions, .drop nav li,
+.mpu-border, .floating-mpu .mpu, .span-8-5 .mpu, .flag, .opta-tabs, .opta-tabs li, .related-contents h3, .related-contents-img figure, .inner-money-widget {
+	border-color: #dadada;
+}
+.box-bottom li, .opinions-list-vert li, .related-list, .article-page .live-update, .drop .ma-teaser, 
+.drop .sa-teaser, .footer-links-wrap, .directory dt, input[type="text"]:focus, footer, 
+.sm-horoscopes-teaser, .drop, .drop h3 {
+	border-color: #b2b2b2;
+}
+.storylist .lg-teaser .tools {
+	border-color: #a3a3a3;
+}		
+.footer-links li, .tools li {
+	border-color: #5a6466;
+}
+		/* dark orange */
+.opinions-heading, .sm-promo-list h3, .article-box-heading.red {
+	border-color: #c50808;
+}
+	/* yellow	*/
+.pagination-controls .selected {
+	border-color: #d2b000;
+}		
+		/* black */
+.row, .article img, .carousel img, .channel-hdr, .four-col-teaser img, .curated-hdr img, 
+.search-results h2, .curated-thumb, .five-col-teaser img, .celebs img, .quicklinks img, 
+.competition img, .competition-teaser img, .competition-teaser, .competition-quotes, 
+.sm-promo-list img, .kb-teaser img, .columnists img, .sm-horoscope-list img, .smht-pic a, 
+.horoscope-page h2, .row-thin, .sm-horoscopes-profile, .tm-twitter .tweet img, .smht-pic a,
+.col4 img, .horoscope-header figure a img, .horoscopes-profile-header a img, .most-read img,
+.horoscopes-storylist, .tools .more, .hot-topics a, .box-bottom h5 a, .related-widget dd a,
+.pluck-login-withFacebook, .just-sayin-wrapper, .just-sayin .visor .video-box  {
+	border-color: #000;
+}
+/* white */
+#page .tabs-article ul.tabs li.active { 
+  border-color: #fff;
+}
+	/* mirror red - outline */
+.tab > .active, .no-js .tab > a:hover, .touch .tab > a:hover, .tab.drop-hover > a, .tab.drop-hover > a:hover {
+	border-color: #c50808;
+}
+	
+	/* text color */
+		/* black */
+blockquote, .popular li, .lc-teaser-nobdr h3, .box-bottom ol li, .article-page .storylist h3, 
+.article-page .related-widget h3, .article-page .article p, .horoscope-header .tools .phone,
+.more, .menu a, .channel-hdr a, .tools .more:hover, .hot-topics a, .hot-topics a:hover,
+.pagination a, .pagination a:hover, .box-bottom h5 a, .box-bottom h5 a:hover, .search-sort .active a,
+.article-page .auto-refresh .selected, .search-top .search-sort .active a, #page .tabs-article ul.tabs li.active a, .channel-hdr a:hover.no-link {
+	color: #000;
+}
+	/* gray */
+footer, .box-bottom h5, .box-bottom dt, .search-sort li, .square h5, .standfirst .match .msg, 
+.standfirst .info, .article p, .article figcaption, .competition-teaser p, .sm-promo-inner p, 
+.five-col-news-teaser h5, .recent-comments p, .headline-teaser p, .sm-horoscopes-list dd,
+.tm-twitter .tweet .time, .competition-quotes h4 span, .competition-winners p, .article-header h1 span, 
+.sm-horoscopes-teaser .tools, .sm-horoscopes-list h5, .small, .horoscope-header .tools li, 
+.horoscope-header figcaption, .horoscopes-list .sm-promo h4, .horoscopes-list .sm-promo h5, 
+.horoscopes-intro p, .horoscopes-list .sm-promo, .sm-horoscopes-list p, .image-credit,
+.play-teaser .issue-date, .play-teaser .issue-number, .curated-hdr p, .section-hdr p,
+.weather form input[type="text"], .date-picker input[type="text"], .contactlist dl dd, .contactlist address, 
+.weather form label, .competition-quotes blockquote, .promo figcaption, .promo p, .article-header h3,
+.recommended-seemore p, .opinions blockquote a, .col4 .opinions-list-vert blockquote a,
+.related-widget dt, .article-page .article .lead-text p, .article-header .span-15-5 h5, .player-rating td p.description, .amount li,
+.mirror-apps .features {
+  color: #5a6466;
+}
+.search-box input[type="text"] {
+  color: #a9a9a9;
+}
+/* Mirror Red - Headline */
+.drop nav li a {
+  color: #e61111;
+}
+  /* blue */
+a, a:hover, .sm-promo-list .more, .drop a, .channel-headline, .channel-msg, .recommendations, .login,
+.search-top .search-sort a, .mirror-apps .channel-hdr a.support {
+	color: #134987;
+}
+		/* white */
+.panel .selected a, a.selected-thumb, .btn, .date-picker input[type="submit"], .sm-promo h3, 
+.sm-promo .bet-button, .sm-promo-list h3 .heading-end a, .sm-promo-list h3 a, 
+.sm-promo .bet-button:hover, .errormessage .search-box input[type="submit"], 
+.search-results .search-box input[type="submit"], .article-box-heading.red, .opinions-heading a, 
+.no-js .tab > a:hover, .touch .tab > a:hover, .tab > .active, .tab.drop-hover > a, .tab.drop-hover > a:hover {
+	color: #fff;
+}
+
+/* new link behaviour 25/11/11 */
+a:hover, .drop a:hover {text-decoration: underline;}
+.tab a, .drop .col1 a {text-decoration: none;}
+
+/**************************** Common ****************************/
+	/* solid */
+.ad, .search-box input, .row, .article, footer, .footer-links, .footer-links li, 
+.weather-header,.storylist .lg-teaser .tools, .storylist .lg-teaser .see-also, 
+footer .span-17, .footer-links-wrap, .recommendations, .box-bottom, .box-heading, .article img, 
+.opinions-heading, .tools li, .half-horizontal, .carousel img, .pic-viewer-thumbs, 
+.lc-teaser .see-also, .channel-hdr, .pagination, .search-results h2, .mpu-border, .floating-mpu .mpu
+.search-for, .search-sort li a, .curated-thumb, .four-col-teaser img, .pagination-controls .selected,
+.five-col-teaser img, .strip, .horoscope ul, .horoscope a, .celebs img, .epl ul, .epl a, .newsflash, 
+.newsflash h2, .quicklinks img, .rankings td, .player-rating, .player-rating td, .player-rating thead th, 
+.rankings-result, .rankings-result thead th, .standfirst .info, .competition img, .competition-teaser img,
+.competition-teaser, .competition-quotes, .sm-promo-list img, .article-page .live-odds, 
+.article-box-heading.grey, .article-box-heading.red, .kb-teaser img, .recent-comments .wrapper, 
+.columnists img, .splash, .splash-image-led, .splash .splash-inner,  
+.row-thin, .tm-twitter .tweet img, .horoscope-page h2, .smht-pic a, .horoscope-tabs, .horoscope-tabs li,
+.drop h3, .drop .ma-teaser, .drop .sa-teaser, .col4 img, .splash-right .splash-inner, 
+.horoscope-header figure a img, .horoscopes-profile-header a img, .drop, .dh-teaser, .dh-teaser-hdln, 
+.dh-teaser-hdln p, .most-read img, .sm-promo-list h3, .superpick-teaser,
+.horoscopes-storylist, .directory dt, .drop, .contact-us h3, .tools .more:hover, .hot-topics a:hover,
+.btn, .weather ul, .weather li, .box-bottom h5 a:hover, .container, .drop nav li, 
+.tab a, .opinions, .related-widget dd, .related-widget dd a:hover, .login, .login ul,
+.pluck-login-withFacebook, .span-8-5 .mpu, .flag, .opta-tabs, .opta-tabs li, .just-sayin-wrapper, #page .tabs-article ul.tabs li.active,
+.just-sayin .visor .video-box, .inner-money-widget {
+	border-style:solid;
+}
+
+	/* dashed */
+.content .article.portrait h1, .archive h1, .article-info, .threeam-guest-list h1 {
+	border-style: dashed;
+}
+	/* dotted */
+.box-bottom li, .headline-teaser li, .opinions-list-vert li, .related-list, .refine-search h4, 
+.refine-search-date, .refine-search dl, .search-results h2 a, .competition-quotes li, .competition-winners li,
+.col4 blockquote, .tools .more, .hot-topics a, .box-bottom h5 a, .sm-horoscopes-teaser,
+.related-widget dd a, .related-contents h3, .related-contents-img figure {
+	border-style: dotted;
+}
+
+	/* border */
+.article img, .opinions-heading, .carousel img, 
+.pic-viewer-thumbs, .article.top-story, .article.lc-teaser, 
+.article.lc-teaser-hdln, .mpu-border, .four-col-teaser img, .curated-thumb,
+.pagination-controls .selected, .five-col-teaser img, .strip, .horoscope ul, .celebs img, 
+.epl ul, .sm-promo, .newsflash, .quicklinks img, .competition img, .competition-teaser img,
+.sm-promo-list img, .errormessage .search-box input[type="text"], 
+.search-results .search-box input[type="text"], .article-page .live-odds, 
+.article-box-heading.grey, .article-box-heading.red, .kb-teaser img, .columnists img, 
+.smht-pic a, .splash, .splash-image-led, .splash .splash-inner, .splash-right .splash-inner, 
+.tm-twitter .tweet, .tm-twitter .tweet img, .smht-pic a, .horoscope-tabs, .horoscope-tabs li, 
+.drop h3, .col4 img, .horoscope-header figure a img, .horoscopes-profile-header a img, .drop, .ad,
+.article.dh-teaser, .article.dh-teaser-hdln, .splash-right, .most-read img, .sm-promo-list h3, 
+.article.superpick-teaser, .article.splash, .article.splash-right, .article.splash-image-led, .btn,
+.standfirst .box-heading, .tab .active, .no-js .tab > a:hover, .touch .tab > a:hover, .tab.drop-hover > a, 
+.tm-twitter .box-heading, .login ul, .recommendations, .floating-mpu .mpu, .span-8-5 .mpu, .flag, 
+.opta-tabs, .opta-tabs li, .just-sayin-wrapper, #page .tabs-article ul.tabs li.active, .just-sayin .visor .video-box, .inner-money-widget {
+	border-width: 1px;
+}	
+	/* border top */
+.lc-teaser .see-also, .pluck-login-withFacebook {
+	border-width: 1px 0 0 0;
+}
+.row-thin {
+	border-width: 3px 0 0 0;
+}		
+.row {
+	border-width: 12px 0 0 0;
+}
+
+	/* border right */
+.hot-topics li, .footer-links li, .nav-tools .celeb-finder, .pagination .prev, 
+.whos-busy-body li, .the-guest-list li, .site-tools li, .footer-links li,  
+.tools li, .search-sort li a, .horoscope a, .epl a, .newsflash h2, .weather li,
+.related-widget dd {
+	border-width: 0 1px 0 0;
+}
+	/* border bottom */
+.content .article.portrait h1, .archive h1, .slideshow .caption, .article-info, 
+.threeam-guest-list h1, .box-bottom li, .headline-teaser li, .opinions-list-vert li, 
+.related-list, .refine-search h4, .refine-search-date, 
+.refine-search dl, .search-results h2 a, .rankings td, .competition-quotes li, .competition-winners li, 
+.horoscope-page h2, .directory dt, .tools .more, .hot-topics a, 
+.box-bottom h5 a, .sm-horoscopes-teaser, .drop nav li, .related-widget dd a, .related-contents h3, .related-contents-img figure {
+	border-width: 0 0 1px 0;
+}
+.article, .half-horizontal, .search-for, .channel-hdr, .competition-quotes {
+	border-width: 0 0 3px 0;
+}
+/* MIR-1071 Non-clickable headers */
+.box-heading, .weather-header {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #dadada;
+}
+
+/* Heading Links HTML: MIR-316 10.1 Channel list */
+.heading-links .channel-hdr {
+  border: 0;
+  margin: 0 0 10px 0;
+}
+.heading-links > .tools {
+  padding: 0 0 5px 0;
+  border-bottom: 3px solid #000;
+}
+.heading-links > .tools li, .competition-quotes li.last, .competition-winners li.last {
+  border: 0;
+}
+.content .article, .span-15 > .article, .news-links {
+	border-width: 0 0 5px 0;
+}
+/* END - Heading Links HTML: MIR-316 10.1 Channel list */
+
+/* border left */
+footer .span-17.last {
+	border-width: 0 0 0 1px;
+}
+	/* right, bottom and left */
+.box-bottom, .recent-comments .wrapper {
+	border-width: 0 1px 1px 1px;
+}	
+/* top, bottom and left */
+.search-box input[type="text"] {
+	border-width: 1px 0 1px 1px;
+}	
+/* top and bottom */
+.pagination, .competition-teaser {
+	border-width: 3px 0;
+}
+
+	/* horizontal list */
+nav > ul, .hot-topics ul, .breadcrumbs, .tools, .share, .footer-links ul, .weather ul, .social-links, 
+.poll ul, .opinions ul, .carousel-controls, .promo ul, .pic-viewer-list, .pagination-controls, 
+.box-bottom ul, .social-interact, .search-sort ul, .square ul, .date-picker ul, .strip ul, .sm-promo ul,
+.horoscope-tabs ul, .col4 .opinions-list-vert, .opta-tabs ul, .inner-content ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.tab, .hot-topics li, .breadcrumbs li, .footer-links li, .footer-links, 
+.tools li, .social-links li, .opinions li, .carousel-controls li, .pic-viewer-list li, .panel, 
+.pagination-controls li, .four-col-teaser, .social-interact li, .curated-thumb, .strip li {
+	float: left;
+}
+.tab, .hot-topics li, .footer-links li {
+	display: block;
+	margin: 0 5px 0 0;
+  padding-right: 5px;
+}
+nav .last, .hot-topics .last, .footer-links .last, .box-bottom .last, .headline-teaser .last, 
+.opinions .last, .tools .last, .article.last, .half-horizontal .ma-teaser, 
+.search-sort li.last a, .box-bottom .last, .strip .last, .horoscope .last a, .epl .last a,
+.rankings .last td {
+	border: 0;
+}
+.article.last, .tools .last {
+  margin: 0;
+  padding: 0;
+}
+.article ol, .article ul {
+  font-size: 100%; 
+}
+.article-page .article .body ol p,
+.article-page .article .body ul p {
+  font-size: 97%;
+}
+.body ol li, .body ul li {
+  font-size: 1.15385em;
+  margin-bottom: 10px;
+  line-height: 1.28571em;
+}
+
+	/* text styles */
+		/* uppercase */
+.weather h3, .box-heading, .opinions h3, .related-widget dt, .square h5, 
+.refine-search dt, .nav-main, .headline-teaser em, .directory dt, 
+.viewport-heading, .curated-hdr h2.channel-hdr, .search-sort a, .competition-winners h3, 
+.competition-teaser h3, .author-hdr h2, .article-box-heading.grey, 
+.article-box-heading.red, .sm-horoscopes-profile h4, .splash h1, .splash-image-led h1 a, .dh-teaser h4,
+.ma-teaser h4, .lg-teaser h4, .drop h3, .drop h4, .splash-right h1, .five-col-news-teaser h5,
+.article-header h1 span, .article-page .storylist h3, .article-page .related-widget h3,
+.article-page .storylist h2 a, .sm-promo-list h3, .sm-promo .bet-button, .celebs a, .columnists a,
+.horoscope-page h2 {
+	text-transform: uppercase;
+}
+
+		/* center-align text */
+.see-all {
+	padding: 0.7em 0;
+	text-align: center;
+}	
+
+	/* advertisement slots */
+.ad {
+	text-align: center;
+	line-height: 0;
+}
+.leaderboard {
+  width: 728px;
+  margin: 0 111px;
+}
+.leaderboard.takeover, .ie7 .leaderboard {
+  left: 0;
+  margin: 0;
+  min-width: 970px;
+  top: 10px;
+}
+.leaderboard div {
+  margin: 0 auto;
+}
+.mpu {
+  border-width: 0;
+  margin-bottom: 20px;
+  width: 300px;
+  /* Removed fixed height to allow for double height MPUs */
+  text-align: center;
+}
+.mpu-border, .span-8-5 .mpu {
+  margin-bottom: 20px;
+  padding: 5px;
+  width: auto;
+}
+.span-8-5 .mpu {
+  padding:5px 19px;
+  background: url(http://images.mirror.co.uk/collections/m5_general/mpu_bg.gif) !important; 
+}
+.bellyband {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 5px 0 5px 24px;
+  text-align: left;
+}
+		/* gutter & fireplace */
+.fireplace, .gutter {
+  position: relative;
+}
+.fireplace .container {
+  margin-top: 100px;
+}
+.takeover {
+  border: 0;
+  background: none;
+  height: 1600px;
+  left: 50%;
+  margin-left: -950px; /* Half the background image width */
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+}
+.fireplace .takeover {
+  top: -100px;
+}
+.takeover a {
+  position: relative;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.takeover img {
+  margin: 0 auto;
+}
+.takeover .container {
+  height: 1500px;
+  z-index: 2;
+  margin: 100px 0 0 465px; /* 465px = half the negative margin above in .takeover, -10px for padding. */
+  width: 950px;
+  position: relative;
+  padding: 10px;
+}
+.reskin { 
+  border: none; 
+}
+.container {
+  margin-top: 100px;
+}
+header, .row, footer, .span-24, .row-thin, .drop {
+  position: relative;
+  z-index:5;
+}
+.skyscraper {
+  position: relative;
+  border: 0;
+}
+.skyscraper .ad {
+  position: absolute;
+}
+    /* Google Adsense */
+.google-adsense {
+  margin-bottom: 20px;
+}
+.google-adsense h3 {
+  font-size: 1.308em;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.sponsorshipBar {
+  border: 0;
+  background: none;
+}
+.adsense-table {
+  float: left;
+  width: 285px;
+}
+.ads-left {
+  padding-right: 40px;
+}
+
+	/* buttons */
+.btn {
+  border-color: #C50808;
+  font-size: 0.846em;
+  font-weight: 700;
+  line-height: 1.636em;
+  padding: 0 20px;
+  text-transform:uppercase;
+}	
+
+  /* labels 
+  	@TODO: add 3am labels and populate label with missing image
+   */
+figure {
+  position: relative;
+}
+.label {
+	position: absolute;
+	left: -2px;
+ 	height: 16px;
+	top: 3px;
+}
+.latest {}
+.live {
+	width: 35px;
+	/* background-position: -64px -320px; */
+	background-position: 0px -332px;
+}
+.exclusive {
+  width: 65px;
+/*	background-position: -64px -272px; */
+	background-position: 0px -248px;
+ }
+.updated {
+	width: 59px;
+	/*background-position: -64px -296px;*/
+	background-position: 0px -290px;
+}
+.live-now {
+  width: 65px;
+  /*background-position: -64px -248px;*/
+  background-position: 0px -269px;
+}
+.new-today {
+  width: 78px;
+  /*background-position: -64px -224px;*/
+  background-position: 0px -227px;
+}
+.news {
+  width: 78px;
+  /* background-position: -64px -200px; */
+  background-position: 0px -311px;
+}
+
+	/* channel header */
+.channel-hdr {
+  font-size: 1.28em;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.channel-hdr a, .channel-hdr a:hover.no-link {
+  background-position: -488px 14px;
+  display: block;
+  font-size: 1.882em;
+  font-weight: 700;
+  padding: 0 0 0 19px;
+  line-height: 1.2em;
+  margin-bottom: 2px;
+  text-transform: capitalize;
+}
+.channel-hdr a:hover {
+  background-position:  -468px -14px ;
+  text-decoration: none;
+}
+
+  /* topics header */
+.social-hdr {
+	position: relative;
+	font-size: 1.077em;
+}
+.social-hdr ul {
+	position: absolute;
+	top: 8px;
+	right: 0;
+}
+
+  /* content header */
+.content-hdr {
+  clear: left;
+  padding: 17px 0 7px;
+}
+
+/* sprites update */
+.logo a, .logo-s, .directory dd a, blockquote, .label, .mirror_pick, .drop nav li a, .drop .box li,
+.sm-promo ul li, .sm-promo .more, .headline-teaser li, .btn-left, .btn-right, .login li li,
+.comment, .gallery, .vid, .play, .pause, .more, .channel-hdr a, .channel-default .channel-msg,
+.channel-default .channel-msg span, .search-box input[type="submit"], .breadcrumbs li,
+.breadcrumbs .b-home a, .login span, .login li:hover span, .headline-teaser .vid, .headline-teaser .gallery,
+.play-teaser .tools .more, .pic-selected, .key-dates li, .most-recent li, .most-read  ul li, .upcoming-events li,
+.video-btn.play, .refine-search dd, .refine-search dl dd.gallery:hover, .refine-search dl dd.vid:hover, .no-results li,
+.competition-quotes li, .competition-winners li, .ol-teaser figcaption {
+   background-image: url(../gfx/sprites_master_v2.png);
+   background-repeat: no-repeat; 
+}
+
+.more {
+	background-position: -416px -66px;
+	padding-left: 12px;
+}
+.tools .more {
+  padding:0;
+  background:none;
+}
+.tools .more:hover {
+  text-decoration: none;
+}
+.tools .gallery, .tools .vid {
+  display: block;
+  height: 12px;
+  margin: 4px 0 2px;
+  width: 12px;
+}
+.gallery {
+	background-position: -128px -327px;
+}
+.gallery:hover {
+	background-position: -148px -311px;
+}
+.vid {
+	background-position: -196px -279px;
+}
+.vid:hover {
+	background-position: -216px -263px;
+}
+.comment {
+	background-position: -8px -430px;
+	padding-left: 15px;
+}
+.comment:hover {
+	background-position: -28px -412px;
+}
+footer .fb {
+	background-position: 5px -343px;
+	padding-left: 25px;
+}
+footer .tw {
+	background-position: 5px -365px;
+	padding-left: 25px;
+}
+.logo-s {
+	background-position: 0px -102px;
+	width: 102px;
+	height: 120px;
+}
+blockquote {
+	background-position:  -479px -466px; 
+}
+.btn-left {
+	background-position: -112px -132px
+}
+.btn-right {
+	background-position: -136px -132px;
+}
+.tools .video {
+	background-position: 0 -45px;
+}
+
+  /* rating */
+.rating0, .rating1, .rating2, .rating3, .rating4, .rating5 {
+  background: url(../gfx/star-rating.png) 0 0 no-repeat;
+}
+.rating0 {background-position: 0 0;}
+.rating1 {background-position: 0 -17px;}
+.rating2 {background-position: 0 -34px;}
+.rating3 {background-position: 0 -51px;}
+.rating4 {background-position: 0 -67px;}
+.rating5 {background-position: 0 -85px;}
+
+
+	/* cut in */
+.top-story figure, .lc-teaser-hdln figure,
+.lc-teaser figure, .lc-teaser-nobdr figure,
+.dh-teaser figure, .superpick-teaser figure {
+  float: left;
+}
+.top-story figure:before, .lc-teaser-hdln figure:before,
+.lc-teaser figure:before, .lc-teaser-nobdr figure:before,
+.dh-teaser-hdln figure:before, .dh-teaser figure:before,
+.splash figure:before, .splash-image-led figure:before {
+	content: url("../gfx/cutin_up.png");
+	position: absolute;
+	right: 0;
+	bottom: 8px;
+	height: 25px;
+}
+.top-story figure:before, .lc-teaser-hdln figure:before {
+	/*content: url("../gfx/cutin_down.png");*/
+	content: url("../gfx/cutin_down_right.png");
+	top: 0;
+}
+.dh-teaser-hdln figure:before, .lc-teaser-hdln figure:before {
+	content: url("../gfx/cutin_down_right.png");
+	top: 0;
+}
+.dh-teaser figure:before, .splash figure:before {
+  content: url("../gfx/cutin_right.png");
+  left: 0px;
+  top: 15px;
+}
+.splash figure:before {
+  top: 20px;
+}
+.superpick-teaser figure:before, .splash-right figure:before {
+  content: url("../gfx/cutin_left.png");
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.splash-right figure:before {
+  right: 0;
+  top: 20px;
+}
+.top-story figure:before, .lc-teaser-nobdr figure:before,
+.dh-teaser-hdln figure:before {
+	right: 15px;
+}
+.lc-teaser figure:before, .lc-teaser-hdln figure:before {
+	right: 15px;
+}
+.splash-image-led figure:before {
+  content: url("../gfx/cutin_up_grey.png");
+  bottom: -2px;
+  right: 15px;
+}
+
+  /* box */
+.box-bottom h5 {
+	font-size: 0.846em;
+	margin-bottom: 5px;	
+}
+.box-bottom h5 a:hover {
+  text-decoration: none;
+}
+.box-hdr {
+  font-size:1.308em;
+  line-height:1.167em;
+}
+.box-bottom ul {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+.ie6 .box-bottom ol, .ie7 .box-bottom ol, .ie8 .box-bottom ol {
+  list-style-type: decimal;
+  padding: 0 0 0 20px;
+}
+.box-bottom ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.box-bottom ul{
+  list-style-type: square;
+}
+.box-bottom form ul {
+  padding-left:0;
+}
+.box-bottom dt {
+  margin-bottom:0;
+}
+.box-bottom li {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.box-bottom .last {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+  /* strips */
+.strip {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+  /* weather conditions */
+.partly-sunny, .scattered-thunder, .showers, .scattered-showers, .rain-and-snow, .overcast,
+.light-snow, .freezing-drizzle, .chance-of-rain, .sunny, .clear-weather, .mostly-sunny, 
+.partly-cloudy, .mostly-cloudy, .chance-of-storm, .rain, .chance-of-snow, .cloudy, .mist, 
+.storm, .thunderstorm, .chance-of-thunderstorm, .sleet, .snow, .icy, .dust, .fog, .smoke, .haze,
+.flurries, .light-rain, .snow-showers, .hail {
+  background: url(../gfx/weather-sprite.png) left top no-repeat transparent;
+  display: block;
+  margin: 0 auto;
+  width: 65px;
+  height: 54px;
+}
+.partly-sunny {background-position: 0px 0px;}
+.scattered-thunder {background-position: 0px -54px;}
+.showers {background-position: 0px -108px;}
+.scattered-showers {background-position: 0px -162px;}
+.rain-and-snow {background-position: 0px -216px;}
+.overcast {background-position: 0px -270px;}
+.light-snow {background-position: 0px -324px;}
+.freezing-drizzle {background-position: 0px -378px;}
+.chance-of-rain {background-position: 0px -432px;}
+.sunny, .clear-weather {background-position: 0px -489px;}
+.mostly-sunny {background-position: -130px -378px;}
+.partly-cloudy {background-position: -130px -432px;}
+.mostly-cloudy {background-position: -130px -540px;}
+.chance-of-storm {background-position: -65px -270px;}
+.rain {background-position: -65px -54px;}
+.chance-of-snow {background-position: -65px -108px;}
+.cloudy {background-position: -65px -162px;}
+.mist {background-position: -65px -216px;}
+.storm {background-position: -65px -270px;}
+.thunderstorm, .chance-of-thunderstorm {background-position: -65px -324px;}
+.sleet {background-position: -65px -427px;}
+.snow {background-position: -65px -486px;}
+.icy {background-position: -65px -540px;}
+.dust {background-position: -130px -486px;}
+.fog {background-position: -130px -270px;}
+.smoke {background-position: -130px -324px;}
+.haze {background-position: -130px 0px;}
+.flurries {background-position: -130px -54px;}
+.light-rain {background-position: -130px -106px;}
+.snow-showers {background-position: -130px -162px;}
+.hail {background-position: -130px -216px;}
+
+  /* bold all right hand column links */
+.most-read .box-bottom a, .sm-promo a, .span-6 .related-widget a, .key-dates .box-bottom, 
+.most-recent .box-bottom, .upcoming-events .box-bottom, .refine-search a, .tm-twitter a,
+footer a, .mostCommented a {
+  font-weight: 700;
+}
+
+  /* Live Now sprites */
+.ln-icon {
+  background: transparent url(../gfx/livenow-sprite.gif) 0 0 no-repeat;
+  float: left;
+  height: 35px;
+  margin: 0 10px 10px 5px;
+  width: 35px;
+  display: inline-block;
+}
+.ln-tweet { background-position: -70px 0; }
+.ln-sms { background-position: -105px 0; }
+.ln-breakingnews { background-position: -140px 0; }
+.ln-email { background-position: -175px 0; }
+.ln-quote { background-position: -210px 0; }
+.ln-image { background-position: -245px 0; }
+.ln-video { background-position: 0 -35px; }
+.ln-audio { background-position: -35px -35px; }
+.ln-live { background-position: -70px -35px; }
+.ln-timeelapsed { background-position: -105px -35px; }
+.ln-placebet { background-position: -140px -35px; }
+.ln-greyplaceholder { background-position: 0 0 }
+.ln-redplaceholder { background-position: -35px 0 }
+.ln-goal { background-position: -175px -35px; }
+.ln-redcard { background-position: -210px -35px; }
+.ln-yellowcard { background-position: -245px -35px; }
+.ln-penalty { background-position: 0 -70px; }
+.ln-extratime, .ln-qualifying { background-position: -35px -70px; }
+.ln-substitute { background-position: -70px -70px; }
+.ln-offside { background-position: -105px -70px; }
+.ln-corner { background-position: -140px -70px; }
+.ln-fullhalftime { background-position: -175px -70px; }
+.ln-four { background-position: -210px -70px; }
+.ln-six { background-position: -245px -70px; }
+.ln-outwicket { background-position: 0 -105px; }
+.ln-endofinning { background-position: -35px -105px; }
+.ln-knockedtoground { background-position: -70px -105px; }
+.ln-knockout { background-position: -105px -105px; }
+.ln-technicalknockout { background-position: -140px -105px; }
+.ln-wononpoints { background-position: -175px -105px; }
+.ln-evicted { background-position: -210px -105px; }
+.ln-stupidcomment { background-position: -245px -105px; }
+.ln-crash { background-position: 0 -140px; }
+.ln-safetycar { background-position: -35px -140px; }
+.ln-f1knockout { background-position: -70px -140px; }
+.ln-gridlineup { background-position: -105px -140px; }
+.ln-poleposition { background-position: -140px -140px; }
+.ln-pits { background-position: -175px -140px; }
+.ln-chequeredflag { background-position: -210px -140px;  }
+.ln-disqualified { background-position: -245px -140px; }
+
+/**************************** Header ****************************/
+header {
+	margin-bottom: 5px;
+  padding-top: 10px;
+  position: relative;
+  z-index: 10;
+}
+.logo {
+	float: left;
+	margin-bottom: 10px;
+}
+.logo a {
+  	height: 93px;
+	width: 339px; 
+	background-position: 0px 0px;
+}
+
+/* Channel titles */
+.channel-title {
+  float: left;
+  height: 93px;
+  margin: 0 0 10px 3px;
+  position: relative;
+  width: 607px;
+}
+.top-write {
+  font-weight: 700;
+  padding: 0 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.channel-headline {
+	font-size: 3.6em;
+	font-weight: 900;
+	line-height: 1em;
+	margin: 7px 0 6px 16px;
+	text-transform: uppercase;
+}
+.channel-msg {
+	font-size: 1.8em;
+	font-weight:  bolder;
+	margin-left: 17px;
+	line-height: 1.5em;
+	letter-spacing: -1px;
+}
+.channel-msg a:hover {
+	text-decoration: none;
+}
+.channel-default .channel-msg {
+	background-position: -330px -171px;
+	bottom: -5px;
+	font-size: 2.76923em;
+	line-height: 1em;
+	padding-left: 10px;
+	position: absolute;
+}
+.channel-default .channel-msg span {
+	background-position: -237px -142px;
+	padding-right: 10px;
+	
+}
+.channel-sport .channel-headline, .channel-lifestyle .channel-headline { margin-bottom: -4px; }
+.channel-news .channel-msg {
+	background: transparent url(../gfx/channel_title_sprite.gif) no-repeat 0 -12px;
+	padding-left: 52px;
+}
+.channel-sport .channel-msg {
+	background: transparent url(../gfx/channel_title_sprite.gif) no-repeat -15px -61px;
+	padding-left: 26px;
+}
+.channel-3am {
+	background: transparent url(../gfx/channel_title_3am.jpg) no-repeat 0 0;
+}
+.channel-football {
+	background: transparent url(../gfx/channel_title_football.jpg) no-repeat 0 0;
+}
+.channel-lifestyle .channel-msg {
+	background: transparent url(../gfx/channel_title_sprite.gif) no-repeat -15px -110px;
+	padding-left: 26px;
+}
+.channel-money .channel-msg {
+	background: transparent url(../gfx/channel_title_sprite.gif) no-repeat -15px -160px;
+	padding-left: 26px;
+}
+.channel-play .channel-msg {
+	background: transparent url(../gfx/channel_title_sprite.gif) no-repeat -13px -260px;
+	padding-left: 32px;
+}
+.channel-opinion .channel-msg {
+	background: transparent url(../gfx/channel_title_sprite.gif) no-repeat -5px -210px;
+	padding-left: 44px;
+}
+.channel-frontpage .channel-msg {
+  background: transparent url(../gfx/channel_title_sprite.gif) no-repeat -5px -310px;
+	padding-left: 44px;
+}
+.channel-tv .channel-msg {
+  background: transparent url(../gfx/channel_title_sprite.gif) no-repeat -5px -350px;
+  margin-top: -15px;
+  padding: 15px 0 0 50px;
+}
+.ir .channel-headline { 
+	margin:0px;
+}
+.ir .channel-headline a { 
+  height: 94px; 
+  display:block; 
+  position:relative; 
+}
+.ir .channel-msg { 
+  display:none; 
+}
+.channel-headline a:hover { 
+  text-decoration: none; 
+}
+	/* navigation */
+.nav-main {
+  border: 1px solid #d8d8d8;
+  border-width: 1px 0 1px 1px;
+  float:left;
+  margin-bottom: 15px;
+  width: 789px;
+}
+.nav-main, .nav-main > ul {
+  height: 40px; /* stops the content jumping */
+}
+.tab {
+  margin: 0;
+  padding: 0;
+}
+.ie7 .tab {
+  height: 50px;
+}
+.no-js .tab:hover .drop, .touch .tab:hover .drop, .tab.drop-hover .drop {
+  display: block;
+}
+.tab > a {
+  border-width: 0 1px;
+  border-color: #d8d8d8 #d8d8d8 #d8d8d8 #efefef;
+  display: block;
+  font-size: 1.385em;
+  height: 38px;
+  line-height: 2.222em;
+  padding: 2px 15px 0;
+  position: relative;
+}
+	/* selected menu bottom arrow
+		NB: does not work in IE 7 and below
+	*/
+.tab.drop-hover > a:before, .touch .tab.drop-hover > a:before {
+  bottom: -24px;
+  content: url("../gfx/dropdown_selected.png");
+  left: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 6;
+}
+.tab > .active, .no-js .tab > a:hover, .touch .tab > a:hover, .tab.drop-hover a {
+  margin: -1px 0;
+}
+	/* search box */
+.search-box {
+  border: 1px solid #d8d8d8;
+  border-width:1px 1px 1px 0;
+  float: left;
+  height: 3.08em;
+  margin-bottom: 15px;
+  width: 159px;
+}
+.search-box form {
+	padding: 0 5px 0 0;
+}
+.search-box input {
+	float: right;
+}
+.search-box input[type="text"] {
+  font-size: 0.92307em;
+  font-style: italic;
+  line-height: 1.08333em;
+  height: 24px;  
+}
+	/* override BluePrint width */
+header .search-box input[type="text"] {
+  width: 115px;
+}
+.search-box input[type="submit"]{
+	background-position: -49px -393px;
+	border-width: 1px 1px 1px 0;
+   height: 28px;
+	margin: 6px 0 0;
+}
+
+/* search box variations */
+.errormessage h2 {
+  font-size: 2.30769em;
+  line-height: 1.13333em;
+  margin-bottom: 15px;
+}
+.errormessage h3 {
+  font-size: 1.30769em;
+  line-height: 1.23529em;
+  margin-bottom: 10px;
+}
+.errormessage p {
+  font-size: 1.15385em;
+  line-height: 1.28571em;
+  margin-bottom: 10px;
+}
+.errormessage .search-box, .search-results .search-box, .votm {
+	background: none;
+	height: auto;
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+.errormessage .search-box, .search-results .search-box {
+	border: 0;
+}
+.search-results .search-box {
+	margin: -35px 0 10px 0;
+}
+.errormessage .search-box input, .search-results .search-box input {
+	float: left;
+}
+.errormessage .search-box input[type="text"], .search-results .search-box input[type="text"]{
+	font-size: 0.923em;
+	margin: 1px 8px 0 0;
+	padding: 1px 7px;
+	width: 418px;
+}
+.errormessage .search-box input[type="submit"], .search-results .search-box input[type="submit"] {
+	height: auto;
+	margin: 0;
+	padding: 5px 20px;
+	background-image:none;
+}
+.search-results .google-adsense {
+  margin-top: 30px;
+}
+
+	/* hot topics */
+.hot-topics {
+  float: left;
+  margin-top: 5px;
+}
+.hot-topics h2 {
+	font-size: 0.95em;
+	font-weight: normal;
+	float: left;
+	margin: 0 0.6em 0 0;
+  text-transform: uppercase;
+}
+.hot-topics ul, .hot-topics li {
+	padding: 0;
+}
+.hot-topics a {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+	/* Newsflash */
+.newsflash {
+	float: left;
+	height: 26px;
+	margin: 10px 0 5px;
+	overflow: hidden;
+  position: relative; 
+  width: 948px;
+}
+    /* display inline content if JS is disabled */
+.no-js .newsflash-container {
+  visibility: visible;
+}
+.newsflash-container {
+  visibility: hidden;
+}
+.newsflash h2 {
+	float: left;
+  font-size: 1.385em;
+  font-weight: 100;
+  margin: 0 8px 0 0;
+	padding: 4px 8px;
+  text-transform: uppercase;
+}
+.newsflash-container {
+  position: relative;
+  margin-left: 92px;
+}
+.newsflash p {
+	font-weight: bold;
+	margin: 0 8px 0 0;
+	padding: 5px 8px;
+}
+.newsflash .active {
+  display: block;
+}
+.ticker-swipe {
+  height:26px;
+  margin:5px 0 5px 10px;
+  position: absolute;
+  top: 0;
+  width: 856px;
+}
+
+	/* breadcrumbs */
+.breadcrumbs {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.38461em;
+  margin-top: 5px;
+}		
+.breadcrumbs li {
+  margin: 0 7px 0 0;
+  background-position:  -398px -89px;
+  padding-left: 8px;
+}
+.breadcrumbs .b-home {
+  background: none;
+  padding-left: 0;
+}
+.breadcrumbs .b-home a {
+	background-position: -111px -208px;
+	display: block;
+	height: 15px;
+   margin-top: 2px;
+	width: 15px;
+}
+
+  /* recommendations and login */
+.recommendations, .login, .login ul {
+  float: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+} 
+.recommendations li, .login li {
+	cursor: pointer;
+   font-weight: 700;
+	position: relative;
+	padding: 4px 7px;
+}
+.recommendations li, .login ul {
+  display: none;
+}
+.recommendations .active, .login li:hover ul, .login .active ul {
+  display: block;
+}
+.recommendations {
+	width: 154px;
+}
+.login {
+	border-width: 1px;
+}
+.login .last {
+	border: 0;
+}
+.login span {
+	background-position: 89px -380px;
+	display: block;
+	padding-right: 12px;
+}
+.login ul {
+  left: 0;
+  position: absolute;
+  width: 108px;
+  top: 26px;
+  z-index: 10; /* has to be higher than 5 because header, .row, footer, .span-24, .row-thin, .drop is set to 5 */
+}
+.login li:hover span {
+  background-position: 88px -398px;
+}
+.login li li {
+	background-position: -393px -85px;
+	background-color: #fff;
+	border: 0;
+	display: block;
+	font-weight: 100;
+	margin: 0 2px;
+	padding-left: 13px;
+}
+
+	/* @TODO: Add new Twitter and Facebook images to sprite and adjust width and height below */
+.facebook, .twitter {
+	width: 16px;
+	height: 16px;
+}
+.facebook {
+	background-position: 0 -295px;
+	margin: 0 4px 0 0;
+}
+.twitter {
+	background-position: 0 -274px;
+}
+
+/* Mega dropdown */
+.nav-main .drop {
+  text-transform: none;
+}
+.drop {
+  border-width: 1px;
+  background: #fff url(../gfx/mega-dropdown-bg.png) repeat-y 100% 0;
+  display: none;
+  left: 0;
+  margin: 0 0 10px;
+  position: absolute;
+  width: 948px;
+}
+  /* if JS is enabled, move dropdown lower */
+.js .drop {
+  top: 47px;
+}
+.drop, .ie6 .drop, .ie7 .drop, .ie8 .drop {
+  top: 41px;
+}
+.drop .col1, .drop .col2, .drop .col3, .drop .col4 {
+  float: left;
+	margin-top: 11px;
+  position: relative;
+  z-index: 1;
+}
+.drop .col2, .drop .col3, .drop .col4 {
+  padding: 0 10px 5px;
+}
+.drop .col1 {
+  width: 188px;
+  z-index: 1;
+}
+.drop .col2 {
+  width: 180px;
+}
+.drop .col3, .drop .col4 {
+  width: 260px;
+}
+.drop .last {
+  margin-right: 0;
+}
+.drop .col1 strong {
+  display: block;
+  margin-bottom: 10px;
+}
+.drop .drop-ad {  
+  float: right;
+  height: 92px;
+  width: 274px;
+  margin-bottom: 10px;
+}
+  /* bold all links within dropdown */
+.drop a {
+  font-weight: 700;
+}
+.drop .box {
+  margin-bottom: 30px;
+}
+.drop .box ul {
+  list-style-type: none;
+	margin-bottom: 0;
+  padding-left: 0;
+}
+.drop .box li {
+  background-position: -395px -89px;
+  font-size: 1em;
+  line-height: 1.61538em;
+  padding-left: 10px;
+}
+.drop .loading {
+  height: 100%;
+  position: inherit;
+  width: 558px;
+  margin-left: 390px;
+}
+/* @TODO: should this display only if JS is enabled? */
+.js .drop .loading {
+  background-image: url(../gfx/loading.gif);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.drop nav li {
+  clear: left;
+  margin-top: 1px;
+  text-transform: uppercase;
+}
+.drop nav li a, .drop h3, .tab.drop-hover .drop a {
+  margin: 5px 0 3px;
+}
+.drop nav li a, .drop h3 {
+  font-size: 1.30769em;
+  line-height: 1em;
+}
+.drop nav li a { 
+  background-position: -369px -115px;
+  display: block;
+  padding-left: 20px;
+}
+.drop nav li a:hover {
+  text-decoration: underline;
+}
+.drop h3 {
+  border-width: 0 0 1px 0;
+  font-weight: 100;
+  margin-bottom: 7px;
+  padding-bottom: 5px;
+}
+.drop h4 {
+  font-size: 0.846em;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+.drop .sa-teaser figcaption {
+  font-weight: bold;
+}
+.drop .ma-teaser, .drop .sa-teaser {
+  border-width: 0 0 1px 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.drop .drop-more {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+.col4 blockquote {
+  border-width: 0 0 1px 0;
+  font-style: normal;
+  margin: 10px 0;
+  padding: 0 0 10px 0;
+}
+.col4 blockquote a {
+  padding-left: 24px;
+  font-weight: 100; /* reset weight */  
+}
+.col4 .opinions-list-vert blockquote a:hover {
+	text-decoration: none;
+}
+.col4 img {
+  display: block;
+  margin: 0 auto;
+}
+.in-pictures img {
+  margin-bottom: 5px;
+}
+.col4 .opinions-list-vert li {
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+.col4 .opinions-list-vert li img {
+  margin-top: 3px;
+}
+.col4 .opinions-list-vert li blockquote {
+  border: 0;
+  font-style: italic;
+  margin-top: 5px;
+}
+.col4 .opinions-list-vert li h4 {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: none;
+}
+.col4 .last {
+  border-bottom: 0;
+}
+
+	
+/**************************** Body ****************************/
+/* insert styles for any elements included within #main. 
+ * separate styles using component name as header title
+ */
+.row {
+	margin-top: 20px;
+	padding-top: 15px;
+}
+.row-thin {
+	margin-top: 10px;
+}
+	/* NB: hide border for the first row */
+#row1 {
+	border: 0;
+	margin: 0;
+  padding-top: 10px;
+}
+
+.article figure img {
+	float: left;
+}
+.article figcaption {
+	float: left;
+}
+.tools {
+  margin-bottom: 10px;
+}
+.tools li {
+  margin: 0 5px 0 0;
+  padding-right: 5px;
+}
+.tools .hide { display:none; }
+.tools .hide a { display: block; }
+
+.article.lg-teaser figcaption {
+	width: auto;
+}
+/* publication date */
+.article-header {
+  position: relative;
+}
+.published-date {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-left: 1px solid black;
+  padding-left: 5px;
+}
+.columnist-header .author-box li:first-child {
+  margin-right: 118px;
+  width: 200px;
+}
+.article-page .columnist-header .author-box .avatar {
+  margin: 20px 0 5px 0;
+  width: auto;
+}
+
+	/* half-width teaser */
+.half-width h3 {
+	font-size: 1.30em;
+	line-height: 1.2em;
+	margin: 0.6em 0;
+}
+
+.span-4-5 figure.clearfix figcaption {
+	padding: 0;
+}
+  /* headline teaser */
+.headline-teaser {
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.headline-teaser em {
+  font-style: normal;
+}
+.headline-teaser .last {
+  margin-bottom: 20px;
+  padding-bottom: 0;
+}
+.headline-teaser h4 {
+  font-size: 1.308em;
+  line-height: 1.235em;
+  margin-bottom: 0;
+}
+.headline-teaser li {
+ background-position: -395px -89px;
+  padding: 0 0 4px 15px;
+  margin-bottom: 4px;
+}
+/* related content teaser */
+#page .article-page .related-contents-img h2 a {
+  text-transform: none;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+.related-contents .ma-teaser {
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+.related-contents-related {
+  list-style-type: none;
+  padding-left: 0;
+}
+.related-contents-img figure {
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
+/* Still used?? */
+.related li {
+  background: url(../gfx/i_related.gif) no-repeat 0 3px;
+}
+.headline-teaser .vid {
+  background-position: -172px -291px;
+}
+.headline-teaser .gallery {
+  background-position:  -108px -339px;
+}
+		/* subset of headline teaser: see also */
+.see-also a	{
+  font-weight: 700;
+}
+.see-also .last {
+  margin-bottom: 10px;
+}
+
+  /* medium article teaser 
+  	@TODO: this should be moved to Common if it's used in various places since this section is 
+  	for medium article teaser only
+  */
+.ma-teaser, .half-horizontal, .sa-teaser {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.ma-teaser h2 {
+  font-size: 1.308em;
+  line-height: 1.235em;
+  margin-bottom: 5px;
+}
+.ma-teaser h4{
+  font-size: 0.846em;
+  margin: 0 0 10px;
+}
+
+    /* HTML: MIR-363 - 10.1 Channel list */
+.ma-teaser .rating0, .lg-teaser .rating0,
+.ma-teaser .rating1, .lg-teaser .rating1,
+.ma-teaser .rating2, .lg-teaser .rating2,
+.ma-teaser .rating3, .lg-teaser .rating3,
+.ma-teaser .rating4, .lg-teaser .rating4,
+.ma-teaser .rating5, .lg-teaser .rating5 {
+  float: right;
+  width: 60px;
+  height: 13px;
+  margin-top: 3px;
+}
+
+.ma-teaser figure {
+  clear: both;
+  margin-bottom: 10px;	
+}
+
+.ma-teaser figure img{
+  float: left;
+}
+.ma-teaser figcaption {
+  margin-left: 160px;
+  float: none ;
+  font-weight: normal;
+} 
+ 
+    /* end HTML: MIR-363 - 10.1 Channel list */
+    
+		/* variant of medium article teaser: half horizontal */
+.half-horizontal .ma-teaser {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.half-horizontal figure img {
+  margin: 0 0 10px;
+}
+.half-horizontal .article figcaption {
+  float: left;
+  margin-left: 0;
+  width: auto;
+}
+    /* variant of medium article teaser: opinion list teaser */
+.ol-teaser {
+  border-bottom: 0;
+  padding-bottom: 2px;
+}
+.ol-teaser .box-heading {
+  margin-bottom: 10px;
+  text-align: left;
+  padding:6px 9px 5px;
+}
+.ol-teaser figcaption {
+  text-indent: 2.5em;
+  background-position: -479px -466px;
+}
+.ol-teaser figcaption a:after {
+  content: " '' ";
+}
+.ol-teaser .see-also a {
+  font-weight: 100;
+}
+    /* variant of medium article teaser: small article teaser */
+.sa-teaser {
+	padding: 0;
+}
+.sa-teaser figure {
+  float: left;
+}
+.sa-teaser figcaption {
+	float: none;
+	margin-left: 102px;
+}
+.sa-teaser h2 {
+	margin: 0 0 5px 0;
+}
+.sa-teaser .teaser-info {
+	margin-left: 160px;
+}
+	/* large teaser */
+.lg-teaser {
+	margin-bottom: 20px;
+}
+.top-story, .lc-teaser {
+  padding: 10px 9px ;
+}
+
+.lg-teaser h1 {
+  font-size: 1.538em;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 8px 10px;
+}
+.lg-teaser h3 {
+	font-size: 1.5em;
+	line-height: 1.2em;
+	margin-bottom: 5px;
+}
+.lg-teaser h4 {
+	font-size: 0.846em;
+	margin: 0 0 10px;
+}
+.lg-teaser figure img {
+  float: none;
+  margin: 0 0 10px;
+
+}
+.ie8 .lg-teaser figure img {
+  float: left;
+}
+.lc-teaser-hdln {
+  padding: 10px 9px 0px; 
+}
+.lc-teaser-hdln figure img {
+  float: none;
+  margin: 0;
+}
+.lc-teaser-hdln .see-also {
+	padding: 10px 0;
+	clear: both;
+}
+.lc-teaser-hdln p {
+	margin-bottom: 20px;
+}
+
+		/* lead channel teaser */
+.lc-teaser figure {
+  margin: -11px 0 0 -10px;
+}
+.lc-teaser .see-also {
+  margin: 0px -9px -10px; 
+  padding: 10px 9px;
+}
+
+		/* lead channel headline teaser */
+.lc-teaser-hdln figure {
+  margin: -11px 0 0 -10px;
+}
+
+  /* double horizontal teaser & double headline teaser headline variant */
+.dh-teaser, .dh-teaser-hdln {
+  margin-bottom: 20px;
+}
+.dh-teaser {
+  position: relative;
+  top: -1px;
+}
+.dh-teaser-hdln {
+  padding: 7px 0 0 0;  
+}
+.dh-teaser h4,
+.dh-teaser h3,
+.dh-teaser .tools, 
+.dh-teaser .headline-teaser,
+.dh-teaser p {
+  clear: none;
+  float: left;
+  width: 220px;
+  padding: 0 0 0 10px;
+} 
+.dh-teaser h4{
+	font-size: 0.846em;
+	margin: 10px 0 0;
+}
+
+.dh-teaser h3 {
+  margin: 7px 0 0.4em 0;
+  font-size: 1.615em;
+  line-height: 1.143em;
+}
+.dh-teaser-hdln h3 {
+  font-size: 2.7em;
+  margin: 0 0 0.51em 0;
+  padding: 0 0 0 10px;
+}
+.dh-teaser-hdln figure, .dh-teaser figure {
+  clear: none;
+  float: right;
+  margin: 0 -1px -1px 0;
+  position: relative;
+}
+.dh-teaser-hdln figure {
+  width: 512px;
+}
+.dh-teaser figure {
+  width: 460px;
+}
+.dh-teaser-hdln ul.tools, 
+.dh-teaser-hdln ul.headline-teaser,
+.dh-teaser-hdln p {
+  float: left;
+  clear: left;
+  padding: 0 0 0 10px;
+  width: 176px;
+}
+.dh-teaser-hdln p {
+  border-bottom-width: 1px;
+  margin-bottom: 1em;
+  padding: 0 10px 15px 10px;
+  position: relative;
+  width: 167px;
+}
+.dh-teaser-hdln ul.headline-teaser li {
+  width: 144px;
+}
+.dh-teaser-hdln ul.headline-teaser li a {
+  font-weight: 100;
+}
+
+  /* four column news teaser */
+.four-col-teaser {
+	width: 150px;
+	margin: 0 33.33px 0 0;
+}
+.four-col-teaser.last {
+	margin: 0;
+}
+.four-col-teaser .more {
+	margin: 0.65em 0;
+	display: block;
+}
+.four-col-teaser h3 {
+	font-size: 1.308em;
+	line-height: 1.235em;
+}
+
+  /* five column news teaser */
+.five-col-teaser figure, .five-col-teaser .more {
+  margin-bottom: 10px;
+}
+.five-col-teaser .more {
+  display:block;
+}
+.five-col-teaser h3 {
+  font-size: 1.308em;
+	line-height: 1.235em;
+  margin-bottom: 30px;
+}
+  /* five column news teaser */
+  /* These are all bespoke CSS styles as the design doesn't fit the CSS grid */
+.five-col-news-teaser {
+  width: 180px;
+  margin-right: 10px;
+  float: left;
+}
+.five-col-news-teaser h5 {
+  font-size: 0.846em;
+  margin-bottom: 10px;
+}
+
+  /* play teaser - as seen on crosswords and cartoon pages */
+.play-teaser {
+	border: 0;
+  margin-bottom: 10px;
+}
+.play-teaser h3 {
+  font-size: 1.615em;
+  line-height: 1.14285em;
+  margin: 5px 0 10px;
+}
+.play-teaser p {
+  margin-bottom: 10px;
+}
+.play-teaser .issue-date {
+  float: right;
+}
+.play-teaser figure {
+  margin-bottom: 10px;
+}
+.play-teaser .tools {
+	margin-bottom: 0;
+}
+.play-teaser .tools .more {
+  background-position: -415px -66px;
+  padding-left: 13px;
+  border: 0;
+  font-weight: 700;
+}
+.play-teaser .tools .more:hover {
+  text-decoration: underline;
+}
+
+  /* Full-width Splash article */
+.splash {
+  padding: 10px;
+}
+.splash, .splash-image-led, .splash-right {
+  margin-bottom: 20px;
+}
+.splash figure {
+  float: right;
+  margin: -11px;
+  position: relative;
+}
+.splash figure img {
+  margin: 0;
+}
+.splash h1, 
+.splash-right h1, 
+.splash-image-led h1 {
+  font-size: 4.615em;
+  letter-spacing: -2px;
+}
+.splash-inner {
+  border-right: 0;
+  clear: none;
+  float: left;
+  min-height: 323px;
+  padding: 20px 20px 20px 20px;
+  width: 318px;
+}
+/*MIR-1990 Increase line-height/margin on 'World War 3' headlines*/
+.splash-image-led h1 {
+  bottom: 0px;
+  position: absolute;
+  z-index: 1;
+  line-height: 1.23em;
+}
+.splash-image-led h1.left {
+  left: 20px;
+}
+.splash-image-led h1.right {
+  right: 20px;
+  text-align: right;
+  line-height: 1.23em;
+}
+.splash-image-led h1.small-text.right {
+  right: 20px;
+  width: 300px;
+  text-align: right;
+    bottom: 6px;
+}
+.splash-image-led h1.small-text.left {
+  left: 20px;
+}
+.splash .small-text, 
+.splash-right .small-text, 
+.splash-image-led .small-text {
+  font-size: 2.615em;
+  letter-spacing: 0;
+}
+.splash .label {
+  left: 9px;
+  top: 14px;
+}
+.splash-inner p {
+  margin-bottom: 0;
+}
+.article.splash-image-led {
+  position: relative;
+}
+.splash-image-led figure {
+  margin-left: -1px;
+  margin-top: -1px;
+}
+.splash-image-led figure img {
+  margin: 0;
+}
+.splash-image-led .tools,
+.splash-image-led p {
+  margin: 10px;
+}
+.splash-right {
+  position: relative;
+}
+.splash-right .splash-inner {
+  border-left: 0;
+  clear: none;
+  float: right;
+  min-height: 323px;
+  padding: 20px 20px 20px 20px;
+  width: 318px;
+  margin: 10px 10px 0 0;
+}
+.splash-right figure {
+  float: left;
+  margin: -1px 0 -1px -1px;
+  position: relative;
+}
+.splash-right figure img {
+  margin: 0;
+}
+.splash-right .label {
+  z-index: 1;
+}
+
+  /* Article page */
+.article-page h1 {
+  font-size: 2.308em;
+  line-height: 1.1335em;
+}
+.article-page h2 {
+  line-height: 1.1335em;
+}
+.article-page .article .lead-text p {
+  font-size: 1.30769em;
+  font-weight: 700;
+  line-height: 1.23529em;
+}
+.article-page .article .lead-text ol,
+.article-page .article .lead-text ul{
+  font-size: 1.30769em;
+}
+/* article header */
+.article-header h1 span {
+  display: block;
+  font-size: 0.36667em;
+  line-height: 1.636em;
+  margin: -36px 0 20px;
+  position: relative;
+  width: 300px;
+}
+.article-header h3 {
+  font-size: 1.30769em;
+  line-height: 1.23529em;
+}
+.article-page .rating0, .article-page .rating1, .article-page .rating2, .article-page .rating3, 
+.article-page .rating4, .article-page .rating5 {
+	margin: 1px 0 17px;
+}
+.article-header .span-15-5 h5 {
+  font-size: 0.84615em;
+  float: left;
+  line-height: 1.54545em;
+  margin: 0 5px 23px 0;
+  text-transform: uppercase;
+}
+.article-page .tools {
+  clear: both;
+  float: right;
+  margin: 0 118px 15px 20px;
+}
+.article-page .tools li:first-child {
+  max-width: 210px;
+}
+.article-page .social-interact {
+  margin-bottom: 10px;
+}
+.article-page .social-interact li {
+  float: left;
+  width: 100px;
+}
+.article-page .article p {
+  font-size: 1.15385em;
+  line-height: 1.28571em;
+  margin-bottom: 10px;
+}
+.article table {
+  border-collapse: collapse;
+}
+.article table td {
+  border: 1px solid #DADADA;
+}
+.article-page .article figure {
+  margin-bottom: 6px;
+  position: relative;
+}
+.article-page .article figure figcaption {
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  max-width: 96%;
+  vertical-align: bottom;
+}
+.article-page .article figure figcaption {
+  font-size: 1.077em;
+  padding: 2px;
+}
+.image-credit {
+  display: block; /* temp until page recaches */
+  font-size: 0.769em;
+  margin: -6px 0 6px;
+  text-align: right;
+}
+.author-box {
+  float: right;
+  margin-left: 20px;
+  width: 160px;
+}
+.author-box .tools {
+  margin: 0; 
+}
+.author-box li {
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.author-box .author {
+  display: block;
+  margin: 5px 0;
+}
+.columnist-header h1 span {
+  margin-top: 0;
+}
+.author-box img {
+  border: 0;
+}
+.commentQuestion {
+  border-top: 3px solid black;
+  clear: both;
+}
+.commentQuestion h2 {
+  margin: 20px 0;
+}
+.commentQuestion h2 a.goComments {
+  line-height: 1.5em;
+  color: black;
+  position: relative;
+}
+.goComments:after {
+  position: absolute;
+  content: url("../gfx/comments_arrow.jpg");
+  width: 38px;
+  height: 42px;
+  padding: 10px;
+}
+  /* Article page - live stream update (X Factor, F1 etc) */
+.live-now-article h5,
+.live-now-article .tools {
+  margin: 0 0 11px 0;
+  color: #5a6466;
+}
+.live-now-article h2 {
+  margin-bottom: 0.5em;
+}
+.live-now-article .article  {
+  border: 0px;
+}
+.live-now-article .live-now {
+  position: relative;
+  clear: both;
+  margin-bottom: 20px;
+}
+.article-page .live-article-stream {
+  border-top: 3px solid #000;
+  margin: 10px 0 20px 0;
+  padding-top: 10px;
+  position: relative;
+}
+.article-page .live-update {
+  border-style: dotted;
+  border-width: 0 0 1px 0;
+  margin-top: 20px;
+}
+.article-page .ln-info {
+  margin-left: 110px;
+}
+.article-page .first {
+  border-bottom: 0;
+}
+.article-page .live-update h4,
+.article-page .live-update p, 
+.article-page .live-update img,
+.article-page .live-update ol,
+.article-page .live-update ul {
+  margin: 0 0 20px 0;
+}
+.article-page .live-update p {
+  margin-top: 10px;
+}
+.article-page .live-update figure img {
+  margin: 0px;
+}
+.article-page .live-update h4 {
+  margin-left: 0px;
+}
+.article-page .live-update .ln-hdr {
+  float: left;
+  margin-right: 10px;
+  width: 100px;
+  overflow: hidden;
+}
+.article-page .live-update .ln-prefix {
+  font-weight: normal;
+  font-size: 1.1em;
+  margin: 0 0 5px;
+}
+.live-update .ln-hdr .entryDate, 
+.live-update .ln-hdr .entryTime {
+  color: #000;
+  font-family: 'MirrorExtraCondBold', sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+} 
+.live-update .ln-hdr .ln-icon {
+  clear: right;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 1px solid #d8d8d8;
+  background-position: 0 0;
+  margin: 0 10px 0 5px;
+}
+.live-update .ln-hdr .entryTime {
+  float: left;
+  font-size: 2.7em;
+  line-height: 1.1em;
+}
+.live-article-stream .live-update .ln-hdr .relProfileAuthor {
+  color: #5a6466;
+  font-family: 'MirrorExtraCondBold', sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  float: left;
+}
+.article-page .live-update .quote cite {
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+}
+.indent-1 .ln-icon, .indent-1 figure {
+  margin-left: -40px;
+}
+.article-page .auto-refresh {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.846em;
+  margin: 6px 0;
+  text-align: right;
+  float: right;
+}
+.article-page .auto-refresh a {
+  text-transform: uppercase;
+}
+.article-page .live-odds {
+  font-size: 1.384em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: -1px;
+  padding: 4px 0;
+}
+.article-page .social-interact .follow-btn {
+  float: right;
+  text-align: right;
+  width: 160px;
+} 
+
+  /* Poll */ 
+ .article-page .article .poll {
+  width: 230px;
+  float: left;
+  margin: 0 10px 10px 0;
+} 
+ 
+  /* Standfirst */
+.standfirst {
+  margin-bottom: 30px;
+}
+.standfirst table {
+  border-collapse: collapse; /* IE7 fix to remove cell spacing */
+}
+.article-page .standfirst .box-heading {
+  font-size: 1em;
+  line-height: 1.308em;
+  padding: 5px 10px;
+  text-align: left;
+}
+.standfirst .box-bottom {
+  margin: 0;
+  padding: 0;
+}
+.results {
+  margin: 0 auto;
+  width: auto;
+}
+.results th {
+  display: none;
+}
+.results td {
+  padding: 0 10px;
+}
+.results h4 {
+  margin-bottom: 0;
+}
+.results span {
+  display: block;
+  text-align: center;
+}
+.match {
+  padding: 10px 0;
+}
+.match td {
+  font-size: 1.308em;
+  font-weight: 700;
+  line-height: 1.235em;
+}
+.match h4 {
+  font-size: 1em;
+}
+.match .msg {
+  font-size: 0.765em;
+  font-weight: 100;
+}
+.stats-info {
+  margin: 0;
+}
+.standfirst .info {
+  background: #f5f5f5;
+  border-width: 0 1px 1px;
+  float: left;
+  width: 308px;
+}
+.standfirst .info.last {
+  float: right;
+  width: 309px;
+  border-left: 0;
+}
+.rankings, .player-rating, .rankings-result {
+  margin: 0;
+  width: 100%;
+}
+.rankings td {
+  padding: 4px 10px;
+}
+.player-rating, .rankings-result {
+	border-width: 1px 0px 0px 1px;
+	margin-bottom: 30px;
+}
+.player-rating td, .rankings-result td {
+	padding: 12px 10px;
+	border-width: 0px 1px 1px 0px
+}
+.player-rating td h4, .rankings-result td h4 {
+	margin-bottom: 0px;
+}
+.player-rating td img {
+	float: left;
+	margin-right: 10px;
+}
+.player-rating td p.description {
+	margin: 5px 0 0 0;
+	overflow: hidden;
+	font-size: 13px;		
+}
+.player-rating thead th, .rankings-result thead th {
+	background-color: whiteSmoke;
+	font-size: 1em;
+	padding: 5px 10px;
+	border-width: 0px 1px 1px 0px
+}
+.player-rating tfoot td {
+  border: 1px solid #fff;
+  text-align: center;
+}
+.player-rating .rating-result {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.mirror_pick {
+	width: 76px;
+	background-position: 0px -353px;
+	display: inline-block;
+	margin-bottom: 5px;	
+}
+.amount{
+	list-style: none;
+	padding: 0;
+	margin: 0px 0px 0px 0px;
+	position: relative;
+	top: -23px;
+	left: 9px;
+}
+.amount li{
+	font-size: 14px;
+	width: 15px;
+}
+.amount li.active {
+	color: #E90E0E;
+}
+.amount li.last {
+	width: 0px;
+}
+
+  /* MIR-428 HTML:Article unordered list with images: 
+    PB: I've used an extra <p> in order to achieve the expected styling
+        Could be a class instead? For review.
+        
+        .top-stories class added here for specific overrides.
+  */
+.top-stories ul {
+  list-style: none;
+  padding: 0;
+}
+.most-read .box-bottom a img {
+  clear: left;
+  float: left;
+  margin-right: 10px;
+}
+.most-read .box-bottom li p {
+  margin: 0 0 0 160px;
+}
+.most-read .info {
+  float: right;
+  font-size: 0.76470em;
+  line-height: 1.38461em;
+}
+
+
+
+  /* MIR-423 html: Related articles and Related tags (article) */
+.article-page .storylist, .article-page .related-widget, .horoscopes-intro, .horoscopes-list, 
+.google-adsense {
+  border-top: 3px solid #000;
+  margin-bottom:20px;
+  padding-top:15px;
+}
+.article-page .storylist h3, .article-page .related-widget h3 {
+  margin-bottom: 10px;
+  font-size: 1.384em;
+  line-height: 1.111em;
+}
+.article-page .storylist h2 {
+  margin: 5px 0 0 0;
+}
+.article-page .storylist h2 a {
+  font-size: 0.6em;
+}
+.article-page .storylist a {
+  font-weight: 100;
+}
+.article-box-heading.grey, .article-box-heading.red {
+  text-align: center;
+  font-size: 1.384em;
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+  /* only in article page body */
+.article-page .storylist li, .span-15-5 .related-widget dd {
+  font-size: 1.15385em;
+  line-height: 1.28571em;
+}
+
+  /* Headline list */
+  /* MIR-424 HTML: Headline List */
+.headline-list img {
+  margin: 0 0 15px;
+}
+  
+	/* carousel */
+.play {
+	background-position: -112px -160px;
+}
+.pause {
+	background-position: -136px -160px;
+}
+		/* picture navigator */
+.pic-nav {
+	position: relative;
+	margin: 0 0 20px;
+}
+.pic-nav .play, .pic-nav .pause {
+  cursor: pointer;
+	left: -2px;
+ 	height: 16px;
+  position: absolute;
+	width: 20px;
+	top: 2px;
+  z-index: 5;
+}
+.pic-nav .wrapper {
+	margin: -17px 34px 0;
+	padding-top: 20px;
+}
+.span-8-5 .pic-nav .wrapper {
+  margin: -17px 39px 0;
+}
+.viewport {
+  position: relative;
+}
+.viewport-heading {
+  bottom: 1px;
+	position: absolute;
+	font-size: 1.539em;
+	line-height: 1.25em;
+}
+.viewport-heading a {
+  padding: 0.2em 0;
+  line-height: 1.45em;
+}
+.viewport-heading.home-left {
+	left: 10px;
+	width: 63.5%;
+}
+.viewport-heading.home-right {
+	left: auto;
+	right: 10px;
+	width: 26%;
+	text-align: right;
+}
+  /* sets .channel-left as the default style */
+.viewport-heading, .viewport-heading.channel-left {
+	left: 10px;
+	width: 98.5%;
+}
+.viewport-heading.channel-left-split {
+	left: 10px;
+	width: 21%;
+}
+		/* thumbnails */
+.pic-viewer-thumbs {
+	position: relative;
+}
+.pic-viewer-list li {
+	width: 120px;
+	position: relative;
+	/* @NB: indesign file - 12px line height which 0.923em - this looks a little to tight */
+	line-height: 1.2em;
+}
+.pic-viewer-list li {
+  padding: 5px 5px 10px;
+}
+.span-17-5 .pic-viewer-list li, .span-18 .pic-viewer-list li {
+  padding: 5px 3px 10px;
+}
+.pic-viewer-list li .label {
+	top: 8px;
+	left: 3px;
+}
+.pic-viewer-list img {
+	margin: 0 0 5px;
+}
+		
+.pic-selected {
+	background-position: -128px -104px ;
+	width: 25px;
+	height: 13px;
+	position: absolute;
+	top: -13px;
+	left: 54px;
+	
+}
+		/* left right buttons */
+.carousel .btn-left, .carousel .btn-right {
+	position: absolute;
+	top: 40px;
+} 
+.carousel .btn-left {
+	left: 10px;
+}
+.carousel .btn-right {
+	right: 10px;
+}
+	/* opinion carousel */
+.opinions {
+  border-width: 0 0 3px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.opinions-heading {
+  font-size: 1.026em;
+  line-height: 1.38461em;
+  padding: 1px 0 3px ;
+  position: relative;
+}
+.opinions-heading h3, .opinions-heading .recent-comments h3{
+	float: left;
+	font-size: 1.35em;
+	margin-bottom: 0;
+	padding: 5px 9px 1px;
+}
+	/* control buttons will be set to hidden by default. buttons will be set to display using JS, 
+	 * only if there are more than one panel 
+	 */
+.carousel-controls {
+	float: right;
+	display: none;
+}
+.carousel-controls li {
+	width: 20px;
+	margin: 3px 5px 0 0;
+}
+.btn-left, .btn-right {
+  cursor: pointer;
+	height: 20px;
+	width: 20px;
+}
+.pic-nav .wrapper, .opinions .wrapper {
+  overflow: hidden;
+	position: relative;
+}
+.panel-container {
+  width: 9999px;
+}
+.opinions .panel {
+	margin: 0 20px 0 0;
+}
+.span-6 .opinions .panel {
+	width: 230px;	
+}
+.span-7 .opinions .panel {
+	width: 270px;
+}
+.span-8-5 .opinions .panel {
+	width: 340px;
+}
+.span-8-5 .panel {
+  width: 260px;
+}
+.span-15 .panel {
+  width: 520px;
+}
+.span-17-5 .panel, .span-18 .panel {
+  width: 630px;
+}
+.opinions h4 {
+	font-size: 1em;
+	line-height: 1.38461em;
+	margin-bottom: 9px;
+}
+.opinions blockquote {
+	margin: 0;
+}
+.opinions blockquote a {
+	cursor: default;
+	padding-top: 20px;
+	display: block;
+}
+.opinions blockquote a:hover {
+	text-decoration: none;
+}
+	/* horizontal opinion carousel */
+.opinions-list-hori li {
+	margin: 10px 20px 15px 0;
+}
+.opinions-list-hori .last {
+  margin-right: 0;
+}
+.span-7 .opinions-list-hori li {
+	width: 125px;
+}
+.span-6 .opinions-list-hori li {
+	width: 105px;
+}
+.opinions-list-hori img {
+  margin-bottom: 10px;
+}
+		/* vertical opinion carousel */
+.opinions-list-vert li {
+	padding: 17px 0 15px;
+	width: 100%;
+}
+.opinions-list-vert img {
+	float: left;
+	margin: -7px 5px 0 0;
+}
+.opinions-list-vert blockquote {
+	margin-left: 80px;
+}
+	/* recent comments variant of opinion carousel */
+.recent-comments .wrapper {
+	margin-top: 0;
+	padding: 0;
+}
+.recent-comments .opinions-heading{
+	margin: 0;
+}
+.recent-comments .opinions-list-vert h4 {
+	padding: 0 5px;
+	margin: 0;
+}
+.recent-comments .opinions-list-vert h4 a	{
+	background-position: -192px -215px;
+}
+.recent-comments .opinions-list-vert li {
+	margin: 0 10px;
+	padding: 5px 0 10px;
+	width: 215px;
+}
+.recent-comments blockquote {
+	margin: 10px 10px 5px;
+}
+.recent-comments blockquote a	{
+	text-indent: 2em;
+	margin: 0;
+	padding: 0;
+}
+.recent-comments p {
+	margin: 5px 10px 0;
+	font-weight: bold;
+}
+  /* promo box */
+.promo h3.box-heading {
+  margin-bottom: 10px;
+}
+.promo h4 {
+  margin-bottom: 10px;
+}
+.promo img {
+	float:left;
+	margin-right: 10px;
+}
+
+/* Article page - embedded image gallery */
+/* .article-page .article figure {
+  background: none repeat scroll 0 0 #202020;
+  text-align: center;
+} */
+.image-gallery {
+  background-color: #383838;
+  margin-bottom: 10px;
+  width: 620px;
+}
+.image-gallery .gallery-caption {
+  padding: 0 0 10px 10px
+}
+.gallery-caption, .image-gallery .thumb .image-credit, .btn-fullscreen {
+  color: #fff;
+}
+.image-gallery figure {
+  background: #202020;
+}
+.image-gallery .thumb {
+  cursor: pointer;
+  height: 393px;
+  overflow: hidden;
+  margin-left: -3px;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+}
+.image-gallery .thumb img {
+  float: none;
+  min-height: 375px;
+  min-width: 265px;
+}
+.image-gallery .thumb .image-credit {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  background: #000;
+  display: inline-block;
+  margin: 0 10px 0;
+  padding: 0 10px;
+}
+/* TODO: replace with view gallery */
+.btn-fullscreen {
+  background-image: url("../gfx/fullscreen_btn.png");
+  width: 170px;
+  height: 53px;
+  position: absolute;
+  display: block;
+  top: 45%;
+  left: 36.5%;
+}
+.btn-fullscreen-thumb {
+  background-image: url("../gfx/arrows_sprite.png");
+  background-position: -125px 0;
+  cursor: pointer;
+  height: 19px;
+  position: absolute;
+  right: 8px;
+  width: 19px;
+  top: 0px;
+}
+  /* viewport */
+.viewport-img {
+  width: 100%;
+  height: 100%;
+}  
+.portrait {
+  height: 100%;
+  width: auto;
+}
+.landscape {
+  height: auto;
+  width: 100%;
+}
+  /* thumbnails */
+.gallery-data {
+  position: relative;
+}
+.image-gallery .gallery-thumb {
+  height: 34px;
+  width: 52px;
+}
+.image-gallery .gallery-thumbs {
+  height: 44px;
+}
+.gallery-thumbs {
+  height: 75px;
+  margin: 0 29px 10px 6px;
+  overflow: hidden;
+  position: relative;
+}
+.gallery-thumbs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 1400px; /* sets default width, replaced using JavaScript */
+}
+.gallery-thumb, .endscreen {
+  background: #000;
+  border: 1px solid #000;
+  float: left;
+  height: 62px;
+  margin: 0 5px 0 0;
+  overflow: hidden;
+  position: relative;
+  width: 95px;
+}
+.endscreen {
+  margin-right: 0;
+}
+.gallery-thumb img, .endscreen img {
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+.gallery-thumb-screen, .gallery-thumb-endscreen {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  cursor: pointer;
+}
+.gallery-thumb:hover, .endscreen:hover, .gallery-thumbs .active {
+  border-color: #fff;
+}
+.ie6 .gallery-thumb-screen, .ie6 .gallery-thumb-endscreen, 
+.ie7 .gallery-thumb-screen, .ie7 .gallery-thumb-endscreen,
+.ie8 .gallery-thumb-screen, .ie8 .gallery-thumb-endscreen,
+.ie9 .gallery-thumb-screen, .ie9 .gallery-thumb-endscreen {
+  background: #000;
+  filter: alpha(opacity=1);
+}
+  /* captions */
+.gallery-captions ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+  /* if JavaScript is disabled */
+.no-js .btn-fullscreen, .no-js .gallery-thumbs, .no-js .btn-fullscreen-thumb {
+  display: none;
+}
+.no-js .image-gallery .thumb {
+  cursor: auto;
+}
+
+
+/**********************  Right Hand Column ***************************/
+.box-heading {
+  font-size: 1.308em;
+  margin: 0;
+  padding: 20px 5px 5px;
+}
+.no-topbdr .box-heading {
+	border-top: 0;
+	padding-top: 23px;
+}
+.weather-header {
+	padding-top: 13px;
+}
+.box-bottom {
+	margin: 0 0 10px;
+	padding: 10px;
+}
+
+	/*  weather  */
+.weather h3 {
+	padding: 5px 10px 5px 5px; 
+	font-size: 1.308em; 
+	float: left;
+	margin: 0;
+}
+.weather form {
+	display: inline;
+}
+.weather form input[type="text"] {
+	font-size: 0.75em; 
+	font-style: italic; 
+	width: 75px;
+}
+.weather form label {
+	font-size: 0.84615em;
+	line-height: 1.36363em;
+	margin: 0 5px 0 -5px;
+}
+.weather figure img {
+	margin: 5px 18px; 
+	text-align: center
+}
+.weather h4 {
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+.weather ul {
+	border-width: 0 1px;
+	font-size: 0.8em;
+	text-align: center
+}
+.weather li {
+	float: left;
+	width: 75px; 
+	padding-bottom: 10px;
+}
+.weather .last {
+	border: 0;
+}
+.weather .box-bottom {
+	border: 0;
+	font-size: 0.84615em;
+	padding: 0 0 0 10px; 
+}
+
+/* poll */
+.poll h4 {
+	margin-bottom: 10px;
+}
+.poll .poll-results {
+  padding-left:0;
+}
+.poll input {
+	margin: 4px 5px 0;
+	float: left;
+	display: inline;
+}
+.poll label {
+	font-weight: normal;
+	margin: 0 0 0 0.5em;
+	width: 170px;
+	display: inline-block;
+}
+.poll .btn {
+	margin: 15px 0 0 28px;
+}
+.poll img {
+	border-color: #DADADA;
+	border-width: 0px 1px;
+	border-style: solid;
+}
+/* @TODO: 
+		1. What colours and height for poll results?
+		2. move background */
+.poll-result {
+	margin: 0.1em 0 0 0;
+	height: 0.6em;
+}
+
+	/* small promo puff */
+.sm-promo-list {
+  border-width: 1px;
+  border-style: solid;
+  border-top: 0;
+  margin: 0 0 10px 0;
+}
+.sm-promo-list h3 {
+  border-right: 0 none;
+  font-size: 1.077em;
+  line-height: 1.28571em;
+  left: -1px;
+  height: 18px;
+  margin-bottom: 0;
+  padding-left: 5px;
+  position: relative;
+}
+.sm-promo-list h3 .heading-end {
+  background: url(../gfx/header_end.png) right top no-repeat;
+  display: block;
+  line-height: 1.42857em;
+  height: 20px;
+  padding-right: 10px;
+  position: absolute;
+  right: -10px;
+  top: -1px;
+}
+.sm-promo-list h3 .heading-end select,
+.sm-promo-list h3 .heading-end a {
+  text-transform: capitalize;
+}
+.sm-promo-list h3 .heading-end select {
+  margin: 2px 0 0 0;
+  font-size: 0.67em;
+}
+.sm-promo-list h3 .heading-end a {
+  line-height: 1.5em;
+}
+.sm-promo-list .sm-promo-inner {
+  margin: 0 10px 0 72px;
+}
+.sm-promo-list .fullwidth .sm-promo-inner {
+  margin: 0 10px;
+}
+.sm-promo-list .fullwidth .more {
+	font-size: 1.30769em;
+	font-weight: 700;
+	line-height: 1.23529em;
+}
+.sm-promo-list .sm-promo {
+  background: url(../gfx/border-bottom.png) 10px bottom no-repeat;
+  margin: 10px 0;
+  padding: 0 0 10px 0;
+ }
+.sm-promo-list .last {
+  background: none;
+  margin-bottom: 0;
+  padding-bottom: 7px;
+}
+.sm-promo-list img {
+  float: left;
+  margin-left: -1px;
+  border: 0;
+}
+.sm-promo-list .fullwidth img {
+  float: none;
+  position: relative;
+  top: -10px;
+}
+.sm-promo-list .cartoon {
+  padding: 0;
+}
+.sm-promo-list .cartoon img {
+  margin-left: -1px;
+}
+.sm-promo-list .cartoon, .sm-promo h4, .sm-promo p, .sm-promo dd {
+  margin: 0;
+}
+.sm-promo h4 {
+  font-size: 1em;
+  line-height: 1.385em;
+}
+.sm-promo .more {
+  display: block;
+  padding-left: 14px;
+  background-position: -352px -154px;
+}
+.sm-promo ul li {
+  background-position: -395px -89px;
+  padding: 0 0 3px 14px;
+}
+.sm-promo dl {
+  font-size: 0.846em;
+  margin: 5px 0 0 0; 
+}
+.sm-promo dt {
+  float: left;
+  width: 49%;
+}
+.sm-promo dd {
+  float: right;
+  width: 49%;
+}
+.sm-promo .bet-button {
+  background: #E61111;
+  float: right;
+  font-size: 0.846em;
+  font-weight: bold;
+  line-height: 1.1em;
+  padding: 4px 7px;
+  text-align: center;
+}
+.promo-live-odds ol {
+  margin-bottom: 5px;
+  margin-left: 5px;
+  /* padding-left: 0;
+  list-style-position: inside; */
+}
+.promo-live-odds ol li a span {
+  float: right;
+}
+.votm .sm-promo {
+	background: none;
+	font-weight: bold;
+}
+.votm blockquote {
+	margin: -10px 0 0; 
+	padding-left: 30px;
+	font-style: normal; 
+	font-size: 1.3em;
+}
+.kb-teaser {
+	margin-bottom: 30px;
+}
+.kb-teaser img{
+	margin-bottom: 10px;
+}  
+.fb-likebox {
+	margin-bottom: 10px;
+}
+.key-dates ul, .most-recent ul, .most-read ul, .upcoming-events ul  {
+	padding: 0;
+	list-style-type: none;
+}
+.key-dates li, .most-recent li, .most-read  ul li, .upcoming-events li {
+	background-position: -302px -202px ;
+	padding-left: 20px;
+}
+.top-stories ul li {
+	background: none;
+	padding-left: 0;
+}
+	/* Mega Dropdown promo */
+.drop .sm-promo-list .last,
+.drop .sm-promo-list .sm-promo {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+.drop .sm-promo-list {
+  border:0;
+}
+
+/* Rummble Labs Recommendation & Pluck Social sign on */
+.pluck-login-withFacebook {
+  padding-top: 10px;
+}
+.fb-btn {
+  background: url(../gfx/btn_fb_login.gif) no-repeat 0 0;
+  height: 44px;
+  width: 226px;
+}
+.recommended-seemore .box-heading, .recommended-seemore .box-bottom {
+  border: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.recommended-seemore .box-bottom  p {
+  margin-bottom: 0;
+}
+
+/* Floating MPU */
+.floating-mpu .mpu-border, .floating-mpu .mpu {
+  float: right;
+  width: 298px;
+  padding: 35px 19px;
+}
+/* Topic Widget */
+.span-17-5.floating-mpu .social-hdr {
+  display: block;
+  width: 340px;
+}
+.span-17-5.floating-mpu .secondary.sa-teaser figure {
+  margin-bottom: 10px;
+}
+.span-17-5.floating-mpu .secondary.sa-teaser .teaser-info {
+  margin-left: 0;
+  width: 340px;
+}
+.span-17-5.floating-mpu .secondary.sa-teaser h3 {
+  clear: left;
+}
+.floating-mpu .lg-teaser {
+  clear: both; /* preventive measure to ensure editor's pick display properly with floating MPU */
+}
+
+/* Stories widget */
+.span-17-5.floating-mpu .first figure, .span-17-5.floating-mpu .first .teaser-info {
+  clear: none;
+  width: 340px;
+}
+.span-17-5.floating-mpu .first .teaser-info {
+  margin-left: 0;
+}
+
+  
+/**************************** Footer ****************************/
+footer {
+	border-width: 3px 1px 0;
+	border-top-color: #000;
+	float:left;
+	margin-top: 30px;
+	width: 948px;
+	position: static;
+}
+.footer-left {
+	float: left;
+	width: 240px;
+}
+.section {
+  width: 156px;
+  float: left;
+  margin-right: 20px;
+}
+.logo-s {
+	margin: 0.769em;
+}
+.footer-links-wrap {
+	padding: 0.462em 0 0;
+}
+.footer-links {
+	padding: 0.462em 0.769em;
+	margin: 0;
+	font-size: 0.923em;
+	line-height: 1.5em;
+  list-style-type: none;
+}
+.ie7 .footer-links {
+  float: none;
+}
+.footer-links li {
+	margin-bottom: 5px;
+}
+.ie7 .footer-links li {
+  border: 0;
+  float: none;
+  display: block;
+  margin-bottom: 0;
+}
+
+	/* directory */
+.directory {
+	padding: 6px 0 6px 12px;
+	float: left;
+	width: 710px;
+}
+nav.directory dl {
+	margin-right: 18px;
+	list-style: none;
+}
+nav.directory dl dd {
+	width: 144px;
+	margin: 0;
+	line-height: 1.615em;
+}
+.directory dt {
+	background-image: none;
+	padding: 0;
+	margin: 5px 0;
+	width: 156px;
+	font-weight: bold;
+	font-size: 1.31em;
+	line-height: 1.21em;
+}
+.directory dd a{
+	background-position: -395px -87px;
+	padding-left: 12px;
+	display: list-item;
+}
+.sub-section {
+	margin: 0 0 0 11px;
+}
+
+	/* login */
+footer .login {
+	padding: 0 0 56px 0;
+}
+footer .login h3 {
+	margin-left: 20px;
+}
+
+/**************************** Custom page ****************************/
+/* separate custom page styles within their own section using the 
+ * comment above 
+ */
+ 
+/**********************  Sports Channel ***************************/
+	/* club strips */  
+.epl {
+  margin-left: 4px;
+}
+.epl a {
+	background: url(../gfx/epl_sprite.gif) no-repeat 0 0;
+  display: block;
+  height: 34px;
+  margin: 4px 1px;
+  width: 43px;
+}
+.epl .arsenal {background-position: -2px -6px; }
+.epl .astonvilla {background-position: -2px -53px;}
+.epl .chelsea {background-position: -2px -194px;}
+.epl .everton {background-position: -50px -6px;}
+.epl .fulham {background-position: -50px -53px;}
+.epl .liverpool {background-position: -50px -100px;}
+.epl .mancity {background-position: -50px -147px;}
+.epl .manutd {background-position: -50px -194px;}
+.epl .newcastle {background-position: -96px -6px;}
+.epl .norwich {background-position: -96px -53px;}
+.epl .qpr {background-position: -96px -100px;}
+.epl .stoke {background-position: -96px -147px;}
+.epl .sunderland {background-position: -96px -194px;}
+.epl .swansea {background-position:-143px -6px;}
+.epl .tottenham {background-position:-143px -53px;}
+.epl .westbrom {background-position:-143px -100px;}
+.epl .wigan {background-position:-143px -147px;}
+.epl .reading {background-position: -2px -147px;}
+.epl .southampton {background-position: -2px -100px;}
+.epl .westham {background-position: -143px -194px;}
+	
+  /* ************************** 3am ************************** */
+  /* 3am page specific colours */
+
+.threeam {
+  background: url(../gfx/3am-bg.jpg) 30% 0 #8F3BB4;
+}
+.threeam .container {
+  background: #fff;
+  padding: 0 10px;
+}
+  
+  /* celebs strip */
+.celebs, .columnists {
+  margin-left: 2px;
+}
+.celebs li {
+  margin-right: 14px;
+  text-align: center;
+  max-width: 92px;
+}
+.celebs .last, .columnists .last  {
+  margin-right:0; 
+}
+.celebs a, .columnists a {
+  font-size: 0.83em;
+}
+ /* columnists strip */
+.columnists li {
+  margin-right: 11px;
+  text-align: center;
+  width: 74px;
+  line-height: 0.92em; 
+}
+.columnists img {
+ margin: 0 0 2px 7px;
+}
+
+/**************************** Automated Topic teasers ****************************/
+.tools .time {
+	float: right;
+}
+
+  /* @TODO: this need a teaser story? */
+.secondary.sa-teaser {
+	padding: 0 0 20px ;
+}
+.secondary.sa-teaser.clearfix figure {
+	float: left;
+	padding: 0;
+}
+.secondary.sa-teaser .teaser-info {
+	margin-left: 320px;
+}
+.sa-teaser .teaser-info .tools,
+.secondary.sa-teaser .tools {
+	clear:none;
+	height:20px;
+}
+
+/**************************** Curated Heading ****************************/
+.section-hdr {
+  width: auto;
+  margin-top: 0;
+}
+.curated-hdr {
+	margin: 30px 0 18px 0;
+}
+.curated-hdr .channel-hdr,
+.section-hdr .channel-hdr {
+	display: inline-block;
+	border-bottom: 0;
+  	font-size: 2.345em;
+  	margin: 14px 0 21px;
+}
+.curated-hdr p,
+.section-hdr p {
+	font-size: 1.308em;
+	line-height: 1.235em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding-right: 10px;
+}
+.curated-hdr ul {
+	position: absolute;
+	top: 0;
+	right: 0.8em;
+}
+.curated-hdr li {
+	margin: 0 0 0 0.8em;
+}
+.curated-thumb, .section-thumb {
+	float: right;
+	margin: 30px 0 0 20px;
+}
+
+/* generic social media links - These mostly sit inside the curated header */
+.social-media {
+  margin: 10px 0 0 0;
+  float: right;
+}
+#page .twitter-share-button, 
+#page .addthis_button_tweet, 
+#page .fb-like, 
+#page .stumbleupon-button, 
+#page .reddit-button {
+  float: left;
+  margin-right: 10px;
+}
+.curated-hdr .fb_edge_widget_with_comment,
+#page .reddit-button span a {
+	float:left;  
+}
+.article-page .social-media,
+.article-page .social-media-buttons {
+  clear: both;
+  float: none;
+  margin: 10px 0 20px 0;
+  overflow: hidden;
+}
+.live-now-article .social-media {
+  float: left;
+  margin: 0;
+}
+.live-now-article .follow-button {
+  float: right;
+}
+
+/**************************** Pagination ****************************/
+.pagination {
+	margin: 0 0 1.6em;
+  padding: 0.77em 0;
+}
+
+.search-showing  {
+  padding-top:0.308em;
+}
+
+.search-showing p {
+  font-size: 0.846em;
+ 
+}
+.pagination-controls {
+	margin: 0 0 0 19.65em;
+}
+.pagination li {
+	font-weight: bold;
+	line-height: 1.53846em;
+	padding: 3px 8px;
+}
+.pagination .btn-left {
+	margin: 0 0.65em 0 0;
+}
+.pagination .btn-right {
+	margin: 0 0 0 0.65em;
+}
+
+/**************************** Related (sidebar) ****************************/
+.related-list {
+	margin: 0;
+	padding: 5px 0 10px;
+}
+.related-list.last {
+	margin-bottom: -5px;
+}
+.related-widget dt {
+	font-size: 0.846em;
+  font-weight: 700;
+}
+.related-widget dd {
+  padding-right: 7px;
+	margin: 0 2px 0;
+	display: inline;
+}
+.ie6 .related-widget dd, .ie7 .related-widget dd {
+  display: block;
+}
+.related-widget dd a {
+  background: none;
+  padding-left: 0;
+}
+.related-widget dd a:hover {
+  text-decoration: none;
+}
+
+/**************************** Most Recent + Upcoming events (sidebar with square bulelts) ****************************/
+/* Still used?? */
+.box-bottom.square li {
+	background: url(../gfx/i_article.gif) no-repeat 0 30px;
+	padding: 10px 0 10px 19px;
+	padding: 0.8em 0 0.8em 1.5em;
+}
+.square h5 {
+	margin: 0;
+	font-size: 0.846em;
+}
+
+
+/**************************** Play button overlay (topics curated v2) ****************************/
+.video-btn.play {
+	width: 30px;
+	height: 24px;
+	position:absolute;
+	right:3px;
+	top:3px;
+	background-position: -164px -128px;
+}
+
+
+/**************************** Superpick ****************************/
+
+.superpick-teaser {
+	margin: 0 0 20px;
+}
+.superpick-teaser figure {
+margin: -1px 0 -1px -1px;
+}
+.superpick-teaser figure:after {
+	clear: none;
+}
+.superpick-teaser figure img {
+  margin-right: 10px;
+}
+.superpick-teaser-info {
+	width: 229px;
+	padding: 10px 0;
+	display: inline-block;
+}
+
+/**************************** Search Results page ****************************/
+.g-ads {
+  margin-bottom: 40px;
+}
+.no-results {
+	border-bottom: 0;
+}
+.no-results ul {
+	padding-bottom: 0px;
+}
+.no-results li {
+	list-style-type: none;
+	background-position: -252px -241px;
+   padding: 0 0 0px 10px;
+}
+.search-results {
+  border-top: 1px solid black;
+}
+.search-results h2 a {
+	padding: 0px;
+}
+.search-results h2 {
+	padding: 25px 0 0 0;
+	font-size: 1.6em;
+	margin: 0 0 15px 0;
+}
+.search-results .ma-teaser {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.search-results .ma-teaser h2, .search-results .tools, .search-results p {
+	margin: 0 0 5px;
+}
+  /* top pagination */
+.search-results .search-top {
+  padding: 0;
+}
+.search-top .search-sort {
+  padding-top: 0.308em;
+  float: right;
+}
+.search-top .search-sort ul {
+  display: inline;
+  font-size: 0.846em;
+}
+.search-top .search-sort li {
+  padding: 0;
+  font-weight: normal;
+  display: inline;
+}
+  /* override link default behaviour */
+.search-top .search-sort .active a {
+  cursor: default;
+}
+.search-top .search-sort a {
+  padding: 0 4px 0 1px;
+}
+.search-sort .active a:hover {
+  text-decoration: none;
+}
+/* temporary fixes for demo JH 17/01/12  - including widths overridden - these need to be fixed in HTML */
+.refine-search h4 {
+	margin-bottom: 5px;
+	font-size: 1.308em;
+	padding: 20px 5px 5px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid #DADADA;
+}
+
+.refine-search dl {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.refine-search dt {
+	font-weight: bold;
+	font-size: 0.846em;
+	line-height: 1.364em;
+	color: #5a6466; 
+}
+
+.refine-search dt a {
+	font-weight: bold;
+	color: #5a6466;
+	cursor: default; 
+}
+.refine-search dt a:hover {
+	text-decoration:none;
+}
+
+.refine-search dd {
+	background-position: -393px -88px;
+	margin: 0;
+	font-size:1em;
+	line-height: 1.6153;
+	display: list-item;
+   padding-left: 12px;
+	list-style: none;
+}
+
+.refine-search dl dd.gallery:hover, .refine-search dl dd.vid:hover {
+	background-position: -393px -88px;
+}
+
+.refine-search-date {
+	margin-bottom: 10px;
+	
+}
+.refine-search-date dl {
+  margin: 0;
+  border: 0;
+  width:140px;
+}
+
+.refine-search .vid a, .refine-search .vid a:hover,
+.refine-search .gallery a, .refine-search .gallery a:hover {
+	background:none;
+}
+
+.date-picker {
+	float:right;
+	width:120px
+}
+.date-picker li {
+  margin:0.5em 0;
+}
+.date-picker label {
+	font-weight: normal;
+	font-size: 0.846em;
+}
+.date-picker input[type="text"] {
+  margin: 0;
+} 
+.date-picker .btn {
+padding: 0 14px;
+}
+/**************************** Lifestyle section ****************************/
+.horoscope a {
+  background: url(../gfx/horoscope_sprite.jpg) 0 0 no-repeat;
+  display: block;
+  height: 83px;
+  margin: 4px 0;
+  width: 75px;
+}
+.horoscope .aries {background-position: 0 0;}
+.horoscope .taurus {background-position: -75px 0;}
+.horoscope .gemini {background-position: -150px 0;}
+.horoscope .cancer {background-position: -225px 0;}
+.horoscope .leo {background-position: 0 -83px;}
+.horoscope .virgo {background-position: -75px -83px;}
+.horoscope .libra {background-position: -150px -83px;}
+.horoscope .scorpio {background-position: -225px -83px;}
+.horoscope .sagittarius {background-position: 0 -165px;}
+.horoscope .capricorn {background-position:  -75px -165px;}
+.horoscope .aquarius {background-position: -150px -165px;}
+.horoscope .pisces {background-position:  -225px -166px;}
+
+/**************************** Horoscope section ****************************/
+.horoscope-page .label {
+	position: static;
+}
+.horoscope-page h2 {
+	font-size: 1.38em;
+	padding: 20px 5px 5px;
+}
+.sm-horoscopes-profile {
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+}
+.sm-horoscopes-profile h4 {
+	font-size: 0.846em;
+	margin: 0 0 5px 70px;
+	padding-left: 10px;
+}
+.sm-horoscopes-profile figcaption {
+	margin-left: 80px;
+	float: none;
+}
+.sm-horoscopes-teaser {
+	margin-bottom: 10px;
+}
+.sm-horoscopes-teaser.last {
+	margin-bottom: -10px;
+}
+.smht-pic {
+	float: left;
+}
+.smht-pic a {
+  background: url(../gfx/horoscope_teaser_sprite.jpg) 0 0 no-repeat;
+  display: block;
+  height: 63px;
+  margin: 0;
+  width: 63px;
+ }
+.smht-pic .teaser-aries {background-position: 0 0;}
+.smht-pic .teaser-taurus {background-position: -63px 0;}
+.smht-pic .teaser-gemini {background-position: -126px 0;}
+.smht-pic .teaser-cancer {background-position: -189px 0;}
+.smht-pic .teaser-leo {background-position: 0 -63px;}
+.smht-pic .teaser-virgo {background-position: -63px -63px;}
+.smht-pic .teaser-libra {background-position: -126px -63px;}
+.smht-pic .teaser-scorpio {background-position: -189px -63px;}
+.smht-pic .teaser-sagittarius {background-position: 0 -126px;}
+.smht-pic .teaser-capricorn {background-position: -63px -126px;}
+.smht-pic .teaser-aquarius {background-position: -126px -126px;}
+.smht-pic .teaser-pisces {background-position: -189px -126px;}
+.smht-pic .teaser-psychic {background-position: 0 -189px;}
+.smht-pic .teaser-medium {background-position: -63px -189px;}
+.smht-pic .teaser-tarot {background-position: -126px -189px;}
+.smht-pic .teaser-messenger {background-position: -189px -189px;}
+
+.smht-text {
+	margin-left: 72px;
+}
+.sm-horoscopes-teaser .tools {
+	padding: 0;
+  margin: 0;
+}
+.sm-horoscopes-teaser h2 {
+  clear: none;
+	font-size: 1.308em;
+	line-height: 1.235em;
+	margin-bottom: 2px;
+}
+.sm-horoscopes-list h4 {
+	margin: 0 0 5px;
+}
+.sm-horoscopes-list .sm-promo {
+  background: url(../gfx/border-bottom.png)  bottom repeat-x;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+}
+.sm-horoscopes-list span  {
+	margin-left: 10px;
+}
+.sm-horoscopes-list p {
+  font-size: 1em;
+	line-height: 1.61538em;
+	margin-bottom: 5px;
+}
+.sm-horoscopes-list p a {
+	font-size: 1.31em;
+	line-height: 1.23529em;
+}
+.sm-horoscopes-list .small a {
+  font-size: 1em;
+  line-height: 1.36363em;
+}
+.small {
+	font-size: 0.846em;
+	line-height: 1.364em;
+}
+.small a {
+  font-size: 0.846em;
+}
+.sender {
+	font-style: italic;
+}
+/* horoscope article */
+.horoscope-header {  
+  margin-bottom: 30px;
+}
+.horoscope-header figure a img {
+  float: left;
+}
+.horoscope-header .horoscope-header-inner {
+  float: left;
+  margin-left: 10px;
+}
+.horoscope-header h2 {
+	font-size: 2.30769em;
+	line-height: 1.13333em;
+  margin-bottom: 4px;
+}
+.horoscope-header figcaption {
+  font-size: 1.385em;
+  line-height: 1.22222em;
+  margin-bottom: 10px;
+}
+.horoscope-header .tools {
+	margin: 0;
+}
+.horoscope-header .tools li {
+  clear: left;
+}
+.horoscope-tabs, .opta-tabs {
+  border-width: 0 0 3px 0;
+}
+.horoscope-tabs li, .opta-tabs li {
+  float: left;
+  width: 125.5px;
+  margin-right: 10px;
+  border-bottom: 0;
+  padding: 10px 10px 5px 10px;
+}
+.horoscope-tabs li a, .opta-tabs li a {
+  font-weight: bold;
+}
+.horoscope-tabs li.last, .opta-tabs li.last {
+  margin-right: 0;
+}
+.tab-body, .no-js .opta-widget {
+  display: none;
+}
+.tab-body.active {
+  display: block;
+}
+.horoscopes-profile-header {
+  margin-top: 20px;
+}
+.horoscopes-profile-header a img {
+  float: left;
+}
+.horoscopes-profile-header h3 {
+  font-size: 2.308em;
+  margin-left: 80px;
+  margin-bottom: 0.1em;
+}
+.horoscopes-profile-header h4 {
+  font-size: 1.308em;
+  margin-left: 80px;
+}
+.horoscopes-profile-header .social-media {
+  float: right;
+  clear: none;
+  margin: -10px 0 10px 0;
+}
+.horoscopes-profile-header .twitter-share-button,
+.horoscopes-profile-header .fb-like {
+  float: right;
+}
+
+.horoscopes-storylist {
+  padding-top: 15px;
+  border-top-width: 3px;
+}
+.horoscopes-intro h2, .article-page .horoscopes-storylist h3, .horoscopes-list h3 {
+  font-size: 1.385em;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.horoscopes-list .sm-promo {
+  margin-bottom: 15px;
+}
+.horoscopes-list .smht-text dl dt {
+  font-size: 1.545em;
+  font-weight: 200;
+}
+.horoscopes-list .smht-text dl dd {
+  font-size: 1.182em;
+}
+.horoscopes-list .smht-text .terms-conditions {
+  display: block;
+  font-size: 0.846em;
+}
+
+/**************************** Competitions ****************************/
+.competition img, .competition-teaser img {
+	margin: 0 0 15px;
+}
+.competition-teaser {
+	border-bottom-color: #dadada;
+	margin-bottom: 20px;
+	padding-top: 18px;
+}
+.competition-teaser h3, .competition-winners h3 {
+	font-size: 1.30769em;
+	line-height: 1.23529em;
+	margin-bottom: 10px;
+}
+.competition-quotes {
+	padding-left: 0;
+	margin: 0 0 20px;
+	padding-bottom: 20px;
+}
+.competition-quotes li, .competition-winners li {
+	list-style-type: none;
+	background-position: -252px -242px;
+	padding: 0 0 4px 13px;
+	margin: 0 0 10px 0;
+}
+
+.competition-quotes h4 {
+	font-size: 1em;
+	line-height: 1.38462em;
+	margin: 0 0 10px;
+}
+.competition-quotes h4 span {
+	float: right;
+	font-weight: 100;
+}
+.competition-quotes blockquote {
+	margin: 2px 0 2px -14px;
+	padding: 0;
+}
+.competition-quotes blockquote span {
+	padding: 0 0 0 30px;
+	display: block;
+}
+.competition-winners ul {
+	margin: 0;
+	padding: 0;
+}
+.competition-winners h4 {
+	padding: 0;
+	margin: 0;
+}
+.competition-winners p {
+	margin-bottom: 0;
+}
+
+/**************************** Columnist index page ****************************/
+.author-hdr {
+  margin: 0 0 10px;
+}
+.author-hdr img {
+  float: left;
+  margin: 0 10px 0 0;
+}
+.author-hdr .channel-hdr {
+  border: 0;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+.author-hdr h2 {
+  font-size: 2.8em;
+  
+  line-height: 0.8em;
+  margin-bottom: 10px;
+}
+.author-hdr p {
+  font-size: 1.307em;
+  font-weight: 700;
+  line-height: 1.236em;
+  margin-bottom: 10px;
+}
+.author-hdr-inner {
+	margin-left: 110px;
+}
+  /* @TODO: do we have a google+ follow script? */
+.g-plus {
+  background: url("../gfx/i_googleplus.gif") no-repeat 0 0 transparent;
+  display: inline-block;
+  height: 20px;  
+  width: 20px;
+  vertical-align: top;
+}
+
+/* Mirror twitter */
+.no-js .tm-twitter {
+  display: none;
+}
+.tm-twitter .box-heading {
+  background: #33ccff;
+  padding: 5px;
+}
+.tm-twitter .box-heading,
+.tm-twitter .box-bottom {
+  border-color: #409fc4;
+}
+.tm-twitter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tm-twitter .tweet {
+  margin: 10px auto 0 auto;
+  padding: 10px 0 0 0;
+  border-width: 1px 0 0 0;
+}
+.tm-twitter .tweet img {
+  float: left;
+}
+.tm-twitter .tweet .user,
+.tm-twitter .tweet .txt,
+.tm-twitter .tweet .time {
+  margin-left: 60px;
+}
+.tm-twitter .tweet .user,
+.tm-twitter .tweet .time {
+  font-size: 0.846em;
+}
+.tm-twitter .tweet .time {
+  display: block;
+}
+
+/* contact us page */
+.sell-story a {
+  background: url("../gfx/sell-your-story-bg.png") left top no-repeat;
+  display: block;
+  width: 410px;
+  color: #fff;
+  padding: 29px 0 35px 92px;
+  font-size: 1.692em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px auto 20px auto;
+}
+.contactlist address {
+	font-style: normal;
+	line-height:1.30769em;
+}
+.contactlist dl {
+	line-height:1.30769em;
+}
+.contactlist dl dt {
+  clear: left;
+  font-weight: normal;
+} 
+.contactlist dl dd {
+  margin: 0 0 10px 0;
+}
+.contactlist dl dd a {
+  clear: left;
+}
+.contactlist .social-links {float: right;}
+.contactlist .contact-list-inline dt, .contactlist .contact-list-inline dd {float: left;}
+.contactlist .contact-list-inline dd {margin-left: 5px;}
+
+/* Firefox 3.0.4 solution CSS Generated Content */
+.firefox-304 .tab.drop-hover > a:before, .firefox-304 figure:before {
+  display: none;
+}
+.firefox-304 .article-header {
+  margin-top: 20px;
+}
+
+/*
+ * print styles
+ * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/
+ */
+@media print{
+
+  /* http://www.alistapart.com/articles/goingtoprint/ */
+  body {
+    /* just to be sure, set the background to white and the copy to black */
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+  header, footer, .tools, .label, .fb-likebox {
+    /* don't display header & footer */
+    display: none !important;
+  } 
+  .container {
+    /* remove margins */
+    margin: 0 !important;
+  }
+  a {
+    /* use a grey for link colour */
+    color: #333 !important;
+    background: transparent;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+  }
+  .sm-promo-list h3, .weather-header h3, .box-heading, .small-promo-links h3, .opinions-heading h3, 
+  .article-page .storylist h3, .article-page .related-widget h3, .sm-promo-list h3, .channel-hdr, 
+  header h1 {
+    font-family:"Trebuchet MS", sans-serif;
+  }
+  .weather-header, .box-heading, .article img, .opinions-heading, .carousel img, 
+  .pic-viewer-thumbs, .article.top-story, .article.lc-teaser, .article.lc-teaser-hdln, 
+  .mpu-border, .four-col-teaser img, .curated-thumb, .pagination-controls .selected, .five-col-teaser img, 
+  .strip, .horoscope ul, .celebs img, .epl ul, .sm-promo, .newsflash, .competition img, 
+  .competition-teaser img, .sm-promo-list img, .errormessage .search-box input[type="text"], 
+  .search-results .search-box input[type="text"], .sm-promo-list h3 {
+    /* remove borders */
+    border: 0 !important;
+  }
+  .most-read .box-heading, .most-read .box-bottom {
+    border-top: 1px solid #dadada !important;
+  }
+  .standfirst .info {
+    width: 309px !important;
+  }
+  .top-story figure:before, .lc-teaser-hdln figure:before, .lc-teaser figure:before, .lc-teaser-nobdr figure:before, 
+  .dh-teaser-hdln figure:before, .dh-teaser figure:before {
+    /* remove the cut-in */
+    content: "" !important;
+  }
+}
+
+/**
+ * Popup notification
+ **/
+#cookieNotification{
+  padding: 15px;
+  border: 1px solid #000;
+  background: #EDEDED;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  border-radius: 5px;
+  width: 360px;
+  display: block;
+}
+#cookieNotification p {
+  color: #5A6466;
+  text-align: center;
+  line-height: 20px;
+  font-size: 13px;
+  padding: 0 5px 10px;
+}
+#cookieNotification a {
+  text-decoration: underline;
+}
+#cookieNotification a:hover {
+  text-decoration: underline;
+}
+
+/**
+ * Article Tabs 
+ **/
+#page .tabs-article .widget-content,
+#page .tabs-article .widget-content .opta-widget-container {
+  margin-bottom: 0;
+}
+#page .tabs-article {
+  background: #EDEDED;
+  margin-bottom: 20px;
+}
+#page .tabs-article ul.tabs li {
+  width: 150px;
+  background: none;
+  border-color: #DADADA;
+  border-left: 1px solid #DADADA;
+}
+#page .tabs-article ul.tabs li.active {
+  background: #fff;
+}
+#page .tabs-article .match-stats-widget .opta-widget-container .tabs-active .tabs-nav li {
+  font-size: 12px;
+}
+#page .tabs-article .match-stats-widget .opta-widget-container .tabs-active .tabs-nav li a {
+  padding: 0 40px;
+}
+#page .tab_container ul li:nth-child(2n) {
+  background: none;
+}
+#page .tab_container .timeline-widget .opta-widget-container {
+  margin-bottom: 20px;
+}
+
+/**
+ * Just saying 3am channel
+ **/
+.just-sayin-wrapper {
+  background-image: url(../gfx/bg_just_sayin.jpg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  width: 700px;
+}
+.just-sayin-panel {
+  display: block;
+  width: 9999px;
+  clear: both;
+  position: relative;
+}
+.just-sayin {
+  overflow: hidden;
+  width: 700px;
+  float: left;
+} 
+.just-sayin .visor {
+  position: relative; 
+  height: 241px;
+}
+.just-sayin-wrapper .calendar-controls {
+  position: absolute;
+}
+.just-sayin-wrapper .calendar-controls a {
+  background-image: url(../gfx/sprite_just_sayin.png);
+  background-repeat: no-repeat;
+}
+.just-sayin-wrapper .calendar-controls .btn-right,
+.just-sayin-wrapper .calendar-controls .btn-left {
+  position: absolute;
+  top: 186px;
+}
+.just-sayin-wrapper .calendar-controls .btn-right {
+  background-position: -47px -63px;
+  left: 262px;
+}
+.just-sayin-wrapper .calendar-controls .btn-left {
+  background-position: 0px -63px;
+}
+.just-sayin .visor .date-calendar {
+  position: absolute;
+  float: left;
+  text-align: center;
+  top: 150px;
+  left: 26px;
+  width: 235px;
+  height: 87px;
+}
+.just-sayin .visor .date-calendar .month {
+  font-size: 15px;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.2em;
+}
+.just-sayin .visor .date-calendar .day {
+  font-size: 79px;
+  color: #552574;
+  margin: 0;
+  line-height: 50px;
+  margin-top: 8px;
+}
+.just-sayin .visor .video-box {
+  position: absolute;
+  float: right;
+  top: 5px;
+  right: 5px;
+}
+.just-sayin .visor .play {
+  background-image: url(../gfx/sprite_just_sayin.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  position: absolute;
+  width: 73px;
+  height: 54px;
+  display: block;  
+  top: 91px;
+  right: 167px;
+}
+.just-sayin .caption {
+  position: relative;
+  padding: 12px 8px 0;
+}
+.just-sayin .caption h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+.just-sayin .caption p {
+  font-size: 14px;
+  font-weight: bold;
+}
+/**
+ * Mirror APPS
+ **/
+.mirror-apps .article, .mirror-apps-support .article,
+.mirror-apps figure img, .mirror-apps-support figure img {
+  border: none;
+}
+.mirror-apps #row1 {
+  padding: 20px 0 60px 0;
+}
+.mirror-apps .channel-hdr a.support {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  background: none;
+  padding: 0 5px;
+  position: absolute;
+  right: 0;
+  top: 22px;
+}
+.mirror-apps .channel-hdr a.support:hover {
+  text-decoration: underline;
+}
+.mirror-apps .features {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+}
+.mirror-apps .features li {
+  margin-bottom: 5px;
+}
+.mirror-apps .features .tick {
+  color: #ff0024;
+  padding-right: 8px;
+  font-size: 20px;
+}
+.mirror-apps .button-apps {
+  float: left;
+  margin-right: 10px;
+}
+.mirror-apps-support .span-24 {
+  font-size: 15px;
+}
+.mirror-apps-support #row1 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.mirror-apps-support #row2 {
+  margin-bottom: 35px;
+}
+.mirror-apps-support .channel-hdr {
+  border: none;
+  text-transform: none;
+}
+.mirror-apps-support .apps-welcome {
+  float: none;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+.mirror-apps-support #row1 h3 {
+  font-size: 18px;
+}
+.mirror-apps-support .faq-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.mirror-apps-support .faq-list li {
+  overflow: hidden;
+}
+.faq-list .panel {
+  display: none;
+}
+.apps-takeover {
+  background-image: url(../gfx/apps_editions_fireplace.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+/**
+ * Pluck Profile Page
+ **/
+.pluck-profile .pluck-persona-main-wrap {
+  font-family: "Trebuchet MS", sans-serif;
+}
+.pluck-profile .pluck-persona-userbar-wrapper {
+  background: #ffffff url('http://images.mirror.co.uk/collections/m5_general/pluck-userbar-bg.jpg') no-repeat scroll left top;
+}
+.pluck-profile .pluck-persona-username-header, .pluck-profile .pluck-persona-third-navigation-tabs, 
+.pluck-profile .pluck-persona-third-navigation, .pluck-profile ul.pluck-persona-third-navigation-holder {
+  background: #E90E0E;
+}
+.pluck-profile span.pluck-persona-username, .pluck-profile a.pluck-persona-third-navigation-link {
+  font-family: 'MirrorExtraCondBold', Arial, sans-serif;
+  font-size: 2.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 100; 
+}
+.pluck-profile a.pluck-persona-third-navigation-link {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.3em;
+  color: #ffffff;
+  letter-spacing: -0.09em;
+}
+.pluck-profile a.pluck-persona-third-navigation-link-active, .pluck-profile a.pluck-persona-third-navigation-link:hover {
+  font-size: 1.3em;
+  color: #000;
+}
+.pluck-profile .pluck-persona-hero-avatar, .pluck-profile .pluck-persona-userbar-stats, .pluck-profile .pluck-persona-userbar-stats-data, 
+.pluck-profile .pluck-persona-userbar-rss, .pluck-profile .pluck-persona-userbar-anchor, .pluck-profile .pluck-persona-third-main-area, 
+.pluck-profile .pluck-persona-main-wrap, .pluck-profile .pluck-persona-userbar-actions {
+  background: #ffffff;
+}
+.pluck-profile li.pluck-persona-third-navigation-element {
+  border: none;
+  margin-right: 1px;
+}
+.pluck-profile .pluck-user-mp-wrap {
+  background: #EDEDED;
+  border: solid 2px #DADADA;
+}
+.pluck-profile .pluck-persona-third-update, .pluck-profile p.pluck-persona-userbar-stats-data-slice {
+  font-size: 0.9em;
+}
+.pluck-profile h4.pluck-user-mp-username a, .pluck-profile span.pluck-persona-userbar-stats-data-label a, 
+.pluck-profile span.pluck-persona-userbar-stats-data-info {
+  color: #000;
+}
+.pluck-profile .pluck-persona-userbar-stats {
+  border-left: solid 1px #DADADA;
+  border-right: solid 1px #DADADA;
+  border-bottom: solid 1px #DADADA;
+}
+.pluck-profile a.pluck-logo {
+  border-bottom: solid 1px #DADADA;
+}
+.pluck-profile .pluck-persona-userbar-actions {
+  border-bottom: 0;
+}
+.pluck-profile span.pluck-persona-userbar-actions-element, .pluck-profile span.pluck-persona-userbar-rss-element, 
+.pluck-profile .pluck-persona-userbar-stats-icons, .pluck-profile p.pluck-persona-userbar-stats-data-slice {
+  margin-left: 15px;
+}
+.pluck-profile p.pluck-persona-userbar-stats-data-slice {
+  padding-left: 0px;
+}
+.pluck-profile .pluck-persona-userbar-stats-icons a img, .pluck-profile span.pluck-persona-userbar-actions-element span, 
+.pluck-profile span.pluck-persona-userbar-rss-element a, .pluck-profile span.pluck-persona-userbar-actions-element a {
+  margin-left: 0px;
+  font-size: 0.9em;
+}
+.pluck-profile .pluck-persona-userbar-stats-icons a img, .pluck-profile img.pluck-persona-userbar-actions-icon, 
+.pluck-profile img.pluck-persona-userbar-rss-icon {
+  padding-bottom: 7px;
+}
+.pluck-profile .pluck-persona-userbar-rss {
+  padding-top: 0;
+}
+.pluck-profile span.pluck-persona-userbar-rss-element {
+  margin-top: 0;
+}
+.pluck-profile img.pluck-persona-userbar-rss-icon, .pluck-profile img.pluck-persona-userbar-actions-icon,
+.pluck-profile p.pluck-third-interests-data-slice {
+  display: inline-block;
+}
+.pluck-profile span.pluck-third-interests-data-label {
+  width: 190px;
+}
+
+/******************* Embedded Quiz Widget ******************/
+
+.quiz .progress-group {
+  display: block;
+  float: left;
+  min-width: 70px;
+  border: 1px solid #000;
+  font-family: 'MirrorExtraCondBold',Arial,sans-serif;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-right: 10px; 
+}
+.quiz .progress-group h5 {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: #ededed;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+.quiz .progress-group span.caption {
+  padding: 0;
+  margin: 0;
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+}
+.quiz h1 {
+  display: block;
+  float: left;
+  width: 525px;
+  margin-left: 10px;
+}
+.quiz .result-group {
+  margin-top: 20px;
+}
+.quiz .result-group h5 {
+  text-align: center;
+  font-size: 1.30769em;
+  font-weight: 700;
+  line-height: 1.23529em;
+}
+.quiz .result-group h2 {
+  text-align: center;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 2.308em;
+  line-height: 1.1335em;
+  line-height: 0.86;
+}
+.quiz .main-picture {
+  margin-bottom: 10px;
+}
+.answer-group {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.answer-option, .answer-disabled {
+  display: block;
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  float: left;
+  cursor: pointer;
+  color: #000;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 615px;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #e4e4e4 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e4e4e4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#e4e4e4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,#e4e4e4 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#e4e4e4 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,#e4e4e4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
+}
+.answer-disabled {
+  cursor: default;
+}
+.answer-option:hover {
+  background: #ededed; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ededed 0%, #c1c1c1 57%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(57%,#c1c1c1)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ededed 0%,#c1c1c1 57%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ededed 0%,#c1c1c1 57%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ededed 0%,#c1c1c1 57%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ededed 0%,#c1c1c1 57%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#c1c1c1',GradientType=0 ); /* IE6-9 */
+}
+.selected-answer {
+  border: 1px solid c50808;
+  background: #e60e0e; /* Old browsers */
+  background: -moz-linear-gradient(top,  #e60e0e 0%, #b10b0b 64%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e60e0e), color-stop(64%,#b10b0b)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #e60e0e 0%,#b10b0b 64%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #e60e0e 0%,#b10b0b 64%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #e60e0e 0%,#b10b0b 64%); /* IE10+ */
+  background: linear-gradient(to bottom,  #e60e0e 0%,#b10b0b 64%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60e0e', endColorstr='#b10b0b',GradientType=0 ); /* IE6-9 */
+}
+.correct-answer {
+  border: 1px solid #37930e;
+  background: #0cad02; /* Old browsers */
+  background: -moz-linear-gradient(top,  #0cad02 0%, #298002 63%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0cad02), color-stop(63%,#298002)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #0cad02 0%,#298002 63%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #0cad02 0%,#298002 63%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #0cad02 0%,#298002 63%); /* IE10+ */
+  background: linear-gradient(to bottom,  #0cad02 0%,#298002 63%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0cad02', endColorstr='#298002',GradientType=0 ); /* IE6-9 */
+  
+}
+li.answer-option h4, li.answer-disabled h4 {
+  display: block;
+  float: left;
+  vertical-align: middle;
+  text-align: center;
+  width: 50px;
+  overflow: hidden;
+  color: inherit;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: 3.6;
+  font-size: 2.2em;
+}
+.quiz .answer-picture, .quiz .answer-disabled .answer-picture {
+  margin: 10px;
+  margin-left: 0;
+  border: none;
+  display: block;
+  float: left;
+}
+.quiz .figcaption {
+  border: 1px solid #d8d8d8;
+  margin: 10px;
+  margin-left: 0;
+  border-radius: 5px;
+  display: block;
+  float: right;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 385px;
+  min-height: 98px;
+  background: #fff;
+}
+.quiz .figcaption-noimg {
+  width: 553px;
+}
+.quiz .progress {
+  margin-top: 20px;
+}
+.quiz .progress .progress-msg {
+  float: left;
+  width: 450px;
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 3em;
+  line-height: 1;
+  min-height: 80px;
+}
+.quiz .tick-yes {
+  color: #37930e;
+  font-weight: bold;
+}
+.quiz .tick-no {
+  color: #e60e0e;
+  font-weight: bold;
+}
+.quiz .progress-btn {
+  float: right;
+  display: block;
+  height: 54px;
+  width: 100px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  background-color: transparent;
+  background-image: url("../gfx/arrows_sprite.png");
+  background-position: 10px -98px;
+  background-repeat: no-repeat;
+  cursor: pointer; 
+  margin-top: 10px;
+  margin-right: 4px;
+  padding: 0;
+  border-radius: 0;
+  border: none; 
+}
+.quiz .choise-explained {
+  margin-top: 20px;
+  border: 1px solid #b6b6b6;
+  padding: 5px;
+}
+.quiz .choise-explained img {
+  border: 1px solid #000;
+  margin: 0;
+  width: 605px;
+}
+.quiz .results-box {
+  width: 280px;
+  margin: 20px auto;
+  font-family: 'MirrorExtraCondBold',Arial,sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 3.6em;
+  text-transform: uppercase;
+}
+.quiz .results-header {
+  border: 1px solid #bcbcbc;
+  background-color: #ededed;
+  color: #000;
+  text-align: center;
+  font-weight: normal;
+}
+.quiz .results-score {
+  border: 1px solid #e20001;
+  background-color: #e20001;
+  color: #fff;
+  text-align: center;
+  font-size: 1.14em;
+}
+.quiz .score-number {
+  font-size: 1.41em;
+  line-height: 1.2;
+}
+.more-quizes {
+	margin: 10px;
+}
+.more-quizes-item {
+  display: block;
+  width: 285px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.more-quizes-item:hover {
+  text-decoration: none;
+}
+.more-quizes-item img {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+.more-quizes-item h5 {
+  color: #565656;
+  font-size: 1.9em;
+  font-family: 'MirrorExtraCondBold',Arial,sans-serif;
+  font-weight: normal;
+  margin-top: 10px;
+}
+/********** Share Quiz on Twitter and Facebook buttons *************/
+#quizShareTwitter {
+  display: block;
+  float: left;
+  width: 130px;
+}
+#quizShareFacebook {
+  display: block;
+  float: left;
+  width: 400px;
+}
+/**
+******** EMBEDDED POLL WIDGET *************
+/******* Original Poll Classes (moved from 3am-on-air.css)******/
+.select-yesno {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.select-yesno form {
+  margin: 0 auto;
+}
+.select-yesno .mega-button-yesno, .mega-result-yesno {
+  width: 170px;
+  height: 90px;
+  font-size: 5.7em;
+  font-weight: normal;
+  font-family: 'MirrorExtraCondBold', sans-serif;
+  text-shadow: -1px -1px 1px #30063e;
+  margin: 5px;
+  padding: 0;
+  color: #fff;
+  border: 1px solid #2e0643;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 1px 1px #7a349b inset;
+  -webkit-box-shadow: 0 0 1px 1px #7a349b inset;
+  box-shadow: 0 0 1px 1px #7a349b inset;
+  background: url("../gfx/btn-bkg2.jpg") repeat scroll 30% 0 #8F3BB4;
+}
+.q-button {
+  cursor: pointer;
+  height: 90px!important;
+}
+.mega-button-yesno:hover, .q-button:hover, .mega-result-yesno.picture:hover {
+  color: #be92cc;
+  background: url("../gfx/btn-bkg1.jpg") repeat scroll 30% 0 #8F3BB4;
+  box-shadow: 0 0 6px 3px #261131 inset;
+  border: 1px solid #a16bb2;
+}
+.mega-result-yesno {
+  height: 145px;
+  display: inline-block;
+  text-shadow: none;
+}
+.mega-result-yesno h3 {
+  font-size: 1em;
+  font-weight: normal;
+  font-family: 'MirrorExtraCondBold', sans-serif;
+  margin: 0;
+  margin-top: 5px;
+  color: #fff;
+}
+.mega-result-yesno.selected h3 {
+  color: #3c0f54;
+}
+.mega-result-yesno.selected {
+  color: #3c0f54;
+  box-shadow: none;
+  border: 1px solid #D0B00B;
+  background: url("../gfx/btn-bkg3.jpg") repeat scroll 30% 0 #8F3BB4;
+}
+.mega-result-yesno.picture, .mega-result-yesno.picture-selected {
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+.picture-holder {
+  height: 371px;
+  width: 211px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #000;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.ln-info .picture-holder {
+  width: 145px;
+  height: 220px;
+}
+.mega-result-yesno.picture-selected .picture-holder {
+  cursor: auto;
+}
+.mega-result-yesno .vote-value {
+  font-size: 0.33em;
+}
+.mega-result-yesno .photo-caption {
+  font-size: 0.28em;
+}
+.mega-result-yesno .progress-bar {
+  height: 20px;
+  width: 89%;
+  margin: 10px;
+  margin-bottom: 0;
+  background-color: #fff;
+  border: none;
+}
+.mega-result-yesno .progress-bar-filler {
+  margin: 0;
+  padding: 0;
+  background-color: #be92cc;
+  font-size: 1px;
+  line-height: 1px;
+  width: 100px;
+  height: 20px;
+}
+.mega-result-yesno.selected .progress-bar-filler {
+  background-color: #551e73;
+}
+.indicator-top {
+  width: 25px;
+  height: 15px;
+  margin: -24px auto 10px;
+  clear: both;
+  background: url("../gfx/3am_sprite.png") -120px -150px no-repeat;
+}
+.btn-panel-1 {
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  padding: 10px 0;
+  margin: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+.ln-info .btn-panel-1{
+  padding: 20px 20px 25px;
+}
+.btn-yellow {
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-size: 1.75em;
+  background: #ffd600; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffd600 0%, #e3bf06 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd600), color-stop(100%,#e3bf06)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffd600 0%,#e3bf06 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffd600 0%,#e3bf06 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffd600 0%,#e3bf06 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffd600 0%,#e3bf06 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd600', endColorstr='#e3bf06',GradientType=0 ); /* IE6-9 */
+  border-radius: 3px;
+  border: 1px solid #d0b00b;
+  -moz-box-shadow: 0px 1px 1px rgba(255,233,0,0.7) inset ;
+  -webkit-box-shadow: 0px 1px 1px rgba(255,233,0,0.7) inset;
+  box-shadow: 0px 1px 1px rgba(255,233,0,0.7) inset;
+  height: 40px;
+  font-family: 'MirrorTextRegular', sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 2px #776b2b;
+  letter-spacing: 0.02em;	
+  padding: 3px 10px;
+}
+.btn-yellow.refresh {
+  padding-left: 45px;
+  background: url("../gfx/3am_sprite.png") -120px 0 repeat-y #ffd600;
+  margin: 20px 0 0;
+}
+.btn-yellow.back {
+  padding-left: 45px;
+  background: url("../gfx/3am_sprite.png") -120px -70px repeat-y #ffd600;
+}
+.btn-panel-1 a, .btn-panel-1 .right-width-balancer, .btn-panel-1 .left-width-balancer { 
+  color: #551e73;
+  display: block;
+  float: left;
+  font-family: 'MirrorExtraCondBold', sans-serif;
+  text-decoration: none;
+  font-size: 2em;
+  line-height: 36px;
+  height: 25px;
+  padding-left: 15px;
+  background: url("../gfx/3am_sprite.png") -120px -120px no-repeat #fff;
+  width: 110px;
+  margin: 0 10px;
+  float: left;
+}
+.btn-panel-1 .right-width-balancer {
+  float: right;
+  visibility: hidden;
+  background: none;
+}
+.btn-panel-1 .left-width-balancer {
+  float: left;
+  visibility: hidden;
+  background: none;
+}
+
+/****** Extended Classes for Mirror Main Publication related to LiveNow and Poll widgets *****/
+
+.mirror-on-air nav .main-nav li, .mirror-on-air .ribbon-title h3, 
+.mirror-on-air .btn-yellow,
+.mirror-on-air .select-yesno .mega-button-yesno, .mirror-on-air .mega-button-yesno:hover,
+.mirror-on-air .mega-result-yesno.selected {
+  background: #E60E0E; /* Old browsers */
+  background: -moz-linear-gradient(top,  #e71216 0%, #b50b0b 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e71216), color-stop(100%,#b50b0b)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #e71216 0%,#b50b0b 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #e71216 0%,#b50b0b 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #e71216 0%,#b50b0b 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #e71216 0%,#b50b0b 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e71216', endColorstr='#b50b0b',GradientType=0 ); /* IE6-9 */
+}
+.mirror-on-air nav .main-nav li.selected a, 
+.mirror-on-air .live-update .ln-hdr .relProfileAuthor,
+.mirror-on-air .notification-tab a, .mirror-on-air .btn-panel-1 a, 
+.mirror-on-air .btn-panel-1 .right-width-balancer, 
+.mirror-on-air .btn-panel-1 .left-width-balancer,
+.mirror-on-air .countdown-box, .mirror-on-air .media-item .performer,
+.mirror-on-air .social-media a:hover span, .mirror-on-air .social-media a:active span {
+  color: #5a6466;
+}
+.mirror-on-air .programme-info .programme-date,
+.mirror-on-air nav .main-nav li a,
+.mirror-on-air .mega-result-yesno.selected,
+.mirror-on-air .mega-result-yesno.selected h3 {
+  color: #fff;
+}
+.mirror-on-air .live-update .ln-info a {
+  color: #134989;
+}
+.mirror-on-air .btn-yellow {
+  border: 1px solid #30063E;
+  -moz-box-shadow: 0 4px 8px #a5a5a5;
+  -webkit-box-shadow: 0 4px 8px #a5a5a5;
+  box-shadow: 0 4px 8px #a5a5a5;
+  text-shadow: 0 0 2px #a5a5a5;
+  letter-spacing: 0.02em;	
+  padding: 3px 10px;
+}
+.mirror-on-air .mega-result-yesno {
+  border: 0;
+  color: #000;
+  background: #dadada; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fdfdfd 0%, #e4e4e4 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#e4e4e4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #fdfdfd 0%,#e4e4e4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #fdfdfd 0%,#e4e4e4 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #fdfdfd 0%,#e4e4e4 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #fdfdfd 0%,#e4e4e4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
+}
+.mirror-on-air .mega-result-yesno.selected {
+  border: 0;
+}
+.mirror-on-air .select-yesno .mega-button-yesno,
+.mirror-on-air .mega-result-yesno {
+  -moz-box-shadow: 0 4px 8px #a5a5a5;
+  -webkit-box-shadow: 0 4px 8px #a5a5a5;
+  box-shadow: 0 4px 8px #a5a5a5;
+}
+.mirror-on-air .mega-button-yesno:hover, 
+.mirror-on-air .q-button:hover, 
+.mirror-on-air .mega-result-yesno.picture:hover {
+  color: #dadada;
+  box-shadow: 0 0 1px 1px #a5a5a5 inset;
+  border: 1px solid #a5a5a5;
+}
+.mirror-on-air .mega-button-yesno:hover, 
+.mirror-on-air .q-button:hover, 
+.mirror-on-air .mega-result-yesno.picture:hover {
+  color: #dadada;
+  box-shadow: 0 4px 8px #a5a5a5;
+  border: 1px solid #a5a5a5;
+}
+.mirror-on-air .mega-result-yesno.picture:hover {
+  color: #000;
+  background: #fff;
+  border: 0;
+}
+.mirror-on-air .mega-result-yesno .photo-caption,
+.mirror-on-air .mega-result-yesno .vote-value {
+  cursor: pointer;
+}
+.mirror-on-air .mega-result-yesno.selected .progress-bar-filler,
+.mirror-on-air .mega-result-yesno .progress-bar-filler {
+  background-color: #000;
+}
+.mirror-on-air .mega-result-yesno h3,
+.mirror-on-air .news-info h3 a,
+.mirror-on-air .site-map li a, 
+.mirror-on-air .purple-lt {
+  color: #000;
+}
+.mirror-on-air .btn-yellow.refresh {
+  background: url("../gfx/mirror_on_air_sprite.png") -120px -1px repeat-y #E60E0E;
+  padding-left: 45px;  
+}
+.mirror-on-air .btn-panel-1 a, .mirror-on-air .btn-panel-1 .right-width-balancer, 
+.mirror-on-air .btn-panel-1 .left-width-balancer {
+  background: url("../gfx/mirror_on_air_sprite.png") -120px -120px no-repeat white;
+}
+.mirror-on-air .news-info .comments-baloon {
+  background: url("../gfx/mirror_on_air_sprite.png") 0 -220px no-repeat;
+}
+
+/*******Readjusted classes to fit the Poll embedded into a LiveNow entry and in a Mirror article *****/
+
+.image-gallery {
+  width: auto;
+}
+.article-page .live-article-stream .live-update .ln-info { 
+  margin-left: 110px; 
+  padding: 0; 
+  border-left:0; 
+  background: none;
+}
+.article-page .live-article-stream .live-update {  
+  background: none;
+}
+.live-article-stream .live-update .ln-info::before {  
+  display: none;
+}
+.live-article-stream .mirror-on-air {
+  background: none;
+}
+.live-article-stream .mirror-on-air .mega-result-yesno .photo-caption {
+  width: 145px;
+}
+.article-page .live-article-stream .live-update .ln-hdr {
+  margin-right: 0;
+  padding: 0px 5px 10px 5px;
+}
+
+
+/********** Share Quiz on Twitter and Facebook buttons *************/
+#quizShareTwitter {
+    display: block;
+    float: left;
+    width: 130px;
+}
+#quizShareFacebook {
+    display: block;
+    float: left;
+    width: 400px;
+}
+
+
+/**
+ * Viagogo
+ **/
+ 
+.vg310tickets {
+  width: 308px;
+  border: 1px solid #D9D9D9;
+  margin-bottom: 10px;
+}
+.vg310row, .vg230row {
+  float: left;
+  width: 308px;
+  padding: 5px 0 10px 0;
+}
+.vg310col1 {
+  width: 100px;
+  float: left;
+}
+.vg310col2 {
+  width: 150px;
+  float: left;
+}
+.vg310col3 {
+  width: 55px;
+  float: left;
+}
+.vg310tickets h3, .vg230tickets h3 {
+  font-size: 1.077em;
+  padding-left: 5px;
+  left: 0px;
+  background-color: #FF0705;
+  color: #FFF;
+  float: left;
+  text-transform: uppercase;
+  width: 176px;
+  line-height: 1.42857em;
+  margin-bottom: 0px;
+  position: relative;
+  height: 19px;
+  padding-top: 1px;
+}
+.vg310mirror-logo {
+  width: 72px;
+  background: #FF0705;
+  float: left
+}
+.vg310tickets-hdr {
+  height: 60px;
+}
+.vg310col3 p, .vg230col3 p {
+  background: #FF0705;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2px 0;
+}
+.vg310row p, .vg230row p {
+  margin: 0 5px;
+  line-height: 1.2em;
+  padding: 0;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+}
+.vg310row:nth-of-type(odd),
+.vg230row:nth-of-type(odd) {
+  background-color: #ECECEC;
+}
+.vg310col3 a, .vg230col3 a {
+  color: #FFF;
+  text-decoration: none;
+}
+.vg310col2 a, .vg230col2 a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.vg310row a:hover, .vg230row a:hover {
+  text-decoration: underline;
+}
+.vg310min-price, .vg230min-price {
+  color: #FF0705;
+  font-weight: bold;
+}
+.vg230tickets {
+  width: 228px;
+  border: 1px solid #D9D9D9;
+  margin-bottom: 10px;
+}
+.vg230row {
+  width: 228px;
+}
+.vg230col1 {
+  width: 60px;
+  float: left;
+}
+.vg230col2 {
+  width: 116px;
+  float: left;
+}
+.vg230col3 {
+  width: 48px;
+  float: left;
+}
+.vg230row p {
+  font-size: 11px;
+}
+.vg230tickets h3 {
+  font-size: 0.87em;
+  width: 128px;
+  height: 14px;
+}
+.vg230mirror-logo {
+  width: 54px;
+  background: #FF0705;
+  float: left;
+  padding-top: 1px;
+}
+.vg230tickets-hdr {
+  height: 50px;
+}
+p.vg230min-price, p.vg310min-price {
+  font-weight: bold;
+}
+
+/**
+ * ECS outbrain -  shared across all sites
+ **/
+ 
+.ob-text-content {
+  padding-bottom: 10px;
+}
+
+/* 6 col - section */
+.span-24 .ob_container .ob_container_recs .item-container {
+  float: left;
+  width: 142px;
+  padding-right: 19px;
+}
+.span-24 .ob_container .ob_container_recs .item-container.ob-last {
+  padding-right: 0px;
+}
+
+/* 4 col - section */
+.span-17-5 .ob_container .ob_container_recs .item-container {
+  padding-right: 44px;
+}
+.span-17-5 .ob_container .ob_container_recs .item-container.ob-last {
+  padding-right: 0px;
+}
+.span-17-5 .ob_container .strip-img {
+  width: 140px !important;
+  height: 100px !important;
+}
+
+/* 4 col - article */
+.span-15-5 .ob_container .ob_container_recs .item-container {
+  padding-right: 17px;
+}
+.span-15-5 .ob_container .ob_container_recs .item-container.ob-last {
+  padding-right: 0px;
+}
+.span-15-5 .ob_container .strip-img {
+  width: 132px !important;
+  height: 100px !important;
+}
+
+/* Site specific - Mirror **************/
+
+/* headings */
+.ob_org_header h3,
+.ob_org_header div { 
+  display: block;
+  border-top: 12px solid #000000; 
+  border-bottom: 3px solid #000; 
+  padding: 15px 0 2px; 
+  font-size: 1.308em; 
+  font-weight: normal; 
+  font-family: 'MirrorTextBold', Arial, sans-serif; 
+  text-transform:uppercase;
+  margin-bottom: 20px;
+}
+
+/* story links */
+.ob_container .strip-rec-link-title {
+  color: #134987;
+  font-family: "Trebuchet MS",sans-serif;
+  font-size: 14px !important;
+  line-height: 19.2833px !important; 
+  font-weight: bold !important;
+}
+.strip-rec-link-title.ob-tcolor:hover {
+  text-decoration: underline;
+}
+
+/* Story sources */
+.ob_container .rec-src-link {
+  color: #666;
+  font-family: "Trebuchet MS",sans-serif;
+  font-size: 11px;
+  line-height: 19.2833px; 
+  font-weight: bold;
+}
+
+/* Story images */
+.ob_container .item-link-container .ob-rec-link-img,
+.ob_container .item-link-container:hover .ob-rec-link-img {
+  border: 1px solid #000 !important;
+  padding: 0 !important;
+}
+
+/* In pictures Page */
+
+.gallery-set {
+  overflow: hidden;
+  display: none;
+}
+.gallery-set figure {
+  cursor: pointer;
+}
+.mirror-pictures .span-8-5 {
+  width: 345px;
+  margin-right: 10px;
+}
+.mirror-pictures .last {
+  margin-right: 0;
+}
+.mirror-pictures .article figure figcaption {  
+  bottom: 35px;
+  max-width: 100%;
+  left: 0;
+  text-align: left;
+  padding: 15px 15px 20px 15px;
+  opacity: 0.7;
+  background: #07090a;
+  color: white;
+  display: none;
+}
+.mirror-pictures img {  
+  border: 0;
+}
+.mirror-pictures .primary-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  opacity: 0.8;
+  background: #07090a;
+  font-size:17px;
+  height: 35px;
+  cursor: pointer; 
+}
+.span-5-6 .primary-tag {
+  font-size: 15px;
+  height: 30px; 
+}
+.span-5-6 .arrow_box {
+  padding: 6px 0;
+}
+.mirror-pictures .article .span-17-5 figure figcaption {
+  width: 670px;
+}
+.mirror-pictures .article .span-8-5 figure figcaption {
+  width: 315px;
+}
+.mirror-pictures .article .span-5-6 figure figcaption {
+  bottom: 30px;
+  padding: 10px 10px 15px 10px;
+  width: 206px;
+}
+.arrow_box {
+  position: relative;
+  color: white;
+  padding: 9px 0;
+  font-weight: bold;
+}
+.arrow_box:after {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box:after {
+  border-color: rgba(7, 9, 10, 0);
+  border-bottom-color: #07090a;
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px;
+}
+.load-more {
+  overflow: hidden;
+  padding: 20px 0;
+  clear: both;
+}
+.load-more-btn {
+  width: 158px;
+  height: 159px;
+  background-image: url(../gfx/load-more-btn.png);
+  margin: 0 auto;
+  position: relative;
+}
+.load-more-bg {
+  background: #f1f1f1;
+  height: 15px;
+  display: block;
+  position: relative;
+  top: 85px;
+  width: 700px;
+}
+
+/* Commercial Widget - Money Page */
+
+#money-widget {
+  border: 0;
+  background-color: #ededed;
+  width: 940px;
+  padding: 5px;
+}
+.inner-money-widget {
+  overflow: hidden;
+}
+.inner-money-widget .panel {
+  height: 190px;
+  width: 150px;
+  border-right: 1px solid #dadada;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+.panel.open {
+  width: 484px;
+}
+.panel .tab-info.open {
+  background: #ededed;
+}
+.panel .tab-info.open h4 {
+  color: #e90e0e;
+}
+.panel .tab-info {
+  height: 85px;
+  width: 150px;
+  background: #fff;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 1px solid #dadada;
+  position: relative;
+  z-index: 3;
+  padding-top: 10px;
+}
+.panel .tab-inner-info {
+  position: absolute;
+  width: 335px;
+  top: 0;
+  height: 190px;
+  z-index: 1;
+  left: 150px;
+  background: #ededed;
+}
+.panel .tab-inner-info.open {
+  z-index: 2;
+}
+.tab-info h4 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #888888;
+}
+.tab-info .money-icon {
+  background-image: url(../gfx/money_widget_sprite.png);
+  height: 50px;
+  width: 60px;
+  display: inline-block;
+}
+.loans-ico {
+  background-position: -60px 0;
+}
+.savings-ico {
+  background-position: -120px -4px;
+}
+.mortgages-ico {
+  background-position: -180px 0;
+}
+.energy-ico {
+  background-position: 0 -50px;
+}
+.phone-internet-ico {
+  background-position: -60px -57px;
+}
+.pre-paid-cards-ico {
+  background-position: -120px -50px;
+}
+.deals-ico {
+  background-position: -180px -51px;
+}
+.inner-content {
+  height: 190px;
+  padding: 10px 30px 0 35px;
+}
+.inner-content h3 {
+  font-size: 17px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+.inner-content input {
+  display: inline;
+  margin: 0px 5px 0 0;
+  position: relative;
+  top: -2px;
+}
+.inner-content .btn {
+  font-size: 13px;
+  display: inline;
+  margin: 0px 5px 0 0;
+  position: relative;
+  cursor: pointer;
+  float: right;
+  top: -28px;
+}
+.inner-content a {
+  text-decoration: none;
+}
+.inner-content .edi-link {
+  padding-top: 15px;
+  color: #134987;
+}
+.inner-content fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.inner-content fieldset label {
+  cursor: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+.inner-content fieldset input.postcode {
+  width: 150px;
+  padding: 5px;
+  box-shadow: inset 1px 1px 1px #ccc; 
+}
+.ie7 fieldset input.btn {
+  padding: 0 10px; 
+}
+.inner-content .inner-arrow {
+  background-image: url(../gfx/money_widget_sprite.png);
+  background-position: 0 -100px;
+  position: absolute;
+  width: 29px;
+  height: 93px;
+}
+.top .inner-content .inner-arrow {
+  left: -2px;
+  top: 1px;
+}
+.bottom .inner-content .inner-arrow {
+  left: -2px;
+  top: 96px;
+}
+.inner-content .sponsor-icon {
+  background-image: url(../gfx/money_widget_sprite.png);
+  background-position: -60px -150px;
+  position: absolute;
+  width: 151px;
+  height: 19px;
+  bottom: 5px;
+  right: 30px; 
+}
+
+/* Specific Panel */
+.loans .inner-content .btn,
+.energy .inner-content .btn {
+  float: none;
+  top: 0;
+}
