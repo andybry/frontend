@@ -1,0 +1,363 @@
+/*
+ * Progressive enhancement
+ */
+
+/* always force a scrollbar in non-IE */
+html{overflow-y:scroll;}
+pre{
+	word-wrap:break-word; /* IE */
+}
+
+/* colors for form validity */
+input:valid, textarea:valid {}
+input:invalid, textarea:invalid{
+	border-radius:1px;
+	-moz-box-shadow:0px 0px 5px red;
+	-webkit-box-shadow:0px 0px 5px red;
+	box-shadow:0px 0px 5px red;
+}
+.no-boxshadow input:invalid,.no-boxshadow textarea:invalid{
+	background-color:#f0dddd;
+}
+
+/* These selection declarations have to be separate.
+   No text-shadow:twitter.com/miketaylr/status/12228805301
+   Also:hot pink. */
+::-moz-selection{ background:#dadada; color:#fff; text-shadow:none;}
+::selection{background:#dadada; color:#000; text-shadow:none;}
+
+/*  j.mp/webkit-tap-highlight-color */
+a:link{-webkit-tap-highlight-color:#5B1E7D;}
+
+/* bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img{-ms-interpolation-mode:bicubic;}
+
+/* Hide only visually, but have it available for screenreaders
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.visuallyhidden{
+	position:absolute !important;
+	clip:rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip:rect(1px, 1px, 1px, 1px);
+}
+
+/* Fix clearfix:blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix{zoom:1;}
+
+/*
+ * print styles
+ * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/
+ */
+@media print{
+  *{text-shadow:none !important;}
+  @page{margin:0.5cm;}
+}
+
+/* Fireplace fix to display horizontal only when browser width is less than 950px */
+html {overflow-x: hidden;}
+@media screen and (max-width:950px){
+  html{
+    overflow-x: auto;
+  }
+}
+
+/* For general iPad layouts */
+@media only screen and (device-width: 768px) { 
+  
+  .takeover.fireplace {
+    width: 1300px;
+    overflow: hidden;
+    left: 0;
+    margin-left: 0;
+  }
+  .takeover.fireplace img {
+    margin-left: -300px;
+  }
+  
+}
+
+/**************************** extend/override Blueprint ****************************/
+tbody tr:nth-child(even) td {
+  background: none;
+}
+
+/**************************** css3 ****************************/
+/* drop shadow */
+.boxshadow .container {
+  -moz-box-shadow: 0px 5px 15px #dcdcdc;
+  -webkit-box-shadow: 0px 5px 15px #dcdcdc;
+  box-shadow: 0px 5px 15px #dcdcdc;
+}
+/* #404040 */
+.boxshadow .drop {
+	-moz-box-shadow: 0px 5px 5px #7f7f7f;
+	-webkit-box-shadow: 0px 5px 5px #7f7f7f;
+	box-shadow: 0px 5px 5px #7f7f7f;
+}
+.boxshadow .errormessage .search-box, .boxshadow .search-results .search-box {
+  -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+ 	box-shadow: none;
+}
+
+/* gradient */
+	/* gray */
+.cssgradients .nav-main > ul, .cssgradients .search-box, 
+.cssgradients .login, .cssgradients .recommendations {
+  background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#fefefe), to(#e4e4e4));
+	background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+	background-image: linear-gradient(top, #fefefe, #e4e4e4);
+}
+.ie8 .nav-main > ul, .ie8 .search-box, .ie8 .recommended-seemore, .ie9 .nav-main > ul, 
+.ie9 .search-box, .ie9 .recommended-seemore, .ie8 .login, .ie9 .login, .ie8 .recommendations, .ie9 .recommendations { 
+  background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAPAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoKDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgAMgABAwERAAIRAQMRAf/EAE0AAQEBAAAAAAAAAAAAAAAAAAMACAEBAAAAAAAAAAAAAAAAAAAAABABAQAAAAAAAAAAAAAAAAAAABIRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANS2ALAFgCwBYDBA/9k=);
+  filter: none;  
+}
+.ie6 .nav-main, .ie6 .search-box, .ie7 .nav-main, .ie7 .search-box, .ie7 .recommended-seemore, 
+.ie6 .login, .ie7 .login, .ie6 .recommendations, .ie7 .recommendations {
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e4e4e4',GradientType=0 );
+}
+	/* mirror red - fill */
+.cssgradients .tab > .active, .touch.cssgradients .tab > .active, .cssgradients .drop-hover > a, .touch.cssgradients .tab > a:hover {
+	background-image: -moz-linear-gradient(top, #ed002d, #b10b0b);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ed002d), to(#b10b0b));
+	background-image: -o-linear-gradient(top, #ed002d, #b10b0b);
+	background-image: linear-gradient(top, #ed002d, #b10b0b);
+}
+.ie9 .tab > .active, .ie8 .tab > .active,
+.ie8 .drop-hover > a, .ie9 .drop-hover > a {
+	background-image: url('data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6MzI6MDAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkEwNEUzOUU5MzI3MTExRTE4Q0M3QzlCMzBCMUVFNTM2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkEwNEUzOUVBMzI3MTExRTE4Q0M3QzlCMzBCMUVFNTM2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTA0RTM5RTczMjcxMTFFMThDQzdDOUIzMEIxRUU1MzYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTA0RTM5RTgzMjcxMTFFMThDQzdDOUIzMEIxRUU1MzYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAGBAQEBQQGBQUGCQYFBgkLCAYGCAsMCgoLCgoMEAwMDAwMDBAMDg8QDw4MExMUFBMTHBsbGxwfHx8fHx8fHx8fAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAoAAEDAREAAhEBAxEB/8QAUQABAQAAAAAAAAAAAAAAAAAAAwcBAQEBAQAAAAAAAAAAAAAAAAIDBgcQAQEAAAAAAAAAAAAAAAAAAAASEQEBAQAAAAAAAAAAAAAAAAAAERL/2gAMAwEAAhEDEQA/AJ9bGR3bQqJKis4joVFEdCo4lp//2Q==');
+}
+.ie6 .tab .active, .ie7 .tab .active,
+.ie6 .drop-hover a, .ie7 .drop-hover a {
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed002d', endColorstr='#b10b0b',GradientType=0 );
+}
+    /* disable gradient filter */
+.ie6 .drop a, .ie7 .drop a {
+  filter: none;
+}
+
+/* Background stripes 
+ * http://leaverou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
+ * @TODO: Degrade to image stripe if not supported 
+ */
+.backgroundsize.cssgradients .ad, .backgroundsize.cssgradients .floating-mpu .ad.mpu {
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, #fff), color-stop(.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient(0deg, #fff 50%, transparent 50%, transparent);
+  background-image: -ms-linear-gradient(0deg, #fff 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient(0deg, #fff 50%, transparent 50%, transparent);
+  background-image: linear-gradient(0deg, #fff 50%, transparent 50%, transparent);
+  -webkit-background-size: 3px 100px;
+  -moz-background-size: 3px 100px;
+  background-size: 3px 100px;
+}
+
+	/* remove background stripes */
+.backgroundsize.cssgradients .skyscraper, .backgroundsize.cssgradients .takeover {
+	background:none;
+}
+
+/* webfonts - not used on Daily Record */
+
+/* rounded corners */
+.borderradius .btn, .sm-promo .bet-button {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.borderradius .login li ul {
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+/* selectors */
+.rankings tr:nth-child(even) td, .rankings tr.even td {
+  background-color: #f5f5f5;
+}
+.rankings td:nth-child(1) {width: 7%;}
+.rankings td:nth-child(2) {width: 30%;}
+.rankings td:nth-child(3) {width: 48%;}
+.rankings td:nth-child(4) {width: 15%;}
+
+.player-rating td:nth-child(1) {width: 50%;}
+.player-rating td:nth-child(2) {width: 12%; text-align: center; font-size: 17px; font-weight: bold; vertical-align: middle;}
+.player-rating td:nth-child(3) {width: 30%; vertical-align: middle;}
+.player-rating thead th:nth-child(2), .player-rating thead th:nth-child(3){text-align: center;}
+
+.rankings-result td:nth-child(1) {width: 5%; font-size: 17px;}
+.rankings-result td:nth-child(2) {width: 37%;}
+.rankings-result td:nth-child(3) {width: 6%; font-weight: bold; font-size: 17px;}
+.rankings-result td:nth-child(4) {width: 5px; background-color: whiteSmoke; padding: 0px;}
+.rankings-result td:nth-child(5) {width: 5%; font-size: 17px;}
+.rankings-result td:nth-child(6) {width: 37%;}
+.rankings-result td:nth-child(7) {width: 6%; font-weight: bold; font-size: 17px;}
+
+	/* make spacing 10px from border
+		@TODO: make this more robust */
+.related-list:nth-child(1) {
+	margin-top: -5px;
+}
+  /* most read numbering */
+.box-bottom ol li > a {
+  background: url(../gfx/numbers.gif) no-repeat -9999px -9999px;
+  display: block;
+  padding-left: 23px;
+}
+.box-bottom ol li:nth-child(1) > a { background-position: -216px -5px; }
+.box-bottom ol li:nth-child(2) > a { background-position: -193px -28px; }
+.box-bottom ol li:nth-child(3) > a { background-position: -170px -51px; }
+.box-bottom ol li:nth-child(4) > a { background-position: -147px -74px; }
+.box-bottom ol li:nth-child(5) > a { background-position: -124px -97px; }
+.box-bottom ol li:nth-child(6) > a { background-position: -101px -120px; }
+.box-bottom ol li:nth-child(7) > a { background-position: -78px -143px; }
+.box-bottom ol li:nth-child(8) > a { background-position: -55px -166px; }
+.box-bottom ol li:nth-child(9) > a { background-position: -32px -189px; }
+.box-bottom ol li:nth-child(10) > a { 
+  background-position: -4px -212px; 
+  padding-left: 27px;
+}
+	/* mega dropdown */
+.tab:first-child {
+	border-color: #d8d8d8;
+}
+.drop nav li:first-child {
+  margin-top: 11px;
+	padding-bottom: 12px;
+}
+.drop nav li:first-child a {
+	background-image: url(../gfx/sprites_master.png);
+   background-repeat: no-repeat; 
+	background-position: -264px -228px;
+}
+.drop .box:last-child {
+	margin-bottom: 0;
+}
+
+  /* search box */
+header .search-box input[type="text"]::-webkit-input-placeholder {
+  line-height: 1.5em;
+}
+
+  /* related widget */
+.related-widget dd:last-child {
+  border: 0;
+  padding-left: 0;
+}
+
+
+/* Ipad Popup */
+.touch #WrapperPopup {
+  background: rgba(0, 0, 0, 0.6); 
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.touch .ipad-promo {
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+  top: 20%;
+}
+.touch .ipad-promo img {
+  margin: 0 auto;
+}
+/* Slider */
+
+/* Component containers
+----------------------------------*/
+
+.cssgradients .ui-widget-content { 
+	background-image: -moz-linear-gradient(top, #5A6466, #e4e4e4);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#5A6466), to(#e4e4e4));
+	background-image: -o-linear-gradient(top, #5A6466, #e4e4e4);
+	background-image: linear-gradient(top, #5A6466, #e4e4e4); 
+}
+.borderradius .ui-widget-content { 
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius:  5px;
+}
+.ie9 .ui-widget-content, .ie8 .ui-widget-content {
+	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAICAgICAgICAgICAgICAwQDAgIDBAUEBAQEBAUGBQUFBQUFBgYGBgcGBgYICAkJCAgLCwsLCwsLCwsLCwsLCwv/2wBDAQMDAwUEBQgGBggMCggKDA4NDQ0NDg4LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwv/wAARCAAFAIwDAREAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAUHCP/EACUQAAAEBgIBBQAAAAAAAAAAAAABAgYDBBhTo9EFERIHCCExgf/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAYEQEAAwEAAAAAAAAAAAAAAAAAARESAv/aAAwDAQACEQMRAD8A3Vy/t1Z8bleRiz0ePPzsSYiKmp6MnyiRYhqPyWszUZmaj+fsbtywjqcGJbxlsLTEFODEt4y2FmIKcGJbxlsLMQU4MS3jLYWYgpwYlvGWwsxBTgxLeMthZiCnBiW8ZbCzEFODEt4y2FmIKcGJbxlsLMQU4MS3jLYWYgpwYlvGWwsxBTgxLeMthZiCnBiW8ZbCzEFODEt4y2FmIKcGJbxlsLMQU4MS3jLYWYhZ7N9BZKS4qJC4N3OHgJM5lalSUktcKGazSntfiiIkuzLovwS2o4f/2Q==);
+}
+.ie7 .ui-widget-content {
+	background-color: #5A6466;
+}
+
+/* Interaction states
+----------------------------------*/
+
+.cssgradients .ui-state-default, .cssgradients .ui-widget-content .ui-state-default, .cssgradients .ui-widget-header .ui-state-default { 
+	background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#fefefe), to(#e4e4e4));
+	background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+	background-image: linear-gradient(top, #fefefe, #e4e4e4); 
+}
+.borderradius .ui-state-default, .borderradius .ui-widget-content .ui-state-default, .borderradius .ui-widget-header .ui-state-default{
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+
+.ie9 .ui-state-default, .ie8 .ui-state-default {
+	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAATABMDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQj/xAAlEAABAwMDBAMBAAAAAAAAAAABAAIDBBESBRMxFDJBcSEiUWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A6W3Otc55eRSg2jaw2z/pI8J0cUYvSudDJ4sSQfYN1Vhcae9O7uiJHscgqQ1IAuT8ILUWs0W2N+ZkU3D2E8EIqEejzVLd/PDcu7Ej9KINLUqeF8DpHNu9g+ruCs3RoIp3uMwzx7boiDeREQf/2Q==);
+}
+.ie7 .ui-state-default {
+	background-color: #DADADA;	
+}
+.ie7 .amount li {
+	height: auto;
+	width: 14px;
+}
+.ie8 .amount li{
+	width: 14px;
+}
+.ie9 .ui-slider .ui-slider-handle, .ie8 .ui-slider .ui-slider-handle {
+	border: none;
+	width: 19px;
+	height: 19px;	
+}
+.ie7 .ui-slider .ui-slider-handle {
+	border: 1px solid #5A6466;	
+}
+.ui-widget :active { 
+	outline: none; 
+}
+.ui-slider { 
+	position: relative; 
+	text-align: left; 
+}
+.ui-slider .ui-slider-handle { 
+	position: absolute; 
+	z-index: 2; 
+	width: 15px;
+	height: 15px;
+	border: 1px solid #DADADA; 
+	cursor: default; 
+}
+.ui-slider-horizontal { 
+	margin: 0px 0px 0px 12px; 
+	height: 5px; 
+	width: 140px;
+	top: 15px;
+}
+.ui-slider-horizontal .ui-slider-handle { 
+	top: -7px; 
+	margin-left: -.6em; 
+}
+/**
+ * Quiz 3AM
+ **/
+.ie6 li.answer-option h4,li.answer-disabled h4,
+.ie7 li.answer-option h4,li.answer-disabled h4 {
+  width: 148px; 
+}
