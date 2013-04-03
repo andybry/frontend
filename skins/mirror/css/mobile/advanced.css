@@ -1,0 +1,156 @@
+/*
+  Note: this code was originally taken from the second embedded styles element on the m.mirror.co.uk site
+*/
+
+/*
+   Advanced Layout Components for Header
+*/
+a.logoMobile {
+	display: block;
+	background-image: url(data:image/gif;base64,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);
+	background-repeat: no-repeat;
+	border: none;
+	width: 105px;
+	height: 28px;
+	margin: 2px;
+}
+
+div#top-menu-expander,
+div#top-menu-search-expander {
+    background-image: linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -o-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -moz-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -webkit-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -ms-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.13, #808080), color-stop(0.57, #535959), color-stop(1, #535959));
+
+    -webkit-transition: max-height 0.3s ease-in;
+    -moz-transition: max-height 0.3s ease-in;
+    transition: max-height 0.3s ease-in;
+    max-height: 0;
+    height: 0;
+    display: block;
+
+    overflow: hidden;
+}
+
+div#sections ul li:hover {
+    cursor: pointer;
+}
+
+div#top-menu-expander.open {
+    max-height: 135px;
+    display: block;
+}
+
+div#top-menu-search-expander.open {
+    max-height: 40px;
+    display: block;
+}
+
+div#footer-menu-expander.open, div#footer-menu-expander.open {
+    max-height: 105px;
+    height: 105px;
+    display: block;
+}
+
+div#footer-menu-search-expander.open {
+    max-height: 70px;
+    height: 70px;
+    display: block;
+}
+
+    /* new header v2*/
+div#header-menu-expander-v2.open {
+    max-height: 105px;
+    height: 105px;
+    display: block;
+}
+
+div#header-menu-search-expander-v2.open {
+    max-height: 70px;
+    height: 70px;
+    display: block;
+}
+
+#sections {
+    background-image: linear-gradient(top, #ffffff 50%, #dddddd 100%);
+    background-image: -o-linear-gradient(top, #ffffff 50%, #dddddd 100%);
+    background-image: -moz-linear-gradient(top, #ffffff 50%, #dddddd 100%);
+    background-image: -webkit-linear-gradient(top, #ffffff 50%, #dddddd 100%);
+    background-image: -ms-linear-gradient(top, #ffffff 50%, #dddddd 100%);
+
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.50, #ffffff), color-stop(1, #dddddd));
+}
+
+.lightgraygradbackground {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#a4a4a4');
+    background-image: linear-gradient(top, #f0f0f0 5%, #a4a4a4 100%);
+    background-image: -o-linear-gradient(top, #f0f0f0 50%, #a4a4a4 100%);
+    background-image: -moz-linear-gradient(top, #f0f0f0 50%, #a4a4a4 100%);
+    background-image: -webkit-linear-gradient(top, #f0f0f0 50%, #a4a4a4 100%);
+    background-image: -ms-linear-gradient(top, #f0f0f0 50%, #a4a4a4 100%);
+
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0f0f0), color-stop(1, #a4a4a4));
+}
+
+/*used for top nav and bottom nav*/
+.graygradbackground {
+    background-image: linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -o-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -moz-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -webkit-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -ms-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.13, #808080), color-stop(0.57, #535959), color-stop(1, #535959));
+}
+
+/*advanced footer style*/
+div#top-menu-expander,
+div#top-menu-search-expander,
+div#header-menu-expander-v2,
+div#header-menu-search-expander-v2,
+div#footer-menu-expander,
+div#footer-menu-search-expander {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#808080', endColorstr='#535959');
+    background-image: linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -o-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -moz-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -webkit-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+    background-image: -ms-linear-gradient(top, #808080 13%, #535959 57%, #535959 100%);
+
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.13, #808080), color-stop(0.57, #535959), color-stop(1, #535959));
+
+    -webkit-transition: max-height 0.3s ease-in;
+    -moz-transition: max-height 0.3s ease-in;
+    transition: max-height 0.3s ease-in;
+    max-height: 0;
+    height: 0;
+    display: block;
+
+    overflow: hidden;
+}
+
+/*prevents text resize when device is rotated*/
+div {
+    -webkit-text-size-adjust: none;
+}
+
+
+/*New Header*/
+div#header-v2 {
+    display: block;
+    float: left;
+    margin-top: 0px;
+    position: relative;
+    width: 100%;
+}
+
+div#header-menu-v2 {
+    background-color: #aaaaaa;;
+    border-top: 1px solid #EEEEEE;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+

@@ -1,0 +1,85 @@
+/*
+  Note: this code was originally taken from the third embedded styles element on the m.mirror.co.uk site
+*/
+
+.flick-gallery-container {
+    overflow: hidden;
+}
+
+    /* IPHONE ANIMATION API CLASSES */
+.imgRtC {
+    position: absolute;
+    -webkit-animation-name: 'RtC';
+    -webkit-animation-duration: 1s;
+}
+
+.imgCtL {
+    position: absolute;
+    -webkit-animation-name: 'CtL';
+    -webkit-animation-duration: 1s;
+}
+
+.imgLtC {
+    position: absolute;
+    -webkit-animation-name: 'LtC';
+    -webkit-animation-duration: 1s;
+}
+
+.imgCtR {
+    position: absolute;
+    -webkit-animation-name: 'CtR';
+    -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes 'RtC' {
+from { left: 490px; }
+to { left: 0px; }
+}
+@-webkit-keyframes 'CtL' {
+from { left: 0px; }
+to { left: -490px; }
+}
+@-webkit-keyframes 'LtC' {
+from { left: -490px; }
+to { left: 0px; }
+}
+@-webkit-keyframes 'CtR' {
+from { left: 0px; }
+to { left: 490px; }
+}
+
+/* New  */
+div.separator {
+    background-image: linear-gradient(top, #ddd 40%, #ccc 100%);
+    background-image: -o-linear-gradient(top, #ddd 40%, #ccc 100%);
+    background-image: -moz-linear-gradient(top, #ddd 40%, #ccc 100%);
+    background-image: -webkit-linear-gradient(top, #ddd 40%, #ccc 100%);
+    background-image: -ms-linear-gradient(top, #ddd 40%, #ccc 100%);
+
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.40, #ddd), color-stop(1, #ccc));
+    height: 15px;
+    display: block;
+}
+
+div#top-stories {
+    display: none;
+}
+
+.gallery-nav-table a:link,
+.gallery-nav-table a:active,
+.gallery-nav-table a:visited,
+.gallery-nav-table td {
+    text-decoration: none;
+    color: #d22328;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.gallery-nav-table td a {
+    padding: 3px;
+}
+
+.gallery-nav-table {
+    width: 100%;
+    height: 30px;
+}
