@@ -1,0 +1,714 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Signika:400,600);
+
+/* Accrington Observer */
+body {
+	font-size:81.25%;
+	line-height:1.385em;
+	background: #fff; 
+	color: #594d4d;
+	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {font-weight:bold;}
+p {font-size: 1.04em;}
+
+/* fonts - Font 1 */
+h1, h2, h3, h4, .blog-agg a, .headline-teaser, nav a, .newsflash, .hot-topics a, .more, .most-read a, .sm-promo ul li,
+.popularList .box-bottom, .btn, .form-bottom ul, .most-recent, .recent-comments blockquote a,
+.breadcrumbs a, .article-header .tools, .article-page .article figcaption, .poll label, .pluck-hdr, .upcoming-events a,
+.key-dates a, .field label, div.fixtures-wrap a, .sc-box a, .weather-hdr, .utility a, .google-adsense a, .stay-connected a,
+footer, .login li, ul.sort-by, .published-date, .info-window, .info-window a, .cookies, .ln-prefix, .auto-refresh a, 
+.extended-forcast, .article .opta-widget-container h2, .tab > a, .pic-viewer-list li a, .ob_container .strip-rec-link-title,
+.profile-list-name, .breadcrumbs {
+	font-family: 'Signika', sans-serif;
+	font-weight: normal;
+}
+
+/* Font 2 */
+.tools .more, .box-bottom h5 a, .five-col-teaser .more, .four-col-teaser .more, .five-col-news-teaser h5 a, .headline-teaser.see-also li a.rc-icon {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-weight: normal;
+}
+
+/* Font 3 */
+span.pluck-comm-socialoptions-posttext, .related-contents-img.ma-teaser figcaption, .ob_container .rec-src-link {
+	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/**************************** Background images ****************************/
+.container, .classified-drop-list li, .weather-today {
+	background: #fff; 
+}
+
+footer .container {
+	background: none;
+}
+
+/* Background Gradients */
+/* Red - Gradient 1 */
+.form-bottom {
+	background: #bc002d; /* Old browsers */
+	background: -moz-linear-gradient(top, #c4002f 0%, #bc002d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c4002f), color-stop(100%,#bc002d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #c4002f 0%,#bc002d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #c4002f 0%,#bc002d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #c4002f 0%,#bc002d 100%); /* IE10+ */
+	background: linear-gradient(top, #c4002f 0%,#bc002d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4002f', endColorstr='#bc002d',GradientType=0 ); /* IE6-9 */
+}
+
+/* Red  - Gradient 2 */
+.errormessage .search-box input#sb-btn, .nav-main > ul, header .search-box, .recommendations, 
+.stay-connected > ul, .pluck-comm-submitoptions .pagination-controls .selected,
+.pluck-comm-submitoptions span.pluck-comm-reply-button a, .pluck-comm-submitoptions a.pluck-primary-button{
+	background: #bc002d; /* Old browsers */
+	background: -moz-linear-gradient(top, #c4002f 0%, #bc002d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c4002f), color-stop(100%,#bc002d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #c4002f 0%,#bc002d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #c4002f 0%,#bc002d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #c4002f 0%,#bc002d 100%); /* IE10+ */
+	background: linear-gradient(top, #c4002f 0%,#bc002d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4002f', endColorstr='#bc002d',GradientType=0 ); /* IE6-9 */
+}
+
+/* darker red - fill - Gradient 3 */ 
+.tab > .active, .tab > .active, .stay-connected > ul a:hover, .stay-connected > ul li.active {
+	background: #af012b; /* Old browsers */
+	background: -moz-linear-gradient(top, #af012b 0%, #9e0026 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#af012b), color-stop(100%,#9e0026)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #af012b 0%,#9e0026 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #af012b 0%,#9e0026 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #af012b 0%,#9e0026 100%); /* IE10+ */
+	background: linear-gradient(top, #af012b 0%,#9e0026 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#af012b', endColorstr='#9e0026',GradientType=0 ); /* IE6-9 */
+}
+
+/* Grey */
+.btn, .form .btn {
+	background: #f1f1f1; /* Old browsers */
+	background: -moz-linear-gradient(top, #eeeeee 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eeeeee 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eeeeee 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #eeeeee 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top, #eeeeee 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+/**************************** Colours ****************************/
+/* background color */
+.pic-viewer-list .selected, .article-page .article figure figcaption, .match-month th, h2.htable  {
+	background-color: #000;
+}
+
+/* grey/black */
+footer, 
+.tab > a:hover, .tab.drop-hover > a, .tab.drop-hover > a:hover {
+	background-color: #212121;
+}
+
+/* white */
+.lg-teaser.top-story, .strip ul, .horoscope-tabs .selected, .top-write, .login ul, .top-story, .pic-viewer-thumbs,  
+.dh-teaser, .sub-bar, .weather ul, .horoscope, .epl, .standfirst .box-heading, .sm-promo-list .sm-promo, 
+.article-page .live-odds, .article-box-heading.grey, .splash, .splash-image-led, .splash-right, 
+.horoscope-tabs li, .drop .loading, .geomap, .dh-teaser-hdln, .superpick-teaser, .fullwidth, 
+.drop h3, .contentBox ul ul li, .local-image-map, ul.follow-list dl, .errormessage, 
+header .search-box input[type="submit"], .classified-drop, .shop img, .search-top, 
+.weather-5day, .form input[type="text"], .fb-like-box, .sc-box.three-col h2, .pluck-login-comment-input, 
+.pluck-login-comment-content, .pluck-wrap .pluck-login-comment-input, .pluck-wrap .pluck-login-comment-content, 
+.author-box img, .blog-row .section-hdr h2 {
+	background-color: #fff;
+}
+
+/* mid gray */
+.weather .box-bottom, input[type="text"].geo-searchloc, .sc-box, .profile-list-name {
+	background-color: #f6f6f6;
+}
+
+/* another mid gray */
+.contentBox dt, .contentBox dd, .standfirst .info, .player-rating thead th, .rankings-result thead th {
+	background-color: #f5f5f5;
+}
+
+.amount li.active {
+	background-color: #eee;
+}
+
+/* red - Fill */
+.poll-result, .date-picker input[type="submit"], .article-box-heading.red, .opinions-heading, 
+.tab .active, .nav-main, .stay-connected, li.fixture-date {
+	background-color:  #bc002d;
+}
+
+/* highlight text on page */
+::-moz-selection { background: #a7120e; color: #fff; text-shadow: none; }
+::selection { background: #a7120e; color: #fff; text-shadow: none; }
+
+/* blue - rgba - semi trans */	
+.mpu-border, .span-8-5 .mpu, .bellyband, .paper-puff, .useful-links li:hover,  ul.breadcrumbs, .social-media, 
+.blog-agg .followbox, .author-hdr img, .classified-drop-list li, .refine-search-date, .refine-search dl, 
+.blog-row, .pluck-login-comment-input, img.pluck-comm-avatarimg, .pluck-user-mp-avatar-seethrough img.pluck-user-mp-avatarimg,
+.pagination a, .login, .pluck-wrap, .opta-widget-container .fixtures, .live-update:nth-child(2n+0) {
+	background-color: #fafafa;
+}
+
+.classified-drop-list li.classified-drop-highlight, .pagination-controls .selected {
+	background-color: #f5f5f5;
+}
+
+/* Remove background */
+.refine-search-date dl {
+	background: none;
+}
+
+/* black rgba overlay */	
+.article-page .article figure figcaption, .splash-image-led h1 a {
+	background: #000;
+	background: rgba(0, 0, 0, 0.8);	
+}
+
+.splash-image-led h1 a:hover {
+	background: rgba(0, 0, 0, 1);
+}
+
+/* Red */
+.newsflash, .ticker-swipe {
+	background: #bc002d;
+}
+
+/* border color - Border 1 */
+/* blue light */
+.ad, .article, footer .span-17, .recommendations,  .headline-teaser li, .half-horizontal, .pic-viewer-thumbs, 
+.pagination, .search-for, .date-picker input[type="text"], .refine-search h4, .refine-search-date,
+.refine-search dl, .horoscope a, .epl ul, .epl a, .standfirst .box-heading, .rankings td, .player-rating, 
+.player-rating td, .player-rating thead th, .rankings-result, .rankings-result td, .rankings-result thead th,
+.standfirst .info, .competition-quotes li, .competition-winners li, .article-page .live-odds,
+.article-box-heading.grey, .recent-comments .wrapper, .sm-horoscopes-teaser, .tm-twitter .tweet, 
+.horoscope-tabs, .horoscope-tabs li, .col4 blockquote, .dh-teaser-hdln p, .drop, .weather ul, 
+.weather li, .container, .opinions, .drop nav li, .mpu-border, .floating-mpu .mpu, .box-bottom li, 
+.opinions-list-vert li, .related-list, .article-page .live-update, .drop .sa-teaser, .footer-links-wrap,  
+.sm-horoscopes-teaser, .drop, .drop h3, .utility-bar, .cookies, .utility .last, .channel-hdr, 
+.sub-bar, .sc-box, .tools li, .vp-teaser,  .span-8-5 .mpu, .sm-promo-list h3, .sm-promo-list .sm-promo,
+#row2.row, #row3.row, #row4.row, .weather-header h3, .box-heading, .article.vp-teaser.last, .geo-searchloc, 
+.append-1.five-col-teaser, .heading-links > .tools, .blog-agg .followbox, #FollowUs.sc-box dt, .useful-links li, 
+.drop h3, .bellyband, .paper-puff, .social-media, .pluck-login-comment-input, .contentBox ul ul li, 
+.titleCell ul li h2, .contentBox dd, .author-hdr img, .fixtures-wrap, .classified-drop-list, 
+.classified-drop-list li, .related-list dd, .article-page .storylist h3, .article-page .related-widget h3, 
+ul.follow-list li, ul.follow-list ul, ul.follow-list h3, ul.follow-list dd, .errormessage 
+.search-box input[type="text"], .weather-hdr-details, .search-results #sb-search, .weather-today, 
+.weather-next4, .see-all, .relatedContents .headline-teaser li, .local-pic-info h2, .blog-row h2.channel-hdr, 
+.sc-box-left, #FollowUs.sc-box dd, #Journalists dd, .sc-box.three-col h2, #ContactUs dl, #SendAStory dl, 
+#TheEditor dl, .drop .col2 li, .pluck-comm-single-comment-top, .pluck-wrap img.pluck-comm-avatarimg, 
+.pluck-wrap .pluck-user-mp-avatar-seethrough img.pluck-user-mp-avatarimg, .pluck-comm-pagination-wrapper, 
+.drop .ma-teaser, .article-page .ma-teaser.related-contents-img, .pluck-login-comment-content, .author-box img, 
+.blog-row .section-hdr h2, .match-month tr, .published-date, .ob_org_header h3, .ob_org_header div,
+.profile-list-name, .club-crests li {
+	border-color: #e0e0e0;
+}
+
+/* Border 2 */
+.storylist .lg-teaser .tools {
+	border-color: #d9d9d9;
+}
+
+/* Border 3 */		
+.footer-links li {
+	border-color: #454545;
+}
+
+/* black - Border 4 */
+.search-results h2, .competition-teaser, .competition-quotes, .smht-pic a, .horoscope-page h2, 
+.row-thin, .sm-horoscopes-profile, .tm-twitter .smht-pic a, .horoscopes-storylist, .tab > a:hover, 
+.tab.drop-hover > a, .tab.drop-hover > a:hover  {
+	border-color: #000;
+}
+
+/* very light grey - Border 5 */
+ul.follow-list dt {
+	border-color: #fafafa;
+}
+
+/* mid grey - Border 6 */
+.form-bottom, .form-bottom ul li, .shop img, .field input {
+	border-color: #960101;
+}
+
+/* White - Border 7 */
+.masthead, .ln-icon {
+	border-color: #fff;
+}	
+
+/* darker red - outline - Border 8 */
+.tab > .active, .tab > a:hover, .tab.drop-hover > a, .tab.drop-hover > a:hover, header .search-box input[type="text"], 
+.footer-copy, .stay-connected > ul a:hover, .stay-connected > ul a:active, .pagination-controls .selected, 
+.nav-main, header .search-box, .stay-connected, .opinions-heading {
+	border-color: #8e000c;
+}
+
+.tab > .active {
+	border-right: 1px solid #111;
+}
+
+/* text color */
+/* black - Color 1 */
+a, blockquote, .popular li, .lc-teaser-nobdr h3, .box-bottom ol li, .article-page .storylist h3, 
+.article-page .related-widget h3, .horoscope-header .tools .phone, .menu a, .pagination a, .search-sort .active a,
+.article-page .auto-refresh .selected, .search-top .search-sort .active a, .dh-teaser h4 a:hover,
+.ma-teaser h4 a:hover, .lg-teaser h4 a:hover, .recent-comments .opinions-list-vert h4 a:hover, .lead-text p,
+.article-header .tools .comment:hover, .article-header .tools .author:hover, .pluck-hdr, .article-page .article a:hover,
+.follow-list a:hover, .pagination-controls a:hover, .weather-temp, .weather-hi-lo, .breadcrumbs a:hover,
+.cookies a:hover, .author, .pluck-comm-posting-form .pluck-comm-commenting-as a, 
+.pluck-comm-posting-form .pluck-comm-commenting-as-persona-disabled a, .sort-by li, a.pluck-comm-report-abuse, 
+a.pluck-comm-report-abuse:hover, header .search-box input[type="text"]:focus, .match-details a,
+.opta-widget-container .fixtures .matches dt .match-score, .opta-widget-container .fixtures .matches dt .match-time, 
+.info-window a, .article .opta-widget-container h2, .ob_container .strip-rec-link-title, .ob_what a {
+	color: #000;
+}
+
+/* grey - Color 2 */
+p, .geomap h3 span, .article-page .article p, .weather-hdr-desc a, .weather-5day h3 span,  .hot-topics h2, 
+.follow-us h2  {
+	color: #494949;
+}
+
+/* Color 3 */
+.third-party a, .ob_container .rec-src-link, .profile-list-name span {
+	color: #666;
+}
+
+/* Color 4 */
+.search-box input[type="text"], input[type="text"].geo-searchloc, .weather-desc {
+	color: #888;
+}
+
+/* Accrington Red - Color 5 */
+a:hover, .dh-teaser h4 a, .ma-teaser h4 a, .lg-teaser h4 a, .recent-comments .opinions-list-vert h4 a, 
+.breadcrumbs a:hover, .article-page .article a:hover, .most-read .info, .follow-list .sub-menu a:hover,
+.errormessage a, .pagination-controls a, .sc-box dt, .cookies a, .article-header .tools .comment:hover, 
+.article-header .tools .author:hover, .pluck-comm-posting-form .pluck-comm-commenting-as a:hover, 
+.pluck-comm-posting-form .pluck-comm-commenting-as-persona-disabled a:hover, .sort-by .active, 
+.sort-by li:hover, .login span, .match-details a:hover, .info-window a:hover, .cookies, 
+.article-page .article .body a.selected,.btn.poll-submit, .btn, .form input[type="submit"], .strip-rec-link-title.ob-tcolor:hover {
+	color: #bc002d;
+}
+
+/* white - Color 6 */
+.panel .selected a, a.selected-thumb, .date-picker input[type="submit"], .sm-promo h3, .sm-promo .bet-button,
+.heading-end a, .sm-promo .bet-button:hover, .errormessage .search-box input[type="submit"], 
+.search-results .search-box input[type="submit"], .article-box-heading.red, .opinions-heading a, 
+.no-js .tab > a:hover, .touch .tab > a:hover, .tab > .active, .tab.drop-hover > a, .tab.drop-hover > a:hover,
+.tab > a, .newsflash a, .newsflash, .newsflash h2, .newsflash p span, .viewport-heading a, .tools .more, 
+.box-bottom h5 a, .headline-teaser.see-also li a.rc-icon, .splash-image-led h1 a, .directory dt a, 
+.directory dd a:hover, .footer-copy p a, .five-col-teaser .more, .four-col-teaser .more, 
+.five-col-news-teaser h5 a, .article-page .article figure figcaption, .article-page .article a.buyphoto, 
+.pagination-controls .selected, .directory dt, .pluck-comm-submitoptions span.pluck-comm-reply-button a:hover, 
+.pluck-comm-submitoptions a.pluck-primary-button:hover, .match-month th, h2.htable, .form-bottom p, .form-bottom label, 
+.form-bottom a {
+	color: #fff;
+}
+
+/* Color 7 */
+.directory dd a, .directory dt a:hover, .footer-copy p {
+	color: #ccc;
+}
+
+/* Text Shadows */
+.nav-main > ul a {
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+ .nav-main > ul li .drop a {text-shadow: none;}
+/**************************** Common ****************************/
+/* uppercase */
+.nav-main, .stay-connected {
+	text-transform: uppercase;
+}
+
+/********** Box Shadows **********/
+.top-story, .dh-teaser, .pic-nav, .splash, .splash-right, .splash-image-led, .geomap, .dh-teaser-hdln, 
+.superpick-teaser, .drop, .strip, .local-image-map, .sc-box, .errormessage, .search-top, .weather-5day, 
+.sm-promo, .form-bottom, .classified-page .classified-drop, .ln-icon {
+	box-shadow:  0 0 3px #ccc;
+}
+
+.profile-list {
+	box-shadow: 0 0 3px #CCCCCC; 
+}
+
+/********** buttons **********/
+.btn, .field .btn, .pluck-comm-submitoptions span.pluck-comm-reply-button a, .pluck-comm-submitoptions a.pluck-primary-button {
+	width: 100%;
+	border: none;
+	font-size: 1.45em;
+	line-height: 1.636em;
+	padding: 4px 20px 3px;
+	line-height: 1;
+	-moz-border-radius: 30px;	
+	-webkit-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+	border-radius: 30px; 
+	background-clip: padding-box;
+	text-shadow:0 -1px 0 rgba(255, 255, 255, 0.35);
+	box-shadow: 0 0 4px rgba(0,0,0, 0.5), -1px 0 0 rgba(255, 255, 255, 0.5) inset;
+}	
+
+.btn:hover, .field .btn:hover, .pluck-comm-submitoptions span.pluck-comm-reply-button a:hover, 
+.pluck-comm-submitoptions a.pluck-primary-button:hover, .span-15-5.search-box #sb-btn:hover {
+	box-shadow: 0 2px 5px rgba(255,255,255,1) inset;
+}
+
+/********** channel header **********/
+.channel-hdr {
+	background-position: 0 0;
+	font-size: 2.4em;
+	line-height: 1.1em;
+	margin-bottom: 12px;
+	padding: 13px 0px 4px 0;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 1px #fff;  
+	letter-spacing: -0.05em;
+}
+
+.channel-hdr a {
+	background-position: 100% 0.4em;
+	display: inline-block;
+	padding-right: 18px;
+}
+
+.box-heading  {
+	background-position: 0 0;
+	font-size: 2.4em;
+	line-height: 1.1em;
+	margin-bottom: 12px;
+	letter-spacing: -0.05em;
+	padding: 13px 0 4px 0;
+}
+
+.box-heading a {
+	background-position: 100% 0.4em;
+	padding-right: 18px;
+}
+
+.span-8 .box-heading {
+	font-size:1.95em;
+}
+
+/**** tools topic more link (tri) ****/
+/* sprites */
+.logo a, .logo-s, blockquote, .label, .mirror_pick, .sm-promo ul li, .btn-left, .btn-right, .comment, 
+.gallery, .vid, .channel-default .channel-msg, .channel-default .channel-msg span, .search-box input[type="submit"], 
+.breadcrumbs .b-home a, .pic-selected, .video-btn.play, .no-results li, .competition-quotes li, 
+.competition-winners li, .ol-teaser figcaption, .headline-teaser.see-also li, .follow-us li.f-facebook, 
+.follow-us li.f-twitter, .follow-us li.f-newsletter, .geomap-search input[type="button"], .newsflash h2, 
+.breadcrumbs .b-home a, .form-powered, .mdd-jobs, .mdd-property, .mdd-motors, .mdd-daily-deals, .mdd-local-mole, 
+.mdd-dating, .mdd-shopping, .mdd-family-notices, .mdd-travel, .mdd-buysell, .mdd-bookad {
+	background-image: url("../gfx/sprite.png");
+	background-repeat: no-repeat; 
+}
+
+/* heading sprite */
+.channel-hdr, .sm-promo-list h3, .drop h3, .weather-header h3, .box-heading, .pluck-wrap, .article-page .storylist h3, 
+.article-page .related-widget h3, .refine-search h4, .google-adsense, .blog-row .section-hdr h2, 
+.article-page .opta-widget-container h2, .ob_org_header h3, .ob_org_header div {
+	background-image: url("../gfx/channel-hdr.png");
+	background-repeat: no-repeat; 
+}
+
+/* Arrow sprite (large) */
+.channel-hdr a, .box-heading a, .directory dt a, #Journalists dt a {
+	background-image: url("../gfx/sprite_arrows.png");
+	background-repeat: no-repeat; 
+}
+
+/* (medium arrow) */
+.sm-promo-list h3 a, .top-stories a, .lg-teaser h1 a, .ma-teaser h2 a, .lg-teaser h3 a, .ma-teaser h3 a, 
+.classified-drop h4, ul.follow-list h3 a, ul.follow-list h4 a, .dh-teaser h3 a {
+	background-image: url("../gfx/sprite_arrows.png");
+	background-repeat: no-repeat; 
+}
+
+/* (smaller arrow) */
+.vp-widget .more, .drop nav li a, .blog-agg .more, .useful-links li a, .breadcrumbs li, .fix-link a,
+.follow-list-link, .sc-box dd a, .refine-search dd, .no-results li, .headline-teaser li a, .see-all a,
+.pluck-comm-submitoptions .link, .match-details a, .opta-widget-container button.details-collapsed,
+.extended-forcast a {
+	background-image: url("../gfx/sprite_arrows.png");
+	background-repeat: no-repeat; 
+}
+
+/* (liink open in new window) */
+.blog-row .headline-teaser li a,
+.blog-row h2.channel-hdr a {
+	background-image: url("../gfx/sprite_arrows.png");
+	background-repeat: no-repeat; 
+}
+
+/* tools ul */
+.tools .more, .box-bottom h5 a, .five-col-teaser .more, .four-col-teaser .more, .five-col-news-teaser h5 a, 
+.headline-teaser.see-also li a.rc-icon {
+	display: inline-block;
+	padding:0 10px 0 3px;
+	background: url("../gfx/sprite.png") no-repeat;
+	background-position: right -87px;
+	height: 17px;
+	vertical-align: top;
+	overflow: hidden;
+	line-height: 17px;	
+	font-size: 12px;
+	letter-spacing: -0.02em;	
+}
+
+/* Numbers - top 10 lists */
+.box-bottom ol li {
+	background: url("../gfx/numbers.png") no-repeat -9999px -9999px;
+}
+
+.logo a {
+	margin: 15px 0 4px;
+	height: 56px;
+	width: 360px; 
+}
+
+/*** Tabs and nav ***/
+nav.nav-main {
+	overflow: hidden;
+}
+.tab > a {
+    border-color: #BC0111 #111111 #bc002d #D91B2B;
+    border-width: 0 1px;
+    display: block;
+    font-size: 1.2em;
+    height: 42px;
+    line-height: 2.7em;
+    padding: 2px 23px 0;
+    position: relative;
+}
+
+.stay-connected .tab > a {
+	padding: 2px 20px 0;
+}
+
+/* selected menu bottom arrow
+NB: does not work in IE 7 and below */
+
+/*** Follow Us ***/
+ul.follow-list li:hover { 
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+ul.follow-list ul.sub-menu { 
+	background-color: #f5f5f5;
+	box-shadow:  0px 5px 4px rgba(0,0,0,0.5);
+}
+
+ul.follow-list dl {
+	background: #fff;
+}
+
+/*** MDD ***/
+.drop {
+	background: #fff url("../gfx/mdd.png") repeat-y 100% 0;
+	border-top: 0;
+}
+
+.drop h3:after {
+	content: url("../gfx/heading-cut.png");
+}
+
+.three-col h2:after {
+	display: block;
+	width: 17px;
+	height: 10px;
+	position: absolute;
+	bottom: -2px;
+	content: url("../gfx/heading-cut.png");
+}
+
+.community-drop {
+	padding-left: 1px;
+	background: #fff url("../gfx/mdd-5col.png") repeat-y 0 0;
+}
+
+.classified-drop-list li {
+	border-top: 1px solid #fff;
+}
+
+.mdd-jobs, .mdd-property, .mdd-motors, .mdd-daily-deals, .mdd-local-mole, .mdd-dating, .mdd-shopping,
+.mdd-family-notices, .mdd-travel, .mdd-buysell, .mdd-bookad {
+	width: 44px;
+	height: 44px;
+}
+
+.mdd-jobs {background-position: 0px -554px;}
+.mdd-buysell {background-position: -99px -597px;} /* Accrington uses camera image rather than pound sign */
+.mdd-shopping {background-position: -48px -556px;}
+.mdd-property {background-position: -46px -596px;}
+.mdd-local-mole {background-position: -0px -643px}
+.mdd-family-notices {background-position: 1px -692px;}
+.mdd-motors {background-position: -47px -640px;}
+.mdd-dating {background-position: -45px -682px;}
+.mdd-travel {background-position: 0px -745px;}
+.mdd-daily-deals {background-position: -98px -554px;}
+.mdd-bookad {background-position: -45px -745px;}
+
+/*** Pic Navi ***/
+.pic-viewer-list a:last-child {
+/* display: none; Hide the headline (but not in ie7 or 8) */
+}
+
+/*** Forms ***/
+.form-bottom.extra, .form-bottom.last {
+	border-top: 1px solid #c30414;
+}
+
+.field {
+	border-top: 1px solid #c30414;
+	border-bottom: 1px solid #960101;
+}
+
+.form-bottom ul li {
+	border-top: 1px solid #c30414;
+	border-bottom: 1px solid #960101;
+}
+
+.form-bottom dd {
+	margin-left: 0;
+}
+
+.form-bottom a {
+	text-shadow: 0 0 1px #960101;
+}
+
+.field.important_search_controls {
+	border-top: 0;
+}
+
+/* Storylist font sizes */
+.ma-teaser h2 {
+	font-size: 1.625em;
+	line-height: 1.2em;
+	margin-bottom: 9px;
+}
+
+.ma-teaser h2 a, .ma-teaser h3 a {
+	background-position: 100% -141px;
+	padding-right: 13px;
+}
+
+.ma-teaser h4{
+	font-size: 0.946em;
+	margin: 0 0 5px;
+}
+
+/* Comment avatars */
+.pluck-comm-sc-avatar:after {
+	display: block;
+	width: 17px;
+	height: 10px;
+	position: absolute;
+	top: 52px;
+	left:21px;
+	content: url("../gfx/heading-cut.png");
+}
+
+/* In Your Area Map */
+.info-window {
+	font-size:18px;
+	padding-top:10px;
+	line-height: 1;
+	text-align:center;
+	overflow: hidden;
+}
+
+.info-window a {
+	text-decoration:none;
+}
+/* ECS outbrain */
+/* headings */
+.ob_org_header h3,
+.ob_org_header div {
+	display: block;
+	font-size: 1.331em;
+	line-height: 1.28571em;
+	margin: 0 0 6px;
+	padding: 14px 0 6px;
+}
+
+/* story links */
+.ob_container .strip-rec-link-title {
+	font-size: 14px !important;
+	line-height: 19.2833px !important;
+}
+
+.strip-rec-link-title.ob-tcolor:hover {
+	text-decoration: underline; 
+}
+
+/* Story sources */
+.ob_container .rec-src-link{
+	font-size: 11px;
+	line-height: 19.2833px;
+}
+
+/* Story images */
+.ob_container .item-link-container .ob-rec-link-img, .ob_container .item-link-container:hover .ob-rec-link-img {
+	border: none !important;
+	padding: 0 !important;
+}
+
+/* Bespoke overwrites */
+.sub-bar {
+	border-left: 0;
+	border-right: 0; 
+	border-style: dotted;
+}
+
+.hot-topics {
+	padding: 9px 0 8px 0px
+}
+
+.follow-us li {
+	border-style: dotted;
+}
+
+.follow-us li:first-child {
+	border: none;
+}
+
+#row2.row, #row3.row, #row4.row {
+	border-color: #f5f5f5;
+}
+.strip.club-crests {
+	margin: 0 0 30px;
+}
+
+.club-crests .ir {
+	background: url("../gfx/club-crests.png") no-repeat;
+	height: 80px;
+}
+
+.club-crests li {
+    float: left;
+    padding: 0 12px;
+ }
+
+.club-crests .ir.ManchesterUnited {background-position: 0px 0px; width: 53px;}
+.club-crests .ir.ManchesterCity {background-position: -53px 0px; width: 52px;}
+.club-crests .ir.WiganAthletic {background-position: -105px 0px; width: 53px;}
+.club-crests .ir.BoltonWanderers {background-position: -158px 0px; width: 37px;}
+.club-crests .ir.OldhamAthletic {background-position: -196px 0px; width: 53px;}
+.club-crests .ir.Bury {background-position: -250px 0px; width: 52px;} 
+.club-crests .ir.Rochdale {background-position: -304px 0px; width: 53px;}
+.club-crests .ir.Stockport {background-position: -358px 0px; width: 48px;}
+.club-crests .ir.FCUnited {background-position: -406px 0px; width: 52px;}
+
+#FollowUs dl {
+	margin: 20px 10px 0 30px;
+}
+.span-6 .fb_iframe_widget {
+	margin-bottom: 40px;
+}
+#Advertise p a {
+	color: #bc002d;
+}
