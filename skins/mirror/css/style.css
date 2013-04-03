@@ -4578,6 +4578,7 @@ padding: 0 14px;
 }
 .answer-group {
   display: block;
+  float: left;
   margin: 0;
   padding: 0;
 }
