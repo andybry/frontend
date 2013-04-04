@@ -534,15 +534,12 @@ header .search-box input[type="text"]::-webkit-input-placeholder {
 /**
  * Quiz 3AM
  **/
-.ie6 li.answer-option h4,li.answer-disabled h4,
-.ie7 li.answer-option h4,li.answer-disabled h4 {
+.ie6 li.answer-option h4,li.answer-disabled h4 {
   width: 148px; 
 }
 
-.ie8 li.answer-option h4 {
-  width: 50px;
-}
-
-.ie8 .quiz .figcaption-noimg {
+.ie7 .quiz .figcaption-noimg {
   width: 531px;
 }
+
+

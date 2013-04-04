@@ -1,0 +1,14 @@
+/* Temp fix for MIR-4776
+   Fix live Tuesday 9th April 2013 to add cleafix class to quiz class*/
+  
+.quiz:after {
+  content:"\0020"; 
+  display: block; 
+  height: 0; 
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.quiz:after {
+  clear: both;
+}

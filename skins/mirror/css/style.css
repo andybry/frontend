@@ -4685,6 +4685,7 @@ li.answer-option h4, li.answer-disabled h4 {
 }
 .quiz .progress {
   margin-top: 20px;
+  float: left;
 }
 .quiz .progress .progress-msg {
   float: left;
